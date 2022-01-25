@@ -21,27 +21,27 @@ spl_autoload_register(function ($class_name) {
                 }
             break;
             
-            case file_exists($fileName) == false && $flag == 2:
+            // case file_exists($fileName) == false && $flag == 2:
 
-                $fileName ="class".DIRECTORY_SEPARATOR."client".DIRECTORY_SEPARATOR.$class_name . ".php";
-                if(file_exists($fileName) == false){
-                    searchFile($fileName,$flag=3,$class_name);
-                }else{
-                    require_once($fileName);
-                    break;
-                }
-            break;
+            //     $fileName ="class".DIRECTORY_SEPARATOR."client".DIRECTORY_SEPARATOR.$class_name . ".php";
+            //     if(file_exists($fileName) == false){
+            //         searchFile($fileName,$flag=3,$class_name);
+            //     }else{
+            //         require_once($fileName);
+            //         break;
+            //     }
+            // break;
             
-                case file_exists($fileName) == false && $flag == 3:
+            //     case file_exists($fileName) == false && $flag == 3:
 
-                    $fileName ="class".DIRECTORY_SEPARATOR."animal".DIRECTORY_SEPARATOR.$class_name . ".php";
-                    if(file_exists($fileName) == false){
-                        echo 'Arquivo não encontrado';
-                    }else{
-                        require_once($fileName);
-                        break;
-                    }
-                break;
+            //         $fileName ="class".DIRECTORY_SEPARATOR."animal".DIRECTORY_SEPARATOR.$class_name . ".php";
+            //         if(file_exists($fileName) == false){
+            //             echo 'Arquivo não encontrado';
+            //         }else{
+            //             require_once($fileName);
+            //             break;
+            //         }
+            //     break;
 
             default:
                 break;
