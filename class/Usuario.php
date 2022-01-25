@@ -1,11 +1,11 @@
 <?php
 
 class Usuario{
-   private $nome;
-   private $cpf;
-   private $tel;
-   private $senha;
-   private $endereco;
+   private $nome = 'teste';
+   private $cpf = 1;
+   private $tel = 1;
+   private $senha = 'teste';
+   private $endereco = 'teste';
 
    public function getNome(){
        return $this->nome;
@@ -61,6 +61,11 @@ class Usuario{
         }
     }
 
+    public function cadastrar(){
+        $sql = new Sql();
+        $sql->execQuery("INSERT INTO usuarios (nome,senha,cpf,tel,endereco) VALUES('NOME',2,2,2,2)");
+    
+    }
     public function __toString(){
         $dados = json_encode(
             array(
