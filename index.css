@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+:root{
+    --cor-primaria: #ff9E00;
+    --cor-secundaria: #4E8499;
+}
+
+body{
+    background-color: var(--cor-primaria);
+}
+
+header,ul,#button-login,#content-home,#home-text,#button-blue{
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+   margin: 0.5vw; 
+   height: 4vh;
+   align-items: center;
+}
+
+nav ul li{
+list-style: none;
+font-size: 1.8vw;
+width: 17vw;
+}
+
+nav ul li a{
+    color: var(--cor-secundaria);
+}
+
+#button-login img{
+width: 2vw;
+height: 2vw;
+margin-left: 0.3vw;
+}
+
+#button-login{
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+}
+
+
+#content-logo{
+    width: 40vw;
+}
+
+#content-logo img{
+    width: 10vw;
+}
+
+#content-home{
+    height: 94vh;
+}
+
+#home-image{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-image img{
+    width: 90%;
+}
+
+#home-text{
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-secundaria);
+}
+
+#home-text h1{
+    font-size: 4.5vw;
+}
+
+#home-text h2{
+    font-size: 2.5vw;
+}
+
+#button-blue{
+    margin: 4vw 0 4vw 0;
+    color: var(--cor-secundaria);
+    border: solid 0.1vw;
+    width: 7vw;
+    height: 2.4vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vw;
+}
