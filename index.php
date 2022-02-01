@@ -82,5 +82,38 @@ require_once("config.php");
 
     </section>
     
+    <section id="content-adoption">
+
+        <div id="adoption-image">
+
+            <div class="content-animal">
+                <img src="img/bob.png" alt="Imagem de animal">
+                <h1>Bob</h1>
+            </div>
+
+            <div class="content-animal">
+                <img src="img/bartolomeu.png" alt="Imagem de animal">
+                <h1>Bartolomeu</h1>
+            </div>
+
+            <div class="content-animal">
+                <img src="img/stuart.png" alt="Imagem de animal">
+                <h1>Stuart</h1>
+            </div>
+
+            <div class="content-animal">
+                <img src="img/caramelo.png" alt="Imagem de animal">
+                <h1>Caramelo</h1>
+            </div>
+
+        </div>
+
+        <div id="adoption-text">
+
+        </div>
+        
+
+    </section>
+
 </body>
 </html>

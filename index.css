@@ -16,7 +16,7 @@ body{
     background-color: var(--cor-primaria);
 }
 
-header,ul,#button-login,#content-home,#home-text,#button-blue{
+header,ul,#button-login,#content-home,#home-text,#button-blue,#content-adoption,#adoption-image,#content-animal{
     display: flex;
 }
 
@@ -25,7 +25,7 @@ a {
 }
 
 header{
-   margin: 0.5vw; 
+   margin: 1.5vh; 
    height: 4vh;
    align-items: center;
 }
@@ -61,7 +61,7 @@ margin-left: 0.3vw;
 }
 
 #content-home{
-    height: 94vh;
+    height: 93vh;
 }
 
 #home-image{
@@ -100,4 +100,17 @@ margin-left: 0.3vw;
     align-items: center;
     justify-content: center;
     font-size: 1.8vw;
+}
+
+#content-adoption{
+    background-color: var(--cor-secundaria);
+}
+
+#adoption-image{
+    flex-wrap: wrap;
+    width: 60vw;
+}
+
+#content-animal img{
+    width: 20vw;
 }
