@@ -16,7 +16,7 @@ body{
     background-color: var(--cor-primaria);
 }
 
-header,ul,#button-login,#content-home,#home-text,#button-blue,#content-adoption,#adoption-image,#content-animal{
+header,ul,#button-login,#content-home,#home-text,.button-empty,#content-adoption,#adoption-image,#content-animal,.content-animal,#adoption-text{
     display: flex;
 }
 
@@ -89,21 +89,34 @@ margin-left: 0.3vw;
 
 #home-text h2{
     font-size: 2.5vw;
+    margin-bottom: 2vw;
 }
 
 #button-blue{
-    margin: 4vw 0 4vw 0;
     color: var(--cor-secundaria);
-    border: solid 0.1vw;
+    margin: 0 0 4vw 0;
     width: 7vw;
     height: 2.4vw;
+    font-size: 1.8vw;
+}
+
+#button-yellow{
+    color: var(--cor-primaria);
+    width: 13vw;
+    height: 2.1vw;
+    font-size: 1.6vw;
+    margin: 4vh 0 4vh 0;
+}
+
+.button-empty{
+    border: solid 0.1vw;
     align-items: center;
     justify-content: center;
-    font-size: 1.8vw;
 }
 
 #content-adoption{
     background-color: var(--cor-secundaria);
+    height: 102vh;
 }
 
 #adoption-image{
@@ -111,6 +124,46 @@ margin-left: 0.3vw;
     width: 60vw;
 }
 
-#content-animal img{
+.content-animal img{
     width: 20vw;
+}
+
+.content-animal{
+    margin: 3vw 0 0 6vw;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1vw;
+}
+
+#adoption-text{
+    height: 102vh;
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#adoption-text h1{
+    font-size: 3.6vw;
+    color: var(--cor-primaria);
+}
+
+#about{
+    margin: 5vh 0 0 3vw;
+}
+
+#about h1{
+    color: var(--cor-secundaria);
+    font-size: 2vw;
+}
+
+#about p{
+    margin-top: 7vh;
+    font-size: 1.2vw;
+}
+
+#about-tec{
+    margin: 5vh 0 0 0;
 }

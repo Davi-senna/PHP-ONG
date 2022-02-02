@@ -110,9 +110,34 @@ require_once("config.php");
 
         <div id="adoption-text">
 
+            <h1>
+                Faça sua parte
+            </h1>
+
+            <h1>
+                e escolha já
+            </h1>
+
+            <h1>
+                seu pet!
+            </h1>
+
+            <a href="#" class="button-empty" id="button-yellow">
+                Ver mais
+            </a>
+
         </div>
         
 
+    </section>
+
+    <section id="about">
+
+        <h1>Sobre o projeto:</h1>
+
+        <p>Esse projeto foi construido com o intuito de desenvolvimento profissional.<br> A ideia foi reproduzir um projeto pequeno, tal qual, foi meu primeiro projeto em console,<br> agora sendo implantado com front-end e back-end.</p>
+
+        <h1 id="about-tec">Tecnologias usadas:</h1>
     </section>
 
 </body>
