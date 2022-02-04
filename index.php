@@ -138,6 +138,13 @@ require_once("config.php");
         <p>Esse projeto foi construido com o intuito de desenvolvimento profissional.<br> A ideia foi reproduzir um projeto pequeno, tal qual, foi meu primeiro projeto em console,<br> agora sendo implantado com front-end e back-end.</p>
 
         <h1 id="about-tec">Tecnologias usadas:</h1>
+
+        <div id="about-image">
+             <figure class="image-tec" id="tec-design">
+                <img src="img/xd.png" alt="Imagem da logo do photoshop">
+                <img src="img/xd.png" alt="Imagem da logo do photoshop">
+             </figure>
+        </div>
     </section>
 
 </body>

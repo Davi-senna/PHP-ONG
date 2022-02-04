@@ -116,7 +116,7 @@ margin-left: 0.3vw;
 
 #content-adoption{
     background-color: var(--cor-secundaria);
-    height: 102vh;
+    height: 100vh;
 }
 
 #adoption-image{
@@ -165,5 +165,9 @@ margin-left: 0.3vw;
 }
 
 #about-tec{
-    margin: 5vh 0 0 0;
+    margin-top: 7vh;
+}
+
+#about-image{
+    margin-top: 7vh;
 }
