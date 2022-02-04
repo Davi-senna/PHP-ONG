@@ -16,7 +16,7 @@ body{
     background-color: var(--cor-primaria);
 }
 
-header,ul,#button-login,#content-home,#home-text,.button-empty,#content-adoption,#adoption-image,#content-animal,.content-animal,#adoption-text{
+header,ul,#button-login,#content-home,#home-text,.button-empty,#content-adoption,#adoption-image,#content-animal,.content-animal,#adoption-text,#about-image,#fundoDog{
     display: flex;
 }
 
@@ -116,7 +116,6 @@ margin-left: 0.3vw;
 
 #content-adoption{
     background-color: var(--cor-secundaria);
-    height: 100vh;
 }
 
 #adoption-image{
@@ -168,6 +167,24 @@ margin-left: 0.3vw;
     margin-top: 7vh;
 }
 
-#about-image{
+.image-tec{
     margin-top: 7vh;
+    font-size: 1.3vw;
+}
+
+.image-tec img{
+    width: 12vw;
+    margin-right: 3vw;
+}
+
+.tec-title{
+    margin-bottom: 3vw;
+}
+
+#image-info{
+    width: 50vw;
+}
+
+#fundoDog img{
+    width: 40vw;
 }

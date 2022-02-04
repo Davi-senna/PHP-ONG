@@ -4,7 +4,6 @@ require_once("config.php");
 
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -139,12 +138,47 @@ require_once("config.php");
 
         <h1 id="about-tec">Tecnologias usadas:</h1>
 
+        
         <div id="about-image">
-             <figure class="image-tec" id="tec-design">
-                <img src="img/xd.png" alt="Imagem da logo do photoshop">
-                <img src="img/xd.png" alt="Imagem da logo do photoshop">
-             </figure>
+            <div id="image-info">
+
+                <figure class="image-tec" id="tec-design">
+
+                    <h2 class="tec-title">Design:</h2>
+        
+                    <img src="img/xd.png" alt="Imagem da logo do adobe xd">
+         
+                    <img src="img/photoshop.png" alt="Imagem da logo do photoshop">
+        
+                </figure>
+        
+                <figure class="image-tec" >
+        
+                    <h2 class="tec-title">Front-end:</h2>
+        
+                    <img src="img/html.png" alt="Imagem da logo do photoshop">
+                    
+                    <img src="img/css.png" alt="Imagem da logo do photoshop">
+        
+                    <img src="img/javascript.png" alt="Imagem da logo do photoshop">
+        
+                </figure>   
+        
+                <figure class="image-tec" >
+        
+                    <h2 class="tec-title">Back-end:</h2>
+        
+                    <img src="img/php.png" alt="Imagem da logo do photoshop">
+        
+                    <img src="img/mysql.png" alt="Imagem da logo do photoshop">
+                    </figure>
+        
+            </div>
+            <figure id="fundoDog">
+                <img src="img/fundoDog.png" alt="Imagem de fundo de um cachorro">
+            </figure>
         </div>
+        
     </section>
 
 </body>
