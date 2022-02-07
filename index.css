@@ -1,22 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Baloo Thambi 2', cursive;
 }
 
-:root{
+:root {
     --cor-primaria: #ff9E00;
     --cor-secundaria: #4E8499;
 }
 
-body{
+body {
     background-color: var(--cor-primaria);
 }
 
-header,ul,#button-login,#content-home,#home-text,.button-empty,#content-adoption,#adoption-image,#content-animal,.content-animal,#adoption-text,#about-image,#fundoDog{
+header,
+ul,
+#button-login,
+#content-home,
+#home-text,
+.button-empty,
+#content-adoption,
+#adoption-image,
+.content-animal,
+#adoption-text,
+#about-image,
+#fundoDog {
     display: flex;
 }
 
@@ -24,58 +34,58 @@ a {
     text-decoration: none;
 }
 
-header{
-   margin: 1.5vh; 
-   height: 4vh;
-   align-items: center;
+header {
+    margin: 1.5vh;
+    height: 4vh;
+    align-items: center;
 }
 
-nav ul li{
-list-style: none;
-font-size: 1.8vw;
-width: 17vw;
+nav ul li {
+    list-style: none;
+    font-size: 1.8vw;
+    width: 17vw;
 }
 
-nav ul li a{
+nav ul li a {
     color: var(--cor-secundaria);
 }
 
-#button-login img{
-width: 2vw;
-height: 2vw;
-margin-left: 0.3vw;
+#button-login img {
+    width: 2vw;
+    height: 2vw;
+    margin-left: 0.3vw;
 }
 
-#button-login{
+#button-login {
     font-size: 1.2vw;
     color: rgb(0, 0, 0);
 }
 
-
-#content-logo{
+#content-logo {
     width: 40vw;
 }
 
-#content-logo img{
+#content-logo img {
     width: 10vw;
 }
 
-#content-home{
+#content-home {
     height: 93vh;
 }
 
-#home-image{
+#home-image {
     width: 60vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#home-image img{
-    width: 90%;
+#home-image img {
+    height: 95vh;
+    width: 50vw;
 }
 
-#home-text{
+#home-text {
     width: 40vw;
     flex-direction: column;
     align-items: center;
@@ -83,16 +93,16 @@ margin-left: 0.3vw;
     color: var(--cor-secundaria);
 }
 
-#home-text h1{
+#home-text h1 {
     font-size: 4.5vw;
 }
 
-#home-text h2{
+#home-text h2 {
     font-size: 2.5vw;
     margin-bottom: 2vw;
 }
 
-#button-blue{
+#button-blue {
     color: var(--cor-secundaria);
     margin: 0 0 4vw 0;
     width: 7vw;
@@ -100,7 +110,7 @@ margin-left: 0.3vw;
     font-size: 1.8vw;
 }
 
-#button-yellow{
+#button-yellow {
     color: var(--cor-primaria);
     width: 13vw;
     height: 2.1vw;
@@ -108,35 +118,38 @@ margin-left: 0.3vw;
     margin: 4vh 0 4vh 0;
 }
 
-.button-empty{
+.button-empty {
     border: solid 0.1vw;
     align-items: center;
     justify-content: center;
 }
 
-#content-adoption{
+#content-adoption {
     background-color: var(--cor-secundaria);
 }
 
-#adoption-image{
+#adoption-image {
     flex-wrap: wrap;
     width: 60vw;
+    justify-content: center;
+    align-items: center;
 }
 
-.content-animal img{
+.content-animal img {
     width: 20vw;
 }
 
-.content-animal{
-    margin: 3vw 0 0 6vw;
+.content-animal {
+    margin: 1.5vw 0 0 6vw;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 1.1vw;
+    height: 23vw;
 }
 
-#adoption-text{
+#adoption-text {
     height: 102vh;
     width: 40vw;
     align-items: center;
@@ -144,47 +157,47 @@ margin-left: 0.3vw;
     flex-direction: column;
 }
 
-#adoption-text h1{
+#adoption-text h1 {
     font-size: 3.6vw;
     color: var(--cor-primaria);
 }
 
-#about{
+#about {
     margin: 5vh 0 0 3vw;
 }
 
-#about h1{
+#about h1 {
     color: var(--cor-secundaria);
     font-size: 2vw;
 }
 
-#about p{
+#about p {
     margin-top: 7vh;
     font-size: 1.2vw;
 }
 
-#about-tec{
+#about-tec {
     margin-top: 7vh;
 }
 
-.image-tec{
+.image-tec {
     margin-top: 7vh;
     font-size: 1.3vw;
 }
 
-.image-tec img{
+.image-tec img {
     width: 12vw;
     margin-right: 3vw;
 }
 
-.tec-title{
+.tec-title {
     margin-bottom: 3vw;
 }
 
-#image-info{
+#image-info {
     width: 50vw;
 }
 
-#fundoDog img{
+#fundoDog img {
     width: 40vw;
 }
