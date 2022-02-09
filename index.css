@@ -131,7 +131,6 @@ nav ul li a {
 #adoption-image {
     flex-wrap: wrap;
     width: 60vw;
-    justify-content: center;
     align-items: center;
 }
 
