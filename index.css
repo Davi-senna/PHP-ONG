@@ -181,17 +181,17 @@ nav ul li a {
 }
 
 .image-tec {
-    margin-top: 7vh;
+    margin-top: 5vh;
     font-size: 1.3vw;
 }
 
 .image-tec img {
-    width: 12vw;
+    width: 7vw;
     margin-right: 3vw;
 }
 
 .tec-title {
-    margin-bottom: 3vw;
+    margin-bottom: 1.5vw;
 }
 
 #image-info {

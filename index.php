@@ -144,7 +144,7 @@ require_once("config.php");
         <div id="about-image">
             <div id="image-info">
 
-                <figure class="image-tec" id="tec-design">
+                <figure class="image-tec">
 
                     <h2 class="tec-title">Design:</h2>
 
