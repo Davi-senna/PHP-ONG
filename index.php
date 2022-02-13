@@ -12,6 +12,8 @@ require_once("config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="script.js"></script>
+    
     <title>PetCare</title>
 </head>
 
@@ -85,7 +87,7 @@ require_once("config.php");
 
     <section id="content-adoption">
 
-        <div id="apresentation-adoption" class="hidden-ativo">
+        <div id="apresentation-adoption" class="hidden-inativo">
             <a name="adoption">
                 <div id="adoption-image">
 
@@ -125,14 +127,14 @@ require_once("config.php");
                     seu pet!
                 </h1>
 
-                <a href="#" class="button-empty" id="button-yellow">
+                <a href="javascript:trocar()" class="button-empty" id="button-yellow">
                     Ver mais
                 </a>
 
             </div>
         </div>
 
-        <div class="hidden-inativo" id="list-adoption">
+        <div class="hidden-ativo" id="list-adoption">
 
             <h1>
                 Encontre seu peludo por aqui!
