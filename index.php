@@ -84,52 +84,156 @@ require_once("config.php");
     </section>
 
     <section id="content-adoption">
-        <a name="adoption">
-            <div id="adoption-image">
 
-                <div class="content-animal">
-                    <img src="img/bob.png" alt="Imagem de animal">
-                    <h1>Bob</h1>
-                </div>
+        <div id="apresentation-adoption" class="hidden-ativo">
+            <a name="adoption">
+                <div id="adoption-image">
 
-                <div class="content-animal">
-                    <img src="img/bartolomeu.png" alt="Imagem de animal">
-                    <h1>Bartolomeu</h1>
-                </div>
+                    <div class="content-animal">
+                        <img src="img/bob.png" alt="Imagem de animal">
+                        <h1>Bob</h1>
+                    </div>
 
-                <div class="content-animal">
-                    <img src="img/stuart.png" alt="Imagem de animal">
-                    <h1>Stuart</h1>
-                </div>
+                    <div class="content-animal">
+                        <img src="img/bartolomeu.png" alt="Imagem de animal">
+                        <h1>Bartolomeu</h1>
+                    </div>
 
-                <div class="content-animal">
-                    <img src="img/caramelo.png" alt="Imagem de animal">
-                    <h1>Caramelo</h1>
+                    <div class="content-animal">
+                        <img src="img/stuart.png" alt="Imagem de animal">
+                        <h1>Stuart</h1>
+                    </div>
+
+                    <div class="content-animal">
+                        <img src="img/caramelo.png" alt="Imagem de animal">
+                        <h1>Caramelo</h1>
+                    </div>
+
                 </div>
+            </a>
+            <div id="adoption-text">
+
+                <h1>
+                    Faça sua parte
+                </h1>
+
+                <h1>
+                    e escolha já
+                </h1>
+
+                <h1>
+                    seu pet!
+                </h1>
+
+                <a href="#" class="button-empty" id="button-yellow">
+                    Ver mais
+                </a>
 
             </div>
-        </a>
-        <div id="adoption-text">
-
-            <h1>
-                Faça sua parte
-            </h1>
-
-            <h1>
-                e escolha já
-            </h1>
-
-            <h1>
-                seu pet!
-            </h1>
-
-            <a href="#" class="button-empty" id="button-yellow">
-                Ver mais
-            </a>
-
         </div>
 
+        <div class="hidden-inativo" id="list-adoption">
 
+            <h1>
+                Encontre seu peludo por aqui!
+            </h1>
+            <h2>
+                Nosso site está cheio de pets que precisam de um lar
+            </h2>
+
+            <div id="container-list">
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+                <div class="adoption-animal">
+                    <figure class="image-animal">
+                        <img src="img/bella.PNG" alt="">
+                    </figure>
+                    <div class="text-animal">
+                            <h1>Bella</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
 
     <a name="about">

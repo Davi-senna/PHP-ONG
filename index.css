@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +22,14 @@ ul,
 #content-home,
 #home-text,
 .button-empty,
-#content-adoption,
+#apresentation-adoption,
 #adoption-image,
 .content-animal,
 #adoption-text,
 #about-image,
-#fundoDog {
+#fundoDog,
+.adoption-animal,
+#container-list {
     display: flex;
 }
 
@@ -130,7 +133,7 @@ nav ul li a {
 
 #adoption-image {
     flex-wrap: wrap;
-    width: 60vw;
+    width: 55vw;
     align-items: center;
 }
 
@@ -139,7 +142,7 @@ nav ul li a {
 }
 
 .content-animal {
-    margin: 1.5vw 0 0 6vw;
+    margin: 1.5vw 3vw 0 3vw;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -149,7 +152,7 @@ nav ul li a {
 }
 
 #adoption-text {
-    height: 102vh;
+    height: 100vh;
     width: 40vw;
     align-items: center;
     justify-content: center;
@@ -199,4 +202,47 @@ nav ul li a {
 
 #fundoDog img {
     width: 40vw;
+}
+
+.hidden-ativo {
+    display: none !important;
+}
+
+#list-adoption {
+    margin-left: 3vw;
+    padding-top: 5vh;
+}
+
+#list-adoption h1,
+#list-adoption h2 {
+    color: var(--cor-primaria);
+}
+
+#container-list {
+    margin-top: 10vh;
+    flex-wrap: wrap;
+}
+
+.adoption-animal {
+    width: 230px;
+    height: 336px;
+    background-color: #f3f2f2;
+    border-radius: 0.8em;
+    flex-direction: column;
+    margin: 0 4vw 6vh 0;
+}
+
+.image-animal {
+    width: 100%;
+    height: 75%;
+}
+
+.image-animal img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8em 0.8em 0 0;
+}
+
+.text-animal h1{
+    color: #000000;
 }
