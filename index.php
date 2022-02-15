@@ -158,7 +158,7 @@ require_once("config.php");
                         <img src="img/bella.PNG" alt="">
                     </figure>
                     <div class="text-animal">
-                            <h1>Bella</h1>
+                            <h1>caramelo</h1>
                     </div>
 
                 </div>
