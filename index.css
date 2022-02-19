@@ -29,7 +29,8 @@ ul,
 #about-image,
 #fundoDog,
 .adoption-animal,
-#container-list {
+#container-list,
+.text-animal {
     display: flex;
 }
 
@@ -162,6 +163,7 @@ nav ul li a {
 #adoption-text h1 {
     font-size: 3.6vw;
     color: var(--cor-primaria);
+    text-align: center;
 }
 
 #about {
@@ -213,10 +215,15 @@ nav ul li a {
     padding-top: 5vh;
 }
 
-#list-adoption h1,
-#list-adoption h2 {
+#list-adoption h1 {
     color: var(--cor-primaria);
+    font-size: 40px;
 }
+
+#list-adoption p {
+    font-size: 20px;
+}
+
 
 #container-list {
     margin-top: 10vh;
@@ -224,9 +231,8 @@ nav ul li a {
 }
 
 .adoption-animal {
-    width: 230px;
-    height: 336px;
-    background-color: #f3f2f2;
+    width: 290px;
+    height: 300px;
     border-radius: 0.8em;
     flex-direction: column;
     margin: 0 4vw 6vh 0;
@@ -234,15 +240,27 @@ nav ul li a {
 
 .image-animal {
     width: 100%;
-    height: 75%;
+    height: 85%;
 }
 
 .image-animal img {
     width: 100%;
     height: 100%;
-    border-radius: 0.8em 0.8em 0 0;
+    border-radius: 0.8em;
 }
 
-.text-animal h1{
-    color: #000000;
+.text-animal{
+    justify-content: center;
+    align-items: center;
+}
+
+.text-animal span{
+    color: var(--cor-primaria);
+    text-align: center;
+    font-size: 25px;
+}
+
+.text-animal p{
+    text-align: center;
+    font-size: 10px;
 }

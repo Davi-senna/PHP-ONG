@@ -13,7 +13,7 @@ require_once("config.php");
     <link rel="shortcut icon" href="img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="script.js"></script>
-    
+
     <title>PetCare</title>
 </head>
 
@@ -86,9 +86,9 @@ require_once("config.php");
     </section>
 
     <section id="content-adoption">
+        <a name="adoption">
+            <div id="apresentation-adoption" class="hidden-inativo">
 
-        <div id="apresentation-adoption" class="hidden-inativo">
-            <a name="adoption">
                 <div id="adoption-image">
 
                     <div class="content-animal">
@@ -112,130 +112,104 @@ require_once("config.php");
                     </div>
 
                 </div>
-            </a>
-            <div id="adoption-text">
 
-                <h1>
-                    Faça sua parte
-                </h1>
+                <div id="adoption-text">
 
-                <h1>
-                    e escolha já
-                </h1>
+                    <h1>
+                        Faça sua parte
+                    </h1>
 
-                <h1>
-                    seu pet!
-                </h1>
+                    <h1>
+                        e escolha já
+                    </h1>
 
-                <a href="javascript:trocar()" class="button-empty" id="button-yellow">
-                    Ver mais
-                </a>
+                    <h1>
+                        seu pet!
+                    </h1>
 
-            </div>
-        </div>
-
-        <div class="hidden-ativo" id="list-adoption">
-
-            <h1>
-                Encontre seu peludo por aqui!
-            </h1>
-            <h2>
-                Nosso site está cheio de pets que precisam de um lar
-            </h2>
-
-            <div id="container-list">
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>caramelo</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
-
-                </div>
-                <div class="adoption-animal">
-                    <figure class="image-animal">
-                        <img src="img/bella.PNG" alt="">
-                    </figure>
-                    <div class="text-animal">
-                            <h1>Bella</h1>
-                    </div>
+                    <a href="javascript:trocar()" class="button-empty" id="button-yellow">
+                        Ver mais
+                    </a>
 
                 </div>
             </div>
-        </div>
+
+            <div class="hidden-ativo" id="list-adoption">
+
+                <h1>
+                    Encontre seu peludo por aqui!
+                </h1>
+                <p>
+                    Nosso site está cheio de pets que precisam de um lar
+                </p>
+
+                <div id="container-list">
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/bella.PNG" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Bella</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/rabito.jpg" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Rabito</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/apollo.jpg" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Apollo</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/orelhinha.jpg" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Orelhinha</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/bella.PNG" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Bella</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/rabito.jpg" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Rabito</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/apollo.jpg" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Apollo</span>
+                        </div>
+                    </div>
+                    <div class="adoption-animal">
+                        <figure class="image-animal">
+                            <img src="img/orelhinha.jpg" alt="">
+                        </figure>
+                        <div class="text-animal">
+                            <span>Orelhinha</span>
+                        </div>
+                    </div>
+                </div>
+        </a>
     </section>
 
     <a name="about">
