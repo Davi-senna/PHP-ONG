@@ -34,6 +34,10 @@ ul,
     display: flex;
 }
 
+.p-relative {
+    position: relative;
+}
+
 a {
     text-decoration: none;
 }
@@ -263,4 +267,46 @@ nav ul li a {
 .text-animal p{
     text-align: center;
     font-size: 10px;
+}
+
+#cadastro-usu{
+    background-color: #fff;
+    border: solid 1px #000;
+    width: 70vw;
+    position: fixed;
+    left: 15vw;
+    border-radius: 0.5em;
+}
+
+.input-dados {
+    outline: none;
+    width: 20vw;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px rgb(0, 0, 0) solid;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    padding: 0.5vw 0.5vw;
+    font-size: 1.2vw;
+    transition: all .3s ease-out;
+    margin-bottom: 5vw;
+}
+
+.label-animado {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    font-size: 1.3vw;
+    top: 0.5vw;
+    left: 0;
+    transition: .4s;
+}
+
+.input-dados:focus~label, .input-dados:valid~label {
+    font-size: 0.6vw;
+    top: -0.7vw;
+    left: 0 !important;
+}
+
+.input-dados:valid {
+    border-bottom: 1px rgb(30, 255, 0) solid;
 }
