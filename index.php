@@ -50,7 +50,7 @@ require_once("config.php");
             </ul>
         </nav>
 
-        <a href="javascript:login()" id="button-login">
+        <a href="pages/pg_cadastro_usu.php" id="button-login">
             <h3>
                 Entrar
             </h3>
@@ -59,10 +59,6 @@ require_once("config.php");
         </a>
 
     </header>
-
-    <?php
-    require_once("pages".DIRECTORY_SEPARATOR."pg_cadastro_usu.php")
-    ?>
 
     <section id="content-home">
 
