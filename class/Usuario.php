@@ -3,6 +3,7 @@
 class Usuario{
     private $nome;
     private $cpf;
+    private $senha;
     private $tel;
     private $rua;
     private $cidade;
@@ -23,6 +24,14 @@ class Usuario{
 
     public function setCpf($value){
         $this->cpf = $value;
+    }
+
+    public function getSenha(){
+        return  $this -> senha ;
+    }
+
+    public function setSenha($value){
+        $this->senha = $value;
     }
 
     public function getTel(){
@@ -87,6 +96,7 @@ class Usuario{
             "cidade" => $this->getCidade(),
             "estado" => $this->getEstado(),
             "cep" => $this->getCep(),
+            "senha" => $this->getSenha(),
         );
 
         return $data;
@@ -99,12 +109,12 @@ class Usuario{
         $data = $this->loadData();
         extract($data);
 
-        $sql->execQuery("INSERT INTO tb_usuario (nome,cpf,telefone,rua,cidade,estado,cep) 
-        VALUES('$nome',$cpf,$tel,'$rua','$cidade','$estado',$cep)");
+        $sql->execQuery("INSERT INTO tb_usuario (nome,cpf,telefone,rua,cidade,estado,cep,senha) 
+        VALUES('$nome',$cpf,$tel,'$rua','$cidade','$estado',$cep,'$senha')");
 
     }
 
-    public function __construct($nome,$cpf,$tel,$cep,$rua,$cidade,$estado){
+    public function __construct($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha){
         $this->setNome($nome);
         $this->setCpf($cpf);
         $this->setTel($tel);
@@ -112,6 +122,7 @@ class Usuario{
         $this->setRua($rua);
         $this->setCidade($cidade);
         $this->setEstado($estado);
+        $this->setSenha($senha);
     }
 
     public function __toString(){

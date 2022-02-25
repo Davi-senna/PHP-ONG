@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -35,6 +35,11 @@
                 </div>
 
                 <div class="container-input-dados">
+                    <input class="input-dados" type="password" required name="senha" id="senha">
+                    <label class="label-animado" for="tel">Senha</label>
+                </div>
+
+                <div class="container-input-dados">
                     <input class="input-dados" type="tel" required name="tel" id="tel">
                     <label class="label-animado" for="tel">Telefone</label>
                 </div>
@@ -61,7 +66,7 @@
             </div>
             <div class="container-button-dados">
                 <input id="button-dados" type="submit" value="Fazer cadastro">
-                <a href="#">Já tenho uma conta</a>
+                <a href="pg_login.php">Já tenho uma conta</a>
             </div>
 
         </form>
@@ -78,7 +83,8 @@
 
 
 if(isset($_GET['error'])){
-    echo "<script>alert('Já existe um usuario com esse cpf')</script>";
+    $erro = $_GET['error'];
+    echo "<script>alert($erro)</script>";
 }
 
 ?>
