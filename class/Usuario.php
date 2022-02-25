@@ -1,26 +1,28 @@
 <?php
 
 class Usuario{
-   private $nome = 'teste';
-   private $cpf = 1;
-   private $tel = 1;
-   private $senha = 'teste';
-   private $endereco = 'teste';
+    private $nome;
+    private $cpf;
+    private $tel;
+    private $rua;
+    private $cidade;
+    private $estado;
+    private $cep;
 
-   public function getNome(){
-       return $this->nome;
-   }
+    public function getNome(){
+        return $this->nome;
+    }
 
-   public function setNome($value){
-    $this->nome = $value;
-   }
+    public function setNome($value){
+        $this->nome = $value;
+    }
 
-   public function getCpf(){
+    public function getCpf(){
         return $this->cpf;
     }
 
     public function setCpf($value){
-    $this->cpf = $value;
+        $this->cpf = $value;
     }
 
     public function getTel(){
@@ -28,54 +30,94 @@ class Usuario{
     }
 
     public function setTel($value){
-    $this->tel = $value;
+        $this->tel = $value;
     }
 
-    public function getSenha(){
-        return $this->senha;
-    }
-    
-    public function setSenha($value){
-        $this->senha = $value;
-    }
-    
-    public function getEndereco(){
-        return $this->endereco;
-    }
-    
-    public function setEndereco($value){
-        $this->endereco = $value;
+    public function getRua(){
+        return $this->rua;
     }
 
-    public function loadByCpf($cpf){
+    public function setRua($value){
+        $this->rua = $value;
+    }
+
+    public function getCidade(){
+        return $this->cidade;
+    }
+
+    public function setCidade($value){
+        $this->cidade = $value;
+    }
+
+    public function getEstado(){
+        return $this->estado;
+    }
+
+    public function setEstado($value){
+        $this->estado = $value;
+    }
+
+    public function getCep(){
+        return $this->cep;
+    }
+
+    public function setCep($value){
+        $this->cep = $value;
+    }
+
+/*    public function loadByCpf($cpf){
         $sql = new Sql();
         $results = $sql->select("SELECT * FROM usuarios WHERE cpf = $cpf");
         $usuario = $results[0];
 
-        if(count($results) > 0){
+        if (count($results) > 0) {
             $this->setNome($usuario['nome']);
             $this->setCpf($usuario['cpf']);
             $this->setTel($usuario['tel']);
-            $this->setSenha($usuario['senha']);
-            $this->setEndereco($usuario['endereco']);
+            $this->setRua($usuario['rua']);
         }
+    }*/
+    
+    public function loadData(){
+        $data = array(
+            "nome" => $this->getNome(),
+            "cpf" => $this->getCpf(),
+            "tel" => $this->getTel(),
+            "rua" => $this->getRua(),
+            "cidade" => $this->getCidade(),
+            "estado" => $this->getEstado(),
+            "cep" => $this->getCep(),
+        );
+
+        return $data;
+
     }
 
-    public function cadastrar(){
+    public function register(){
+
         $sql = new Sql();
-        $sql->execQuery("INSERT INTO usuarios (nome,senha,cpf,tel,endereco) VALUES('NOME',2,2,2,2)");
-    
+        $data = $this->loadData();
+        extract($data);
+
+        $sql->execQuery("INSERT INTO tb_usuario (nome,cpf,telefone,rua,cidade,estado,cep) 
+        VALUES('$nome',$cpf,$tel,'$rua','$cidade','$estado',$cep)");
+
     }
+
+    public function __construct($nome,$cpf,$tel,$cep,$rua,$cidade,$estado){
+        $this->setNome($nome);
+        $this->setCpf($cpf);
+        $this->setTel($tel);
+        $this->setCep($cep);
+        $this->setRua($rua);
+        $this->setCidade($cidade);
+        $this->setEstado($estado);
+    }
+
     public function __toString(){
         $dados = json_encode(
-            array(
-                "Nome"=>$this->getNome(),
-                "Cpf"=>$this->getCpf(),
-                "Tel"=>$this->getTel(),
-                "Senha"=>$this->getSenha(),
-                "Endereco"=>$this->getEndereco(),
-            )
+            $this->loadData()
         );
-        return $dados; 
+        return $dados;
     }
 }

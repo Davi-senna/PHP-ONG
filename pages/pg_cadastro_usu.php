@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,7 @@
 
     <section id="cadastro-usu">
 
-        <form id="form_cadastro_usu" action="../class/Usuario.php" method="post">
+        <form id="form_cadastro_usu" action="../action/insert_usuario.php" method="post">
 
             <span>Faça seu cadastro</span>
 
@@ -28,7 +30,7 @@
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" type="text" required name="cpf" id="cpf">
+                    <input class="input-dados" type="number" required name="cpf" id="cpf">
                     <label class="label-animado" for="cpf">Cpf</label>
                 </div>
 
@@ -71,5 +73,14 @@
         </figure>
     </section>
 </body>
+
+<?php
+
+
+if(isset($_GET['error'])){
+    echo "<script>alert('Já existe um usuario com esse cpf')</script>";
+}
+
+?>
 
 </html>
