@@ -18,7 +18,7 @@
 
     <section id="cadastro-usu">
 
-        <form id="form_cadastro_usu" action="../action/insert_usuario.php" method="post">
+        <form class="form_usu" id="form_cadastro_usu" action="../action/insert_usuario.php" method="post">
 
             <span>Faça seu cadastro</span>
 
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="container-button-dados">
-                <input id="button-dados" type="submit" value="Fazer cadastro">
+                <button id="button-dados" type="submit" >Fazer cadastro</button>
                 <a href="pg_login.php">Já tenho uma conta</a>
             </div>
 

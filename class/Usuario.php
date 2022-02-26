@@ -27,7 +27,7 @@ class Usuario{
     }
 
     public function getSenha(){
-        return  $this -> senha ;
+        return $this->senha;
     }
 
     public function setSenha($value){
@@ -74,18 +74,23 @@ class Usuario{
         $this->cep = $value;
     }
 
-/*    public function loadByCpf($cpf){
+    public function loadByCpf($cpf){
         $sql = new Sql();
-        $results = $sql->select("SELECT * FROM usuarios WHERE cpf = $cpf");
+        $results = $sql->select("SELECT * FROM tb_usuario WHERE cpf = $cpf");
         $usuario = $results[0];
+        var_dump($usuario);
 
         if (count($results) > 0) {
             $this->setNome($usuario['nome']);
             $this->setCpf($usuario['cpf']);
-            $this->setTel($usuario['tel']);
+            $this->setTel($usuario['telefone']);
             $this->setRua($usuario['rua']);
+            $this->setCidade($usuario['cidade']);
+            $this->setEstado($usuario['estado']);
+            $this->setCep($usuario['cep']);
+            $this->setSenha($usuario['senha']);
         }
-    }*/
+    }
     
     public function loadData(){
         $data = array(
@@ -114,7 +119,7 @@ class Usuario{
 
     }
 
-    public function __construct($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha){
+    public function feed_user($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha){
         $this->setNome($nome);
         $this->setCpf($cpf);
         $this->setTel($tel);

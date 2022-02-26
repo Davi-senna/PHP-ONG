@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,10 +16,10 @@
 
     <section id="cadastro-usu">
 
-        <form id="form_cadastro_usu" action="../action/insert_usuario.php" method="post">
+        <form class="form_usu" id="form_login_usu" action="../action/valid_login.php" method="post">
 
-            <span>Fazer loginaaa</span>
-
+            <span>Fazer login</span>
+            <div id="container-login">
                 <div class="container-input-dados">
                     <input class="input-dados" type="number" required name="cpf" id="cpf">
                     <label class="label-animado" for="cpf">Cpf</label>
@@ -29,12 +27,11 @@
 
                 <div class="container-input-dados">
                     <input class="input-dados" type="password" required name="senha" id="senha">
-                    <label class="label-animado" for="tel">Senha</label>
+                    <label class="label-animado" for="senha">Senha</label>
                 </div>
-
+            </div>
             <div class="container-button-dados">
-                <input id="button-dados" type="submit" value="Fazer cadastro">
-                <a href="pg_login.php">Já tenho uma conta</a>
+            <button id="button-dados" type="submit" >Entrar</button>
             </div>
 
         </form>

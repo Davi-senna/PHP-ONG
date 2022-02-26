@@ -4,7 +4,8 @@ require_once("../config.php");
 
 extract($_POST);
 
-$usuario = new Usuario($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha);
+$usuario = new Usuario();
+$usuario->feed_user($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha);
 
 try{
 
