@@ -44,4 +44,13 @@
     </section>
 </body>
 
+<?php
+
+if(isset($_GET['error'])){
+    $erro = $_GET['error'];
+    echo "<script>alert($erro)</script>";
+}
+
+?>
+
 </html>

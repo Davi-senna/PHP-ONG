@@ -36,7 +36,7 @@
 
                 <div class="container-input-dados">
                     <input class="input-dados" type="password" required name="senha" id="senha">
-                    <label class="label-animado" for="tel">Senha</label>
+                    <label class="label-animado" for="senha">Senha</label>
                 </div>
 
                 <div class="container-input-dados">
