@@ -21,7 +21,7 @@
             <span>Fazer login</span>
             <div id="container-login">
                 <div class="container-input-dados">
-                    <input class="input-dados" type="number" required name="cpf" id="cpf">
+                    <input class="input-dados" type="text" required name="cpf" id="cpf">
                     <label class="label-animado" for="cpf">Cpf ou login</label>
                 </div>
 
