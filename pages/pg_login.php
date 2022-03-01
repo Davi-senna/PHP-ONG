@@ -29,6 +29,8 @@
                     <input class="input-dados" type="password" required name="senha" id="senha">
                     <label class="label-animado" for="senha">Senha</label>
                 </div>
+
+                <input type="hidden" name="valid" value="true">
             </div>
             <div class="container-button-dados">
             <button id="button-dados" type="submit" >Entrar</button>

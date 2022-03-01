@@ -37,7 +37,8 @@ ul,
 #login,
 .container-button-dados,
 #button-dados,
-#container-login {
+#container-login,
+#pg-admin {
     display: flex;
 }
 
@@ -381,4 +382,17 @@ color: var(--cor-secundaria);
 
 #container-login{
     margin-bottom: 5vh;
+}
+
+#admin{
+    background-color: var(--cor-secundaria);
+}
+
+.menu-lateral{
+    height: 100vh;
+}
+
+#menu-admin{
+    width: 15vw;
+    background-color: var(--cor-primaria);
 }

@@ -10,7 +10,14 @@
 
     <title>PetCare</title>
 </head>
-<body>
-    
+<body id="admin">
+    <div id="pg-admin">
+        <nav class="menu-lateral" id="menu-admin">
+            a
+        </nav>
+        <div id="conteudo-admin">
+a
+        </div>
+    </div>
 </body>
 </html>
