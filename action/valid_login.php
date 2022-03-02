@@ -9,7 +9,7 @@ $admin = new Admin();
 
 if($admin->validAdmin($cpf,$senha) === true){
 
-    header("Location: ../pages/pg_admin.php");
+    header("Location: ../pages/admin/pg_admin.php");
 
 }else if($admin->validAdmin($cpf,$senha) == "senha invalida"){
 

@@ -38,7 +38,10 @@ ul,
 .container-button-dados,
 #button-dados,
 #container-login,
-#pg-admin {
+#pg-admin,
+#logo-menu-lateral,
+.link-menu-lateral,
+#filter-admin {
     display: flex;
 }
 
@@ -385,7 +388,7 @@ color: var(--cor-secundaria);
 }
 
 #admin{
-    background-color: var(--cor-secundaria);
+    background-color: #EBEFF3;
 }
 
 .menu-lateral{
@@ -393,6 +396,67 @@ color: var(--cor-secundaria);
 }
 
 #menu-admin{
-    width: 15vw;
+    width: 23vw;
     background-color: var(--cor-primaria);
+}
+
+#logo-menu-lateral{
+    width: 100%;
+    justify-content: center;
+    margin: 4vh 0 8vh 0;
+}
+
+.link-menu-lateral{
+    width: 20vw;
+    height: 10.8vh;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    align-items: center;
+    padding-left: 1.6vw;
+
+}
+
+.link-menu-lateral img{
+    width: 3.6vw;
+}
+
+.link-menu-lateral span{
+    margin-left: 1vw;
+}
+
+#user-icon{
+    height: 4vw;
+}
+
+#logo-icon{
+    height: 3.5vw;
+}
+
+#container-link{
+    flex-wrap: wrap;
+}
+
+#container-link li{
+    margin: 0 0 8vh 1.5vw;
+
+}
+
+.link-activated{
+    background-color: rgb(255, 255, 255);
+}
+
+#conteudo-admin{
+    margin-left: 3.5vw;
+}
+
+#conteudo-admin h1{
+    font-size: 3vw;
+    margin-top: 4vh;
+}
+
+#filter-admin{
+    width: 70vw;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    margin: 6.15vh 0 0 0;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
