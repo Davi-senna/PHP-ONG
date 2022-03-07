@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="pg_admin_user.php">
+                    <a href="admin_user/index_user.php">
                         <div class="link-menu-lateral">
 
                             <figure id="user-icon">
@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="pg_admin_adoption.php">
+                    <a href="admin_animal/index_adoption.php">
                         <div class="link-menu-lateral">
 
                             <figure id="logo-icon">
@@ -64,14 +64,97 @@
         </nav>
 
         <div id="conteudo-admin">
-            
+
             <h1>Lista de animais</h1>
 
             <div id="filter-admin">
-                Todos os animais
-                <figure>
-                    <img src="../../img/edit-icon.png" alt="Editar">
-                </figure>
+
+                <span id="filter-text">Todos os animais</span>
+                <a href="#">
+                    <span>Filtro</span>
+                    <figure>
+                        <img src="../../img/filter-icon.png" alt="Editar">
+                    </figure>
+                </a>
+
+            </div>
+            <hr>
+            <a id="create-animal" href="admin_animal/form_animal.php">
+                <span>
+                    Adicionar +
+                </span>
+            </a>
+            <div id="container-list-admin">
+                <div class="list-admin">
+
+                    <div class="list-bar"></div>
+
+                    <div class="container-list-admin-situation">
+
+                        <span class="list-admin-name">Bella</span>
+
+                        <div class="situation">
+                        Ativo
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list-admin">
+
+                    <div class="list-bar"></div>
+
+                    <div class="container-list-admin-situation">
+
+                        <span class="list-admin-name">Bella</span>
+
+                        <div class="situation">
+                        Ativo
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-admin">
+
+                    <div class="list-bar"></div>
+
+                    <div class="container-list-admin-situation">
+
+                        <span class="list-admin-name">Bella</span>
+
+                        <div class="situation">
+                        Ativo
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-admin">
+
+                    <div class="list-bar"></div>
+
+                    <div class="container-list-admin-situation">
+
+                        <span class="list-admin-name">Bella</span>
+
+                        <div class="situation">
+                        Ativo
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-admin">
+
+                    <div class="list-bar"></div>
+
+                    <div class="container-list-admin-situation">
+
+                        <span class="list-admin-name">Bella</span>
+
+                        <div class="situation">
+                        Ativo
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

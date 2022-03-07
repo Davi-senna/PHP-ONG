@@ -41,7 +41,10 @@ ul,
 #pg-admin,
 #logo-menu-lateral,
 .link-menu-lateral,
-#filter-admin {
+#filter-admin,
+#filter-text,
+.list-admin,
+.container-list-admin-situation {
     display: flex;
 }
 
@@ -322,56 +325,56 @@ nav ul li a {
     width: 100%;
 }
 
-.form_usu{
+.form_usu {
     flex-wrap: wrap;
 }
 
-.form_usu span{
-color: var(--cor-secundaria);
+.form_usu span {
+    color: var(--cor-secundaria);
 }
 
-#form_cadastro_usu span{
+#form_cadastro_usu span {
     margin: 3vh 0 5vh 10vw;
     font-size: 2.7vw;
 }
 
-#form_login_usu span{
+#form_login_usu span {
     font-size: 3vw;
     margin: 18vh 0 10vh 14.5vw;
 }
 
-.container-input-dados{
+.container-input-dados {
     position: relative;
-    margin:5vh 3vw 5vh 3vw;
+    margin: 5vh 3vw 5vh 3vw;
 }
 
-#pg-cadastro-fundo{
+#pg-cadastro-fundo {
     height: 100vh;
     align-items: flex-end;
 }
 
-#pg-cadastro-fundo figure img{
+#pg-cadastro-fundo figure img {
     width: 100%;
     height: 90vh;
 }
 
-#login{
+#login {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.container-button-dados{
+.container-button-dados {
     width: 45vw;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
 
-#button-dados{
+#button-dados {
     border-radius: 0.8em;
     background-color: var(--cor-secundaria);
-    width: 20vw; 
+    width: 20vw;
     margin: 3vh 0 2vh 12vw;
     height: 1.6vw;
     font-size: 1.2vw;
@@ -379,34 +382,38 @@ color: var(--cor-secundaria);
     align-items: center;
 }
 
-#button-dados:hover{
+#button-dados:hover {
     cursor: pointer;
 }
 
-#container-login{
+#container-login {
     margin-bottom: 5vh;
 }
 
-#admin{
+#admin {
     background-color: #EBEFF3;
 }
 
-.menu-lateral{
+.menu-lateral {
     height: 100vh;
 }
 
-#menu-admin{
+#menu-admin {
     width: 23vw;
     background-color: var(--cor-primaria);
 }
 
-#logo-menu-lateral{
+#logo-menu-lateral {
     width: 100%;
     justify-content: center;
     margin: 4vh 0 8vh 0;
 }
 
-.link-menu-lateral{
+#logo-menu-lateral img {
+    width: 80%;
+}
+
+.link-menu-lateral {
     width: 20vw;
     height: 10.8vh;
     box-shadow: 1px 1px 5px rgb(0, 0, 0);
@@ -415,48 +422,121 @@ color: var(--cor-secundaria);
 
 }
 
-.link-menu-lateral img{
+.link-menu-lateral img {
     width: 3.6vw;
 }
 
-.link-menu-lateral span{
+.link-menu-lateral span {
     margin-left: 1vw;
 }
 
-#user-icon{
+#user-icon {
     height: 4vw;
 }
 
-#logo-icon{
+#logo-icon {
     height: 3.5vw;
 }
 
-#container-link{
+#container-link {
     flex-wrap: wrap;
 }
 
-#container-link li{
+#container-link li {
     margin: 0 0 8vh 1.5vw;
 
 }
 
-.link-activated{
+.link-activated {
     background-color: rgb(255, 255, 255);
 }
 
-#conteudo-admin{
+#conteudo-admin {
     margin-left: 3.5vw;
 }
 
-#conteudo-admin h1{
+#conteudo-admin h1 {
     font-size: 3vw;
     margin-top: 4vh;
 }
 
-#filter-admin{
+#filter-admin {
     width: 70vw;
     height: 8vh;
     background-color: rgb(255, 255, 255);
     margin: 6.15vh 0 0 0;
-    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    box-shadow: 1px 1px 6px rgb(182, 182, 182);
+    align-items: center;
+}
+
+#filter-text {
+    width: 88%;
+    height: 100%;
+    align-items: center;
+    padding-left: 2vw;
+    font-size: 1.2vw;
+}
+
+
+#filter-admin figure img {
+    width: 2vw;
+}
+
+#filter-admin a {
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+#conteudo-admin hr {
+    margin: 4vh 0 2vh 0;
+}
+
+
+.list-admin {
+    width: 70vw;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 6px rgb(182, 182, 182);
+    align-items: center;
+    margin-top: 5vh;
+
+}
+
+#container-list-admin {
+    height: 55vh;
+    overflow: scroll;
+}
+
+.container-list-admin-situation {
+    margin-left: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.list-bar {
+    width: 2%;
+    height: 100%;
+    background-color: #4E8499;
+}
+
+.situation {
+    font-size: 0.6vw;
+    background-color: #4E8499;
+    width: 3.3vw;
+    height: 2vh;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.list-admin-name {
+    font-size: 1.4vw;
+
+}
+
+#create-animal{
+    color: rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    padding: 0 0.6vw;
 }
