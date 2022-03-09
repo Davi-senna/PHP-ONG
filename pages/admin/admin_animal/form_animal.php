@@ -11,6 +11,21 @@
     <title>PetCare</title>
 </head>
 <body id="admin">
-    
+    <form action="../../../action/insert_animal.php" method="post" enctype="multipart/form-data">
+
+        <input type="text" name="name" id="name">
+        <input type="file" name="image" id="image">
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <?php
+        if(isset($_GET['error'])){
+            $erro = $_GET['error'];
+            echo "<script>alert($erro)</script>";
+        }
+    ?>
 </body>
 </html>
+

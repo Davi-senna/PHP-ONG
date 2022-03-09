@@ -1,3 +1,9 @@
+<?php
+if(isset($sucess)){
+echo "<script>alert('fafffafa')</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-bt">
 
