@@ -69,7 +69,7 @@ echo "<script>alert('fafffafa')</script>";
 
         </nav>
 
-        <div id="conteudo-admin">
+        <div class="conteudo-admin">
 
             <h1>Lista de animais</h1>
 
@@ -91,62 +91,6 @@ echo "<script>alert('fafffafa')</script>";
                 </span>
             </a>
             <div id="container-list-admin">
-                <div class="list-admin">
-
-                    <div class="list-bar"></div>
-
-                    <div class="container-list-admin-situation">
-
-                        <span class="list-admin-name">Bella</span>
-
-                        <div class="situation">
-                        Ativo
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="list-admin">
-
-                    <div class="list-bar"></div>
-
-                    <div class="container-list-admin-situation">
-
-                        <span class="list-admin-name">Bella</span>
-
-                        <div class="situation">
-                        Ativo
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-admin">
-
-                    <div class="list-bar"></div>
-
-                    <div class="container-list-admin-situation">
-
-                        <span class="list-admin-name">Bella</span>
-
-                        <div class="situation">
-                        Ativo
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-admin">
-
-                    <div class="list-bar"></div>
-
-                    <div class="container-list-admin-situation">
-
-                        <span class="list-admin-name">Bella</span>
-
-                        <div class="situation">
-                        Ativo
-                        </div>
-                    </div>
-                </div>
-
                 <div class="list-admin">
 
                     <div class="list-bar"></div>

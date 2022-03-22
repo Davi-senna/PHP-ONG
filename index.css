@@ -44,7 +44,10 @@ ul,
 #filter-admin,
 #filter-text,
 .list-admin,
-.container-list-admin-situation {
+.container-list-admin-situation,
+.card-header,
+.form-group,
+.row {
     display: flex;
 }
 
@@ -396,6 +399,7 @@ nav ul li a {
 
 .menu-lateral {
     height: 100vh;
+    position: fixed;
 }
 
 #menu-admin {
@@ -451,11 +455,11 @@ nav ul li a {
     background-color: rgb(255, 255, 255);
 }
 
-#conteudo-admin {
-    margin-left: 3.5vw;
+.conteudo-admin {
+    margin-left: 26.5vw;
 }
 
-#conteudo-admin h1 {
+.conteudo-admin h1 {
     font-size: 3vw;
     margin-top: 4vh;
 }
@@ -488,7 +492,7 @@ nav ul li a {
     align-items: center;
 }
 
-#conteudo-admin hr {
+.conteudo-admin hr {
     margin: 4vh 0 2vh 0;
 }
 
@@ -539,4 +543,49 @@ nav ul li a {
     color: rgb(0, 0, 0);
     border: solid rgb(0, 0, 0) 1px;
     padding: 0 0.6vw;
+}
+
+.card-admin{
+    margin-top: 5vh;
+    width: 70vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 6px rgb(182, 182, 182);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.card-header{
+    width: 100%;
+    height: 7vh;
+    background-color: var(--cor-primaria);
+    align-items: center;
+    padding-left: 2vw;
+    font-size: 1.5vw;
+
+}
+
+.container-form-admin{
+    width: 100%;
+    padding: 3vh 0 0 3vh;
+}
+
+.form-group{
+    flex-direction: column;
+    margin-bottom: 3vh;
+}
+
+.input-form-admin{
+    width: 35vw;
+    padding: 1vh 1vw ;
+    border-radius: 0.25rem;
+    line-height: 1.5;
+    font-weight: 400;
+    border: 1px solid #ced4da;
+
+}
+
+#description-animal{
+    margin: 3vh 0 0 4vw;
+    border-radius: 0.25rem;
+
 }

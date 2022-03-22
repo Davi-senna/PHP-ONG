@@ -63,7 +63,7 @@
 
         </nav>
 
-        <div id="conteudo-admin">
+        <div class="conteudo-admin">
             
             <h1>Histórico de adoções</h1>
 
