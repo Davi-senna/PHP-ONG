@@ -2,20 +2,16 @@
 
 require_once("../controller/controller_Usuario.php");
 require_once("../model/Usuario.php");
+require_once("../model/Sql.php");
 
-
-
-$usuario = new Usuario();
-$usuario->feed_user($nome, $cpf, $tel, $cep, $rua, $cidade, $estado, $senha);
-
- $_POST["stmt"];
+extract($_POST);
 
 
 if (isset($stmt)) {
 
     switch ($stmt) {
 
-        case 'delete':
+        /*case 'delete':
 
             try {
                 $objectController = new Controller_Usuario();
@@ -25,47 +21,31 @@ if (isset($stmt)) {
                 header("Location:public/user/usuario.php?error=Não foi possivel deletar esse usuario");
             }
 
-            break;
+            break;*/
 
         case 'insert':
 
             try {
                 $objectController = new Controller_Usuario();
-                $objectController->addUser($_GET);
-                header("Location:../../index.php?success=Usuário cadastrado com sucesso");
+                $objectController->add_user($_POST);
+                header("Location:public/user/pg_index_usuario.php?success=Usuário cadastrado com sucesso");
             } catch (\Throwable $th) {
-                header("Location:../../index.php?error=Não foi possivel cadastrar esse usuario");
+                header("Location:public/login/pg_cadastro_usu.php?error=Não foi possivel cadastrar esse usuario");
             }
 
             break;
 
-        case 'update':
+        /*case 'update':
 
             try {
                 $objectController = new Controller_Usuario($id);
-                $objectController->updateUser($_GET);
+                $objectController->updateUser($_POST);
                 header("Location:public/user/usuario.php?success=Usuário atualizado com sucesso");
             } catch (\Throwable $th) {
                 header("Location:public/user/usuario.php?error=Não foi possivel atualizar esse usuario");
             }
 
-            break;
-
-        case 'login':
-
-            try {
-                $objectController = new Controller_Usuario();
-                $results = $objectController->comfirmUser($_POST);
-                if ($results["valid"] == 1) {
-                    header("Location:public/user/usuario.php?success=Usuário validado com sucesso");
-                } else {
-                    header("Location:../../index.php?error=Login ou senha invalido");
-                }
-            } catch (\Throwable $th) {
-                header("Location:../../index.php?error=Login ou senha invalido");
-            }
-
-            break;
+            break;*/
     }
 } else {
     header("Location:public/user/usuario.php?error=Comando invalido");

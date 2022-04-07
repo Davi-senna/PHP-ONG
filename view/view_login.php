@@ -1,6 +1,9 @@
 <?php
 
-require_once("../config.php");
+require_once("../model/Sql.php");
+require_once("../model/Usuario.php");
+require_once("../model/Admin.php");
+require_once("../controller/controller_Usuario.php");
 
 extract($_POST);
 

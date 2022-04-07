@@ -1,9 +1,3 @@
-<?php
-
-require_once("config.php");
-
-?>
-
 <html lang="pt-br">
 
 <head>
@@ -50,7 +44,7 @@ require_once("config.php");
             </ul>
         </nav>
 
-        <a href="pages/pg_cadastro_usu.php" id="button-login">
+        <a href="view/public/login/pg_login.php" id="button-login">
             <h3>
                 Entrar
             </h3>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/logo-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../index.css">
-    <script type="text/javascript" src="../script.js"></script>
+    <link rel="shortcut icon" href="../../../img/logo-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../../index.css">
+    <script type="text/javascript" src="../../../script.js"></script>
 
     <title>PetCare</title>
 </head>
@@ -16,7 +16,7 @@
 
     <section id="cadastro-usu">
 
-        <form class="form_usu" id="form_cadastro_usu" action="../action/insert_usuario.php" method="post">
+        <form class="form_usu" id="form_cadastro_usu" action="../../view_usuario.php" method="post">
 
             <span>Faça seu cadastro</span>
 
@@ -60,6 +60,8 @@
                 <div class="container-input-dados">
                     <input class="input-dados" required type="text" name="estado" id="estado">
                     <label class="label-animado" for="estado">Estado</label>
+
+                    <input type="hidden" name="stmt" value="insert">
                 </div>
             </div>
             <div class="container-button-dados">
@@ -72,7 +74,7 @@
 
     <section id="pg-cadastro-fundo">
         <figure>
-            <img src="../img/fundo.png" alt="">
+            <img src="../../../img/fundo.png" alt="">
         </figure>
     </section>
 </body>

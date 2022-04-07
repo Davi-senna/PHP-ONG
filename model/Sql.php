@@ -21,11 +21,11 @@ class Sql extends PDO{
     }
 
     public function execQuery($rawQuery, $params = array()){
-        echo $rawQuery;
+        //echo $rawQuery;
         $stmt = $this->conn->prepare($rawQuery);
         $this->setParams($stmt, $params);
         $stmt->execute();
-        echo 'chegou';
+        //echo 'chegou';
         return $stmt;
     }
 
