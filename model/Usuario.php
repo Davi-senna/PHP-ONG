@@ -9,6 +9,7 @@ class Usuario{
     private $cidade;
     private $estado;
     private $cep;
+    private $sql;
 
     public function getNome(){
         return $this->nome;
@@ -108,14 +109,23 @@ class Usuario{
 
     }
 
-    public function register(){
-
-        $sql = new Sql();
+    public function insert($raw_nome,$raw_cpf,$raw_tel,$raw_cep,$raw_rua,$raw_cidade,$raw_estado,$raw_senha){
+        
+        $this->feed_user($raw_nome,$raw_cpf,$raw_tel,$raw_cep,$raw_rua,$raw_cidade,$raw_estado,$raw_senha);
+        
         $data = $this->loadData();
         extract($data);
+        
 
-        $sql->execQuery("INSERT INTO tb_usuario (nome,cpf,telefone,rua,cidade,estado,cep,senha) 
-        VALUES('$nome',$cpf,$tel,'$rua','$cidade','$estado',$cep,'$senha')");
+        try {
+            
+            $sql->execQuery("INSERT INTO tb_usuario (nome,cpf,telefone,rua,cidade,estado,cep,senha) 
+                VALUES('$nome',$cpf,$tel,'$rua','$cidade','$estado',$cep,'$senha')");
+            return 1;
+
+        } catch (\Throwable $th) {
+            return 0;
+        }
 
     }
 
@@ -136,4 +146,9 @@ class Usuario{
         );
         return $dados;
     }
+
+    public function __construct(){
+        $this->sql = new Sql();
+    }
+
 }
