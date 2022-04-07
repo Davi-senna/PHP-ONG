@@ -587,5 +587,10 @@ nav ul li a {
 #description-animal{
     margin: 3vh 0 0 4vw;
     border-radius: 0.25rem;
+    padding: 1vw;
 
+}
+
+#input-image{
+    margin: 6vh 4vw;
 }

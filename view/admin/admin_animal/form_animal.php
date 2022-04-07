@@ -105,14 +105,14 @@
 
                                 <div class="form-group">
 
-                                    <textarea name="description-animal" id="description-animal" cols="60" rows="10" placeholder="Descrição"></textarea>
+                                    <textarea class="description" name="description-animal" id="description-animal" cols="55" rows="10" placeholder="Descrição"></textarea>
 
                                 </div>
 
 
                                 <div class="form-group">
 
-                                    <input type="file" name="image" id="image">
+                                    <input type="file" name="image" id="input-image">
 
                                 </div>
 
@@ -168,7 +168,7 @@
 
                 </div>
 
-                <button type="submit">Enviar</button>
+                <input type="submit" value="Enviar">
 
             </form>
         </div>
