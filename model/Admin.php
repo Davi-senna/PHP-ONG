@@ -24,22 +24,12 @@ class Admin{
         $this->senha = $value;
     }
 
-    public function validAdmin($login,$senha){
+    public function loadByLogin($login,$senha){
 
         $sql = new Sql();
         $results = $sql->select("SELECT * FROM tb_admin WHERE login = '$login'");
+        $admin = $results[0];
+        return $admin;
 
-        if(count($results) > 0){
-            $admin = $results[0];
-
-            if($senha == $admin["senha"]){
-                return true;
-            }else{
-                return "senha invalida";
-            }
-            
-        }else{
-            return false;
-        }
     }
 }

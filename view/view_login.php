@@ -4,22 +4,26 @@ require_once("../model/Sql.php");
 require_once("../model/Usuario.php");
 require_once("../model/Admin.php");
 require_once("../controller/controller_Usuario.php");
+require_once("../controller/controller_Admin.php");
 
-extract($_POST);
+var_dump($_POST);
 
-$usuario = new Usuario();
-$admin = new Admin();
+$usuario = new controller_Usuario();
+$admin = new controller_Admin();
 
-if($admin->validAdmin($cpf,$senha) === true){
+$results = $admin->valid_admin($_POST);
+var_dump($results);
+if($results["valid"] == 1){
 
-    header("Location: ../pages/admin/pg_admin.php");
+    header("Location: public/admin/pg_admin.php");
 
-}else if($admin->validAdmin($cpf,$senha) == "senha invalida"){
+}else if($results["valid"] == 0 && $results["error"] == "Senha incorreta"){
 
-    header("Location: ../pages/pg_login.php?error='Senha incorreta'");
+    $error = $results['error'];
+    header("Location: ../pages/pg_login.php?error= $error ");
 
 }else{
-
+/*
     try{
         $usuario->loadByCpf($cpf);
     
@@ -31,5 +35,5 @@ if($admin->validAdmin($cpf,$senha) === true){
     }catch(Exception $e){
         header("Location: ../pages/pg_login.php?error='Usuario não encontrado'");
     }
-
+*/
 }

@@ -21,8 +21,8 @@
             <span>Fazer login</span>
             <div id="container-login">
                 <div class="container-input-dados">
-                    <input class="input-dados" type="text" required name="cpf" id="cpf">
-                    <label class="label-animado" for="cpf">Cpf ou login</label>
+                    <input class="input-dados" type="text" required name="login" id="login">
+                    <label class="label-animado" for="login">Cpf ou login</label>
                 </div>
 
                 <div class="container-input-dados">
@@ -30,7 +30,6 @@
                     <label class="label-animado" for="senha">Senha</label>
                 </div>
 
-                <input type="hidden" name="valid" value="true">
             </div>
             <div class="container-button-dados">
             <button id="button-dados" type="submit" >Entrar</button>
