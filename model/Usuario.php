@@ -75,25 +75,19 @@ class Usuario{
         $this->cep = $value;
     }
 
-    public function loadByCpf($cpf){
+    private function loadByCpf($cpf){
         $this->sql = new Sql();
         $results = $this->sql->select("SELECT * FROM tb_usuario WHERE cpf = $cpf");
         $usuario = $results[0];
-        var_dump($usuario);
+        extract($usuario);
 
         if (count($results) > 0) {
-            $this->setNome($usuario['nome']);
-            $this->setCpf($usuario['cpf']);
-            $this->setTel($usuario['telefone']);
-            $this->setRua($usuario['rua']);
-            $this->setCidade($usuario['cidade']);
-            $this->setEstado($usuario['estado']);
-            $this->setCep($usuario['cep']);
-            $this->setSenha($usuario['senha']);
+            $this->feed_user($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha);
         }
     }
     
     public function loadData(){
+        
         $data = array(
             "nome" => $this->getNome(),
             "cpf" => $this->getCpf(),
@@ -139,15 +133,9 @@ class Usuario{
         $this->setSenha($senha);
     }
 
-    public function __toString(){
-        $dados = json_encode(
-            $this->loadData()
-        );
-        return $dados;
-    }
-
     public function __construct(){
         $this->sql = new Sql();
+
     }
 
 }

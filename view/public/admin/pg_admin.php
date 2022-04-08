@@ -11,9 +11,9 @@ echo "<script>alert('fafffafa')</script>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../img/logo-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../../index.css">
-    <script type="text/javascript" src="../../script.js"></script>
+    <link rel="shortcut icon" href="../../../img/logo-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../../../index.css">
+    <script type="text/javascript" src="../../../script.js"></script>
 
     <title>PetCare</title>
 </head>
@@ -24,7 +24,7 @@ echo "<script>alert('fafffafa')</script>";
         <nav class="menu-lateral" id="menu-admin">
 
             <figure id="logo-menu-lateral">
-                <img src="../../img/logoMaior.png" alt="Logo Petcare">
+                <img src="../../../img/logoMaior.png" alt="Logo Petcare">
             </figure>
 
             <ul id="container-link">
@@ -33,7 +33,7 @@ echo "<script>alert('fafffafa')</script>";
                         <div class="link-menu-lateral link-activated">
 
                             <figure>
-                                <img src="../../img/icon-dog.png" alt="Ícone de cachorro">
+                                <img src="../../../img/icon-dog.png" alt="Ícone de cachorro">
                             </figure>
                             <span>Animais</span>
 
@@ -45,7 +45,7 @@ echo "<script>alert('fafffafa')</script>";
                         <div class="link-menu-lateral">
 
                             <figure id="user-icon">
-                                <img src="../../img/user-icon.png" alt="Ícone de usuario">
+                                <img src="../../../img/user-icon.png" alt="Ícone de usuario">
                             </figure>
                             <span>Usuarios</span>
 
@@ -57,7 +57,7 @@ echo "<script>alert('fafffafa')</script>";
                         <div class="link-menu-lateral">
 
                             <figure id="logo-icon">
-                                <img src="../../img/logo-icon.png" alt="Ícone de editar">
+                                <img src="../../../img/logo-icon.png" alt="Ícone de editar">
                             </figure>
                             <span>Adoções</span>
 
@@ -79,7 +79,7 @@ echo "<script>alert('fafffafa')</script>";
                 <a href="#">
                     <span>Filtro</span>
                     <figure>
-                        <img src="../../img/filter-icon.png" alt="Editar">
+                        <img src="../../../img/filter-icon.png" alt="Editar">
                     </figure>
                 </a>
 
