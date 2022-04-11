@@ -32,7 +32,7 @@
 
             </div>
             <div class="container-button-dados">
-            <button id="button-dados" type="submit" >Entrar</button>
+            <button class="button-dados" id="button-dados-login" type="submit" >Entrar</button>
             <a href="pg_cadastro_usu.php">Fazer cadastro</a>
             </div>
 
@@ -41,7 +41,7 @@
 
     <section id="pg-cadastro-fundo">
         <figure>
-            <img src="../../../img/fundo.png" alt="">
+            <img src="../../../img/fundo-login.png" alt="">
         </figure>
     </section>
 </body>

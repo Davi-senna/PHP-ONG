@@ -36,7 +36,7 @@ ul,
 #pg-cadastro-fundo,
 #login,
 .container-button-dados,
-#button-dados,
+.button-dados,
 #container-login,
 #pg-admin,
 #logo-menu-lateral,
@@ -47,7 +47,8 @@ ul,
 .container-list-admin-situation,
 .card-header,
 .form-group,
-.row {
+.row,
+.button-form-animal {
     display: flex;
 }
 
@@ -342,8 +343,8 @@ nav ul li a {
 }
 
 #form_login_usu span {
-    font-size: 3vw;
-    margin: 18vh 0 10vh 14.5vw;
+    font-size: 4.5vw;
+    margin: 18vh 0 10vh 11vw;
 }
 
 .container-input-dados {
@@ -374,19 +375,23 @@ nav ul li a {
     text-align: center;
 }
 
-#button-dados {
+.button-dados {
     border-radius: 0.8em;
     background-color: var(--cor-secundaria);
     width: 20vw;
-    margin: 3vh 0 2vh 12vw;
+    margin: 6vh 0 2vh 12vw;
     height: 1.6vw;
     font-size: 1.2vw;
     justify-content: center;
     align-items: center;
 }
 
-#button-dados:hover {
+.button-dados:hover {
     cursor: pointer;
+}
+
+#button-dados-login{
+    margin-top: 10vh;
 }
 
 #container-login {
@@ -593,4 +598,18 @@ nav ul li a {
 
 #input-image{
     margin: 6vh 4vw;
+}
+
+.button-form-animal{
+    justify-content: center ;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.button-form-animal input{
+    width: 20vw;
+    height: 5vh;
+    margin-bottom: 5vh;
+
+    
 }

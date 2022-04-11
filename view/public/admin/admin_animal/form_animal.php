@@ -62,12 +62,12 @@
 
         </nav>
         <div class="conteudo-admin">
-            <form action="../../../../action/insert_animal.php" method="post" enctype="multipart/form-data">
+            <form action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
 
                 <div class="card-admin">
 
                     <div class="card-header">
-                        <spam>Dados do animal</spam>
+                        <span>Dados do animal</span>
                     </div>
 
                     <div class="container-form-admin">
@@ -168,7 +168,9 @@
 
                 </div>
 
-                <input type="submit" value="Enviar">
+                <div class="button-form-animal">
+                    <input type="submit" value="Enviar">
+                </div>
 
             </form>
         </div>

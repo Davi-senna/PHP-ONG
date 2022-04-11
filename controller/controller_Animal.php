@@ -1,5 +1,9 @@
 <?php
 
+class controller_Animal{
+
+}
+/*
 $dir = "../img/animals/";
 extract($_POST);
 
@@ -23,7 +27,7 @@ if(move_uploaded_file($image["tmp_name"],$source_image)){
 
 
 
-
+*/
 /*
 var_dump($_FILES["image"]);
 echo "<br>";

@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="container-button-dados">
-                <button id="button-dados" type="submit" >Fazer cadastro</button>
+                <button class="button-dados" type="submit" >Fazer cadastro</button>
                 <a href="pg_login.php">Já tenho uma conta</a>
             </div>
 
@@ -74,7 +74,7 @@
 
     <section id="pg-cadastro-fundo">
         <figure>
-            <img src="../../../img/fundo.png" alt="">
+            <img src="../../../img/fundo-cadastro.png" alt="Imagem de fundo">
         </figure>
     </section>
 </body>
