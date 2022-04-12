@@ -79,23 +79,23 @@
 
                                 <div class="form-group">
                                     <label for="name">Nome do animal:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o nome do animal" name="name" id="name">
+                                    <input class="input-form-admin" type="text" required placeholder="Digite o nome do animal" name="name" id="name">
                                 </div>
                                 <div class="form-group">
                                     <label for="age">Idade do animal:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite a idade do animal" name="age" id="age">
+                                    <input class="input-form-admin" type="text" required placeholder="Digite a idade do animal" name="age" id="age">
                                 </div>
                                 <div class="form-group">
                                     <label for="genre">Sexo do animal:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o sexo do animal" name="genre" id="genre">
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o sexo do animal" name="genre" id="genre">
                                 </div>
                                 <div class="form-group">
                                     <label for="specie">Nome da espécie animal:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o nome da espécie animal" name="specie" id="specie">
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da espécie animal" name="specie" id="specie">
                                 </div>
                                 <div class="form-group">
                                     <label for="breed">Nome da raça animal:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o nome da raça do animal" name="breed" id="breed">
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da raça do animal" name="breed" id="breed">
                                 </div>
 
 
@@ -105,7 +105,7 @@
 
                                 <div class="form-group">
 
-                                    <textarea class="description" name="description-animal" id="description-animal" cols="55" rows="10" placeholder="Descrição"></textarea>
+                                    <textarea class="description" required name="description-animal" id="description-animal" cols="55" rows="10" placeholder="Descrição"></textarea>
 
                                 </div>
 
@@ -120,11 +120,7 @@
 
                         </div>
 
-
                     </div>
-
-
-
 
                 </div>
 
@@ -143,19 +139,19 @@
 
                                 <div class="form-group">
                                     <label for="cidade">Cidade:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o nome da cidade onde o animal se encontra" name="cidade" id="cidade">
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da cidade onde o animal se encontra" name="cidade" id="cidade">
                                 </div>
                                 <div class="form-group">
                                     <label for="estado">Estado:</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o nome do estado onde o animal se encontra" name="estado" id="estado">
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome do estado onde o animal se encontra" name="estado" id="estado">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email:</label>
-                                    <input class="input-form-admin" type="email" placeholder="Digite o email do responsável" name="email" id="email">
+                                    <input class="input-form-admin" required type="email" placeholder="Digite o email do responsável" name="email" id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="telefone">Telefone</label>
-                                    <input class="input-form-admin" type="text" placeholder="Digite o telefone do resposável" name="telefone" id="telefone">
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o telefone do resposável" name="telefone" id="telefone">
                                 </div>
 
                             </div>

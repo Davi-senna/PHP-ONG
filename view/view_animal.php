@@ -13,8 +13,7 @@ $animal_data = array(
     $age,
     $genre,
     $specie,
-    $breed,
-    $image => $_FILES["image"]
+    $breed
 );
 
 $responsavel_data = array(
@@ -23,6 +22,8 @@ $responsavel_data = array(
     $email,
     $telefone
 );
+
+$image_data = $_FILES["image"];
 
 $instanceAnimal =  new Animal();
 $instanceResponsavel = new Responsavel();

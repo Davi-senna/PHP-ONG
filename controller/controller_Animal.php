@@ -1,8 +1,14 @@
 <?php
 
 class controller_Animal{
+    
+
+    public function __construct($id = "Em processo de criação"){
+        
+    }
 
 }
+
 /*
 $dir = "../img/animals/";
 extract($_POST);
@@ -22,6 +28,9 @@ if(move_uploaded_file($image["tmp_name"],$source_image)){
 }else{
 
     header("Location: ../pages/admin/admin_animal/form_animal.php?error='Animal não foi cadastrado'");
+
+
+    
 
 }
 
