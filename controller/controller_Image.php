@@ -1,4 +1,4 @@
-<?php
+<?php/*
 
 class Controller_Image{
 
@@ -42,4 +42,4 @@ class Controller_Image{
 
 
     }
-}
+}*/

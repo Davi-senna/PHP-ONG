@@ -34,4 +34,27 @@ class Sql extends PDO{
         $stmt = $this->execQuery($rawQuery, $params);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function execTransaction($statements){
+        try {
+
+            $this->conn->beginTransaction();
+
+                foreach($statements as $stmt){
+                    var_dump($stmt);
+                    echo "<br>";
+                }
+
+            $this->conn->commit();
+        } catch (\Exception $e) {
+        }
+        
+    }
 }
+
+$teste = new Sql();
+$teste->execTransaction(array(
+    "INSERT INTO tb_animal(nome) VALUES(teste)",
+    "INSERT INTO tb_animal(nome) VALUES(teste)",
+    "INSERT INTO tb_animal(nome) VALUES(teste)"
+));
