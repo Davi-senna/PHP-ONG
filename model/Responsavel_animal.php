@@ -1,6 +1,6 @@
 <?php
 
-class Responsavel{
+class Responsavel_animal{
 
     private $id_animal;
     private $cidade;
@@ -127,15 +127,15 @@ class Responsavel{
         $results = $sql->select("SELECT * FROM tb_responsavel_animal WHERE id_animal = :ID_ANIMAL",array(
             ":ID_ANIMAL" => $value)
         );
-        $animal = $results[0];
+        $responsavel = $results[0];
 
-        if(count($animal) > 0){
-            $this->setId_animal($animal['id_animal']);
-            $this->setCidade($animal['cidade']);
-            $this->setEstado($animal['estado']);
-            $this->setEmail($animal['email']);
-            $this->setTelefone($animal['telefone']);
-            $this->setId($animal['id']);
+        if(count($responsavel) > 0){
+            $this->setId_animal($responsavel['id_animal']);
+            $this->setCidade($responsavel['cidade']);
+            $this->setEstado($responsavel['estado']);
+            $this->setEmail($responsavel['email']);
+            $this->setTelefone($responsavel['telefone']);
+            $this->setId($responsavel['id']);
         }
     }
 
@@ -173,7 +173,7 @@ class Responsavel{
         $data = $this->loadData();
         extract($data);
         
-        $stmt =" INSERT INTO tb_animal (id_animal,cidade,estado,email,telefone,especie,situacao,descricao,peso) 
+        $stmt =" INSERT INTO tb_responsavel_animal (id_animal,cidade,estado,email,telefone,especie,situacao,descricao,peso) 
             VALUES($id_animal,'$cidade',$estado,$email,'$telefone','$especie',$situacao,'$descricao',$peso)
         ";
 

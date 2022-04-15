@@ -1,7 +1,5 @@
 <?php
 
-/*
-
 class Controller_Image{
 
     private $objectImage;
@@ -10,13 +8,10 @@ class Controller_Image{
         $this->objectImage = new Image($id_usuario);
     }
 
-    public function selectAll(){
 
-        return $this->objectImage->selectAllByUserId();
-    }
-
-    public function deleteImage($id){
-        $this->objectImage->delete($id);
+    public function deleteImage($id,$id_animal){
+        $file = $this->objectImage->loadById_animal($id_animal);
+        $this->objectImage->delete($id,$id_animal);
         $nameFile =  $file["image_source"];
         unlink($nameFile);
         
@@ -26,11 +21,11 @@ class Controller_Image{
     public function addImage($user_data, $image){
         extract($user_data);
 
-        $dir = "images/";
+        $dir = "../img/animals";
         $file = $image["image"];
         $image_source = $dir . md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
 
-        $this->objectImage->pushInsert($nome, $image_source, $link);
+        $this->objectImage->pushInsert($nome, $image_source);
 
         if(!is_dir($dir)){
             mkdir($dir);
@@ -44,5 +39,6 @@ class Controller_Image{
 
 
     }
-}*/
+}
+
 ?>
