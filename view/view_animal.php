@@ -53,6 +53,11 @@ switch($stmt){
                     $image_data = $_FILES["image"];
 
                     $resultsImage = $instanceControllerImage->addImage($resultsAnimal["ids"][0],$image_data);
+                    if($resultsResponsavel_animal["success"] == 1){
+                        header("Location:public/admin/pg_admin.php?success='Animal inserido com sucesso'");
+                    }else{
+                        throw new Exception($message = "Não foi possível adicionar esse animal");
+                    }
                     
                 }else{
                     throw new Exception($message = "Não foi possível adicionar esse animal");
