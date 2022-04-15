@@ -1,6 +1,4 @@
 <?php
-
-require_once("Sql.php");
 class Animal{
     private $nome;
     private $idade;
@@ -145,7 +143,7 @@ class Animal{
         
         $sql = new Sql();
 
-        $results = $sql->select("SELECT * FROM animais WHERE chip = :CHIP",array(
+        $results = $sql->select("SELECT * FROM tb_animal WHERE chip = :CHIP",array(
             ":CHIP" => $value)
         );
         $animal = $results[0];

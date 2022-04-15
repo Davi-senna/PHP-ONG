@@ -12,7 +12,7 @@ class controller_Animal{
 
         extract($data);
 
-        $this->instanceModel->insert($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso);
+        $results = $this->instanceModel->insert($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso);
     }
 
 }
