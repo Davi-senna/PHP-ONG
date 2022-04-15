@@ -21,7 +21,7 @@ class Sql extends PDO{
     }
 
     public function execQuery($rawQuery, $params = array()){
-        echo $rawQuery;
+        //echo $rawQuery;
         $stmt = $this->conn->prepare($rawQuery);
         $this->setParams($stmt, $params);
         $stmt->execute();
@@ -43,20 +43,23 @@ class Sql extends PDO{
 
             $this->conn->beginTransaction();
 
+                $ids=[];
+
                 foreach($statements as $stmt){
                     /*var_dump($stmt);
                     echo "<br>";*/
 
                     $this->execQuery($stmt);
                     $id = $this->conn->lastInsertId();
-                    var_dump($id);
+                    array_push($ids,$id);
 
                 }
 
                 $this->conn->commit();
 
             return (array(
-               "success" => 1 
+               "success" => 1,
+               "Ids" => $ids
             ));
 
         } catch (\Exception $e) {
@@ -71,10 +74,10 @@ class Sql extends PDO{
         
     }
 }
-
+/*
 $teste = new Sql();
 var_dump($teste->execTransaction(array(
     "INSERT INTO tb_animal(nome) VALUES('teste')",
     "INSERT INTO tb_animal(noe) VALUES('teste1')",
     "INSERT INTO tb_animal(nome) VALUES('teste2')"
-)));
+)));*/

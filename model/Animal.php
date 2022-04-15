@@ -1,5 +1,6 @@
 <?php
 
+require_once("Sql.php");
 class Animal{
     private $nome;
     private $idade;
@@ -7,6 +8,10 @@ class Animal{
     private $raca;
     private $especie;
     private $chip;
+    private $situacao;
+    private $descricao;
+    private $peso;
+    private $sql;
 
 
     public function setNome($value){
@@ -81,6 +86,61 @@ class Animal{
         
     }
 
+    
+    /**
+     * Get the value of situacao
+     */ 
+    public function getSituacao(){
+        return $this->situacao;
+    }
+
+    /**
+     * Set the value of situacao
+     *
+     * @return  self
+     */ 
+    public function setSituacao($situacao){
+        $this->situacao = $situacao;
+
+        return $this;
+    }
+
+        /**
+     * Get the value of descricao
+     */ 
+    public function getDescricao(){
+        return $this->descricao;
+    }
+
+    /**
+     * Set the value of descricao
+     *
+     * @return  self
+     */ 
+    public function setDescricao($descricao){
+        $this->descricao = $descricao;
+
+        return $this;
+    }
+
+        /**
+     * Get the value of peso
+     */ 
+    public function getPeso(){
+        return $this->peso;
+    }
+
+    /**
+     * Set the value of peso
+     *
+     * @return  self
+     */ 
+    public function setPeso($peso){
+        $this->peso = $peso;
+
+        return $this;
+    }
+
     protected function loadByChip($value){
         
         $sql = new Sql();
@@ -97,19 +157,79 @@ class Animal{
             $this->setRaca($animal['raca']);
             $this->setEspecie($animal['especie']);
             $this->setChip($animal['chip']);
+            $this->setSituacao($animal['situacao']);
+            $this->setDescricao($animal['descricao']);
+            $this->setPeso($animal['peso']);
         }
     }
 
-    public function __toString(){
-        $results = array(
-            'Nome' => $this->getNome(),
-            'Idade' => $this->getIdade(),
-            'Sexo' => $this->getSexo(),
-            'Raca' => $this->getRaca(),
-            'Especie' => $this->getEspecie(),
-            'Chip' => $this->getChip()
+
+    public function loadData(){
+        
+        $data = array(
+            'nome' => $this->getNome(),
+            'idade' => $this->getIdade(),
+            'sexo' => $this->getSexo(),
+            'raca' => $this->getRaca(),
+            'especie' => $this->getEspecie(),
+            'chip' => $this->getChip(),
+            'situacao' => $this->getSituacao(),
+            'descricao' => $this->getDescricao(),
+            'peso' => $this->getPeso()
         );
-        $dados = json_encode($results);
-        return $dados;
+
+        return $data;
+
     }
+
+
+    //Método para alimentação da classe por metodos como insert ou update
+    public function feed_class($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso){
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setSexo($sexo);
+        $this->setRaca($raca);
+        $this->setEspecie($especie);
+        $this->setSituacao($situacao);
+        $this->setDescricao($descricao);
+        $this->setPeso($peso);
+    }
+
+
+
+    public function insert($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso){
+
+        $this->feed_class($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso);
+        $data = $this->loadData();
+        extract($data);
+        
+        $stmt =" INSERT INTO tb_animal (nome,idade,sexo,raca,especie,situacao,descricao,peso) 
+            VALUES('$nome',$idade,$sexo,'$raca','$especie',$situacao,'$descricao',$peso)
+        ";
+
+        $results = $this->transaction($stmt);
+
+        return $results;
+    }
+
+
+    //Método para fazer transação
+    public function transaction($stmt){
+
+        $results = $this->sql->execTransaction(
+            $statements = [$stmt]
+        );
+        	
+        return $results;
+    }
+
+    public function __construct(){
+        $this->sql = new Sql();
+
+    }
+
 }
+
+/*
+$teste = new Animal();
+var_dump($teste->insert("teste",12,1,"fdsa","fdsa"));*/

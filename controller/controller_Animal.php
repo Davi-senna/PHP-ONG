@@ -1,10 +1,18 @@
 <?php
 
 class controller_Animal{
-    
 
+    private $instanceModel;
+    
     public function __construct($id = "Em processo de criação"){
-        
+        $this->instanceModel = new Animal();
+    }
+
+    public function insertAnimal($data){
+
+        extract($data);
+
+        $this->instanceModel->insert($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso);
     }
 
 }
