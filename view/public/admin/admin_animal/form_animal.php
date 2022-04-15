@@ -133,6 +133,7 @@
 
                                         <input required type="radio" value="0" name="situacao" id="situacao">
                                         <span class="span-checkbox">Morto</span>
+                                        <input type="hidden" name="stmt" value="insert">
 
                                     </div>
 

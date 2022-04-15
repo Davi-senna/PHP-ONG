@@ -4,8 +4,8 @@ class Controller_Image{
 
     private $objectImage;
 
-    public function __construct($id_usuario){
-        $this->objectImage = new Image($id_usuario);
+    public function __construct(){
+        $this->objectImage = new Image();
     }
 
 
@@ -18,14 +18,15 @@ class Controller_Image{
 
     }
 
-    public function addImage($user_data, $image){
-        extract($user_data);
+    public function addImage($id_animal, $image){
+        extract($image);
+        //var_dump($image);
 
-        $dir = "../img/animals";
-        $file = $image["image"];
+        $dir = "../img/animals/";
+        $file = $image;
         $image_source = $dir . md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
 
-        $this->objectImage->pushInsert($nome, $image_source);
+        $this->objectImage->pushInsert($id_animal, $image_source);
 
         if(!is_dir($dir)){
             mkdir($dir);

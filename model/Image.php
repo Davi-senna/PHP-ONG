@@ -28,7 +28,7 @@ class Image{
      /**
       * Get the value of id_animal
       */ 
-      public function getId_animal(){
+      public function getId_animal():INT{
         return $this->id_animal;
     }
 
@@ -60,14 +60,9 @@ class Image{
     // Metodo de alimentação geral
     public function feedClass($user_data){
 
-        if (count($user_data) != 0) {
-
-        $this->setSource_image($user_data["image"]);
+        $this->setSource_image($user_data["source_image"]);
         $this->setId_animal($user_data["id_animal"]);
         
-        }else{
-            throw new Exception($message = "Responsável não existe");
-        }
     
     }
 
@@ -83,18 +78,18 @@ class Image{
     }
 
 
-    public function pushInsert($source_image,$id_animal){
+    public function pushInsert($id_animal,$source_image){
 
         $this->pushFeedClass($source_image,$id_animal);
 
-        $this->sql->execQuery("INSERT INTO tb_img_souce(source_image,id_animal) 
+        $this->sql->execQuery("INSERT INTO tb_img_source(source_image,id_animal) 
         Values (
             :SOURCE_IMAGE,
-            :ID_ANIMAL,
+            :ID_ANIMAL
         )
         ", array(
             ":SOURCE_IMAGE" => $this->getSource_image(),
-            ":ID_ANIMAL" => $this->getId_animal(),
+            ":ID_ANIMAL" => $this->getId_animal()
         ));
     }
 

@@ -173,8 +173,8 @@ class Responsavel_animal{
         $data = $this->loadData();
         extract($data);
         
-        $stmt =" INSERT INTO tb_responsavel_animal (id_animal,cidade,estado,email,telefone,especie,situacao,descricao,peso) 
-            VALUES($id_animal,'$cidade',$estado,$email,'$telefone','$especie',$situacao,'$descricao',$peso)
+        $stmt =" INSERT INTO tb_responsavel_animal (id_animal,cidade,estado,email,telefone) 
+            VALUES($id_animal,'$cidade','$estado','$email','$telefone')
         ";
 
         $results = $this->transaction($stmt);

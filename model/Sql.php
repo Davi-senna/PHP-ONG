@@ -21,7 +21,8 @@ class Sql extends PDO{
     }
 
     public function execQuery($rawQuery, $params = array()){
-        //echo $rawQuery;
+        echo $rawQuery;
+        var_dump($params);
         $stmt = $this->conn->prepare($rawQuery);
         $this->setParams($stmt, $params);
         $stmt->execute();
@@ -58,7 +59,7 @@ class Sql extends PDO{
 
             return (array(
                "success" => 1,
-               "Ids" => $ids
+               "ids" => $ids
             ));
 
         } catch (\Exception $e) {

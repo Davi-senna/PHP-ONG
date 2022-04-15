@@ -11,8 +11,11 @@ class controller_Animal{
     public function insertAnimal($data){
 
         extract($data);
+        //var_dump($data);
 
         $results = $this->instanceModel->insert($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso);
+
+        return $results;
     }
 
 }

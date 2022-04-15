@@ -13,6 +13,7 @@ class controller_Responsavel_animal{
         extract($data);
 
         $results = $this->instanceModel->insert($id_animal,$cidade,$estado,$email,$telefone);
+        return $results;
     }
 
 }
