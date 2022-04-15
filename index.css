@@ -613,3 +613,15 @@ nav ul li a {
 
     
 }
+
+.span-checkbox{
+    font-size: 0.8vw;
+}
+
+.margin-checkbox{
+    margin-top: 2vh;
+}
+
+.container-checkbox{
+    align-items: center;
+}

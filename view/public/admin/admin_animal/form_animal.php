@@ -78,25 +78,67 @@
                             <div class="column">
 
                                 <div class="form-group">
-                                    <label for="name">Nome do animal:</label>
-                                    <input class="input-form-admin" type="text" required placeholder="Digite o nome do animal" name="name" id="name">
+                                    <label for="nome">Nome do animal:</label>
+                                    <input class="input-form-admin" type="text" required placeholder="Digite o nome do animal" name="nome" id="nome">
                                 </div>
                                 <div class="form-group">
-                                    <label for="age">Idade do animal:</label>
-                                    <input class="input-form-admin" type="text" required placeholder="Digite a idade do animal" name="age" id="age">
+                                    <label for="idade">Idade do animal:</label>
+                                    <input class="input-form-admin" type="number" required placeholder="Digite a idade do animal" name="idade" id="idade">
                                 </div>
                                 <div class="form-group">
-                                    <label for="genre">Sexo do animal:</label>
-                                    <input class="input-form-admin" required type="text" placeholder="Digite o sexo do animal" name="genre" id="genre">
+                                    <label for="especie">Nome da espécie animal:</label>
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da espécie animal" name="especie" id="especie">
                                 </div>
                                 <div class="form-group">
-                                    <label for="specie">Nome da espécie animal:</label>
-                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da espécie animal" name="specie" id="specie">
+                                    <label for="raca">Nome da raça animal:</label>
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da raça do animal" name="raca" id="raca">
                                 </div>
                                 <div class="form-group">
-                                    <label for="breed">Nome da raça animal:</label>
-                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da raça do animal" name="breed" id="breed">
+                                    <label for="peso">Peso do animal (kg): </label>
+                                    <input class="input-form-admin" required type="number" placeholder="Digite o nome da raça do animal" name="peso" id="peso">
                                 </div>
+
+                                <div class="form-group">
+
+                                    <label for="sexo">Sexo do animal:</label>
+
+                                    <div class="row container-checkbox margin-checkbox">
+                                    
+                                        <input required type="radio" value="1" name="sexo" id="sexo">
+                                        <span class="span-checkbox">Macho</span>
+
+                                    </div>
+
+                                    <div class="row container-checkbox">
+
+                                        <input required type="radio" value="0" name="sexo" id="sexo">
+                                        <span class="span-checkbox">Fêmea</span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="situacao">Situacao:</label>
+
+                                    <div class="row container-checkbox margin-checkbox">
+                                    
+                                        <input required type="radio" value="1" name="situacao" id="situacao">
+                                        <span class="span-checkbox">Vivo</span>
+
+                                    </div>
+
+                                    <div class="row container-checkbox">
+
+                                        <input required type="radio" value="0" name="situacao" id="situacao">
+                                        <span class="span-checkbox">Morto</span>
+
+                                    </div>
+
+                                </div>
+
+                                
 
 
                             </div>
@@ -105,7 +147,7 @@
 
                                 <div class="form-group">
 
-                                    <textarea class="description" required name="description-animal" id="description-animal" cols="55" rows="10" placeholder="Descrição"></textarea>
+                                    <textarea class="description" required name="descricao" id="description-animal" cols="55" rows="10" placeholder="Descrição"></textarea>
 
                                 </div>
 
