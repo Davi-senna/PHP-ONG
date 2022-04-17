@@ -21,22 +21,33 @@ class Controller_Image{
     public function addImage($id_animal, $image){
         extract($image);
         //var_dump($image);
+        
 
-        $dir = "../img/animals/";
-        $file = $image;
-        $image_source = $dir . md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
+        if($image["size"] != 0){
 
-        $this->objectImage->pushInsert($id_animal, $image_source);
+            $dir = "../img/animals/";
+            $file = $image;
+            $image_source = $dir . md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
 
-        if(!is_dir($dir)){
-            mkdir($dir);
-        }
+            $results = $this->objectImage->pushInsert($id_animal, $image_source);
 
-        if(move_uploaded_file($file["tmp_name"],$image_source)){
-            return 1;
+            //var_dump($results);
+
+            if(!is_dir($dir)){
+                mkdir($dir);
+            }
+
+            if(move_uploaded_file($file["tmp_name"],$image_source)){
+                return 1;
+            }else{
+                return 0;
+            };
+
         }else{
-            return 0;
-        };
+
+            $results = $this->objectImage->pushInsert($id_animal,"../img/animal_sem_foto.png");
+
+        }
 
 
     }

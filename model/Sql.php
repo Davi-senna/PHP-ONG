@@ -21,8 +21,8 @@ class Sql extends PDO{
     }
 
     public function execQuery($rawQuery, $params = array()){
-        echo $rawQuery;
-        var_dump($params);
+        //echo $rawQuery;
+        //var_dump($params);
         $stmt = $this->conn->prepare($rawQuery);
         $this->setParams($stmt, $params);
         $stmt->execute();
@@ -37,7 +37,7 @@ class Sql extends PDO{
 
 
     //Metodo para transações
-    public function execTransaction($statements){
+    public function execTransaction($statements,$params = array()){
 
         try {
 
@@ -49,7 +49,7 @@ class Sql extends PDO{
                     /*var_dump($stmt);
                     echo "<br>";*/
 
-                    $this->execQuery($stmt);
+                    $this->execQuery($stmt,$params);
                     $id = $this->conn->lastInsertId();
                     array_push($ids,$id);
 

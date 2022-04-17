@@ -194,7 +194,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="telefone">Telefone</label>
-                                    <input class="input-form-admin" required type="text" placeholder="Digite o telefone do resposável" name="telefone" id="telefone">
+                                    <input class="input-form-admin" required type="text" placeholder="Ex: (71) 9278-4526" name="telefone" id="telefone">
                                 </div>
 
                             </div>

@@ -610,7 +610,13 @@ nav ul li a {
     width: 20vw;
     height: 5vh;
     margin-bottom: 5vh;
+    
+}
 
+.button-form-animal input:hover{
+
+    cursor: pointer;
+    background-color: var(--cor-primaria);
     
 }
 
@@ -625,3 +631,4 @@ nav ul li a {
 .container-checkbox{
     align-items: center;
 }
+
