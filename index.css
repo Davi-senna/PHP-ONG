@@ -12,6 +12,7 @@
     --cor-secundaria: #4E8499;
 }
 
+
 body {
     background-color: var(--cor-primaria);
 }

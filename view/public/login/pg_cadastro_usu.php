@@ -23,42 +23,42 @@
             <div id="login">
 
                 <div class="container-input-dados ">
-                    <input class="input-dados" type="text" required name="nome" id="nome">
+                    <input class="input-dados" type="text" autocomplete="off" required name="nome" id="nome">
                     <label class="label-animado" for="nome">Nome</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" type="number" required name="cpf" id="cpf">
+                    <input class="input-dados" type="number" autocomplete="off" required name="cpf" id="cpf">
                     <label class="label-animado" for="cpf">Cpf</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" type="password" required name="senha" id="senha">
+                    <input class="input-dados" type="password" autocomplete="off" required name="senha" id="senha">
                     <label class="label-animado" for="senha">Senha</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" type="tel" required name="tel" id="tel">
+                    <input class="input-dados" type="tel" autocomplete="off" required name="tel" id="tel">
                     <label class="label-animado" for="tel">Telefone</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" required type="text" name="cep" id="cep">
+                    <input class="input-dados" autocomplete="off" required type="text" name="cep" id="cep">
                     <label class="label-animado" for="cep">Cep</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" required type="text" name="rua" id="rua">
+                    <input class="input-dados" autocomplete="off" required type="text" name="rua" id="rua">
                     <label class="label-animado" for="rua">Rua</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" required type="text" name="cidade" id="cidade">
+                    <input class="input-dados" autocomplete="off" required type="text" name="cidade" id="cidade">
                     <label class="label-animado" for="cidade">Cidade</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" required type="text" name="estado" id="estado">
+                    <input class="input-dados" autocomplete="off" required type="text" name="estado" id="estado">
                     <label class="label-animado" for="estado">Estado</label>
 
                     <input type="hidden" name="stmt" value="insert">

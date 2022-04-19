@@ -21,12 +21,12 @@
             <span>Fazer login</span>
             <div id="container-login">
                 <div class="container-input-dados">
-                    <input class="input-dados" type="text" required name="login" id="login">
+                    <input class="input-dados" type="text" autocomplete="off" required name="login" id="login">
                     <label class="label-animado" for="login">Cpf ou login</label>
                 </div>
 
                 <div class="container-input-dados">
-                    <input class="input-dados" type="password" required name="senha" id="senha">
+                    <input class="input-dados" type="password" autocomplete="off" required name="senha" id="senha">
                     <label class="label-animado" for="senha">Senha</label>
                 </div>
 
