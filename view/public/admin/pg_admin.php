@@ -1,7 +1,12 @@
 <?php
-if(isset($sucess)){
-echo "<script>alert('fafffafa')</script>";
+if(isset($_GET["success"])){
+echo "<script>alert($_GET[success])</script>";
 }
+
+require_once("../../../model/Sql.php");
+require_once("../../../model/Animal.php");
+require_once("../../../controller/controller_Animal.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -91,19 +96,30 @@ echo "<script>alert('fafffafa')</script>";
                 </span>
             </a>
             <div id="container-list-admin">
+
+                <?php
+
+                $controllerAnimal = new controller_Animal();
+                $animais = $controllerAnimal->getAll();
+
+                foreach($animais as $animal){
+                ?>
                 <div class="list-admin">
 
                     <div class="list-bar"></div>
 
                     <div class="container-list-admin-situation">
 
-                        <span class="list-admin-name">Bella</span>
+                        <span class="list-admin-name"><?php echo $animal["nome"]?></span>
 
                         <div class="situation">
                         Ativo
                         </div>
                     </div>
                 </div>
+                <?php
+                }
+                ?>
 
             </div>
         </div>

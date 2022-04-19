@@ -161,6 +161,11 @@ class Animal{
         }
     }
 
+    public function selectAll(){
+        $results = $this->sql->select("SELECT * FROM tb_animal");
+        return $results;
+    } 
+
 
     public function loadData(){
         

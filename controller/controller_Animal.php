@@ -18,6 +18,11 @@ class controller_Animal{
         return $results;
     }
 
+    public function getAll(){
+        $results = $this->instanceModel->selectAll();
+        return $results;        
+    }
+
 }
 
 /*
