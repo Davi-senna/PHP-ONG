@@ -1,6 +1,6 @@
 <?php
-if(isset($_GET["success"])){
-echo "<script>alert($_GET[success])</script>";
+if (isset($_GET["success"])) {
+    echo "<script>alert($_GET[success])</script>";
 }
 
 require_once("../../../model/Sql.php");
@@ -102,21 +102,65 @@ require_once("../../../controller/controller_Animal.php");
                 $controllerAnimal = new controller_Animal();
                 $animais = $controllerAnimal->getAll();
 
-                foreach($animais as $animal){
+                foreach ($animais as $animal) {
+
+                    if ($animal["situacao"] == 1) {
+                        $situacao = "situation-ativo";
+                    } else {
+                        $situacao = "situation-inativo";
+                    }
+
                 ?>
-                <div class="list-admin">
+                    <div class="list-admin">
 
-                    <div class="list-bar"></div>
+                        <div class="list-bar <?php echo $situacao ?>"></div>
 
-                    <div class="container-list-admin-situation">
+                        <div class="container-list-admin-situation">
 
-                        <span class="list-admin-name"><?php echo $animal["nome"]?></span>
+                            <span class="list-admin-name"><?php echo $animal["nome"] ?></span>
 
-                        <div class="situation">
-                        Ativo
+                            <div class="situation <?php echo $situacao ?>">
+
+                                <?php
+                                if ($animal["situacao"] == 1) {
+                                    echo "Ativo";
+                                } else {
+                                    echo "Inativo";
+                                }
+                                ?>
+
+                            </div>
+                        </div>
+
+                        <div class="container-info-animal">
+                              
+                                <div class="info-animal">
+                                    <span>Idade:</span>
+                                    <div class="info-animal-value">
+
+                                    </div>
+                                </div>
+
+                                <div class="info-animal">
+                                    <span>Sexo:</span>
+                                    <div class="info-animal-value">
+
+                                    </div>
+                                </div>
+
+                                <div class="info-animal">
+                                    <span>Raça:</span>
+                                    <div class="info-animal-value">
+                                        <span><?php echo $animal["raca"]?></span>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="container-actions">
+                               
                         </div>
                     </div>
-                </div>
                 <?php
                 }
                 ?>
