@@ -90,7 +90,7 @@ require_once("../../../controller/controller_Animal.php");
 
             </div>
             <hr>
-            <a id="create-animal" href="admin_animal/form_animal.php">
+            <a class="button-empty-admin" href="admin_animal/form_animal.php">
                 <span>
                     Adicionar +
                 </span>

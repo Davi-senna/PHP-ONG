@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../../../img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../../../../index.css">
-    <script type="text/javascript" src="../../../../script.js"></script>
+    <script type="text/javascript" src="../../../../js/script.js"></script>
 
     <title>PetCare</title>
 </head>
@@ -64,7 +64,7 @@
         <div class="conteudo-admin">
             <form action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
 
-                <div class="card-admin">
+                <div class="card-admin hidden-inativo">
 
                     <div class="card-header">
                         <span>Dados do animal</span>
@@ -98,51 +98,52 @@
                                     <input class="input-form-admin" required type="number" placeholder="Digite o nome da raça do animal" name="peso" id="peso">
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group-options">
 
-                                    <label for="sexo">Sexo do animal:</label>
+                                    <div class="container-form-options">
 
-                                    <div class="row container-checkbox margin-checkbox">
-                                    
-                                        <input required type="radio" value="1" name="sexo" id="sexo">
-                                        <span class="span-checkbox">Macho</span>
+                                        <label for="sexo">Sexo do animal:</label>
+
+                                        <div class="row container-checkbox margin-checkbox">
+
+                                            <input required type="radio" value="1" name="sexo" id="sexo">
+                                            <span class="span-checkbox">Macho</span>
+
+                                        </div>
+
+                                        <div class="row container-checkbox">
+
+                                            <input required type="radio" value="0" name="sexo" id="sexo">
+                                            <span class="span-checkbox">Fêmea</span>
+
+                                        </div>
 
                                     </div>
 
-                                    <div class="row container-checkbox">
+                                    <div class="container-form-options">
 
-                                        <input required type="radio" value="0" name="sexo" id="sexo">
-                                        <span class="span-checkbox">Fêmea</span>
+                                        <label for="situacao">Situacao:</label>
+
+                                        <div class="row container-checkbox margin-checkbox">
+
+                                            <input required type="radio" value="1" name="situacao" id="situacao">
+                                            <span class="span-checkbox">Vivo</span>
+
+                                        </div>
+
+                                        <div class="row container-checkbox">
+
+                                            <input required type="radio" value="0" name="situacao" id="situacao">
+                                            <span class="span-checkbox">Morto</span>
+
+                                        </div>
 
                                     </div>
 
                                 </div>
-
-                                <div class="form-group">
-
-                                    <label for="situacao">Situacao:</label>
-
-                                    <div class="row container-checkbox margin-checkbox">
-                                    
-                                        <input required type="radio" value="1" name="situacao" id="situacao">
-                                        <span class="span-checkbox">Vivo</span>
-
-                                    </div>
-
-                                    <div class="row container-checkbox">
-
-                                        <input required type="radio" value="0" name="situacao" id="situacao">
-                                        <span class="span-checkbox">Morto</span>
-                                        <input type="hidden" name="stmt" value="insert">
-
-                                    </div>
-
-                                </div>
-
-                                
-
 
                             </div>
+
 
                             <div class="column">
 
@@ -166,11 +167,13 @@
                     </div>
 
                 </div>
+                
 
-                <div class="card-admin">
+
+                <div class="card-admin hidden-ativo">
 
                     <div class="card-header">
-                        <spam>Dados do Responsável</spam>
+                        <span>Dados do Responsável</span>
                     </div>
 
                     <div class="container-form-admin">
@@ -207,8 +210,27 @@
 
                 </div>
 
-                <div class="button-form-animal">
-                    <input type="submit" value="Enviar">
+                <div class="container-etapa">
+
+                    <div class="figure-etapa">
+                        <div class="figure-circle circle-ativo"></div>
+                        <div class="figure-circle circle-inativo"></div>
+                    </div>
+
+                    <div class="container-button-etapa">
+                        <button class="button-empty-admin hidden-inativo" href="javascript:cadastrarAnimal()">
+                            <span>
+                                Proxima etapa >
+                            </span>
+                        </button>
+
+                        <button class="button-empty-admin hidden-ativo" href="javascript:cadastrarResponsavel()">
+                            <span>
+                                Finalizar cadastro >
+                            </span>
+                        </button>
+                        
+                    </div>
                 </div>
 
             </form>
