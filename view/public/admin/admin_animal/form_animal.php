@@ -62,9 +62,10 @@
 
         </nav>
         <div class="conteudo-admin">
-            <form action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
 
-                <div class="card-admin hidden-inativo">
+            <form class="hidden-inativo" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
+
+                <div class="card-admin ">
 
                     <div class="card-header">
                         <span>Dados do animal</span>
@@ -167,10 +168,28 @@
                     </div>
 
                 </div>
-                
+
+                <div class="container-etapa">
+
+                    <div class="figure-etapa">
+                        <div class="figure-circle circle-ativo"></div>
+                        <div class="figure-circle circle-inativo"></div>
+                    </div>
+
+                    <div class="container-button-etapa">
+                        <button class="button-empty-admin" type="submit">
+                            <span>
+                                Proxima etapa >
+                            </span>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
 
 
-                <div class="card-admin hidden-ativo">
+            <form class="hidden-ativo" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
+                <div class="card-admin">
 
                     <div class="card-header">
                         <span>Dados do Responsável</span>
@@ -207,32 +226,7 @@
 
                     </div>
 
-
                 </div>
-
-                <div class="container-etapa">
-
-                    <div class="figure-etapa">
-                        <div class="figure-circle circle-ativo"></div>
-                        <div class="figure-circle circle-inativo"></div>
-                    </div>
-
-                    <div class="container-button-etapa">
-                        <button class="button-empty-admin hidden-inativo" href="javascript:cadastrarAnimal()">
-                            <span>
-                                Proxima etapa >
-                            </span>
-                        </button>
-
-                        <button class="button-empty-admin hidden-ativo" href="javascript:cadastrarResponsavel()">
-                            <span>
-                                Finalizar cadastro >
-                            </span>
-                        </button>
-                        
-                    </div>
-                </div>
-
             </form>
         </div>
     </div>
