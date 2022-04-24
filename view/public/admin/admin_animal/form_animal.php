@@ -221,11 +221,27 @@
 
                             </div>
 
-
                         </div>
 
                     </div>
 
+                </div>
+
+                <div class="container-etapa">
+
+                    <div class="figure-etapa">
+                        <div class="figure-circle circle-inativo"></div>
+                        <div class="figure-circle circle-ativo"></div>
+                    </div>
+
+                    <div class="container-button-etapa">
+                        <button class="button-empty-admin" type="submit">
+                            <span>
+                                Finalizar cadastro >
+                            </span>
+                        </button>
+
+                    </div>
                 </div>
             </form>
         </div>
