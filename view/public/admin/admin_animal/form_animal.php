@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../../../../img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../../../../index.css">
     <script type="text/javascript" src="../../../../js/script.js"></script>
+    <script src="../../../../js/jQuery/jquery-3.6.0.min.js"></script>
 
     <title>PetCare</title>
 </head>
@@ -63,7 +64,7 @@
         </nav>
         <div class="conteudo-admin">
 
-            <form class="hidden-inativo" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
+            <form class="hidden-inativo" form="form-animal" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
 
                 <div class="card-admin ">
 

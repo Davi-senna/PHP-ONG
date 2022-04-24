@@ -17,12 +17,13 @@ if($results["valid"] == 1){
 
     header("Location: public/admin/pg_admin.php");
 
-}else if($results["valid"] == 0 && $results["error"] == "Senha incorreta"){
+}else if($results["valid"] == 0 && $results["error"] == "Senha invalida"){
 
     $error = $results['error'];
-    header("Location: ../pages/pg_login.php?error= $error ");
+    header("Location: public/login/pg_login.php?error= $error");
 
 }else{
+    
 /*
     try{
         $usuario->loadByCpf($cpf);
