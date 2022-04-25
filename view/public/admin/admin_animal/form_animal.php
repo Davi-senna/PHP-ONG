@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../../../img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../../../../index.css">
+    <script src="../../../../js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="../../../../js/script.js"></script>
-    <script src="../../../../js/jQuery/jquery-3.6.0.min.js"></script>
+
 
     <title>PetCare</title>
 </head>
@@ -64,7 +65,7 @@
         </nav>
         <div class="conteudo-admin">
 
-            <form class="hidden-inativo" form="form-animal" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
+            <form class="hidden-inativo" id="form-data-animal" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
 
                 <div class="card-admin ">
 
