@@ -37,9 +37,7 @@ $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
 $stmt = $_GET["stmt"];
 //echo(json_encode($stmt));
 if($stmt == 'insert'){
-    echo(json_encode("b"));
-}else{
-    echo(json_encode("bfgsf"));
+    echo(json_encode("bADA"));
 }
 switch($stmt){
 

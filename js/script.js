@@ -72,7 +72,7 @@ $(document).ready(() => {
 
         $.ajax({
 
-            url: "../../../view_animal.php?stmt='insert'",
+            url: "../../../view_animal.php?stmt=insert",
             type: "POST",
             cache: false,
             processData:false,
