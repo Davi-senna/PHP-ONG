@@ -19,23 +19,6 @@ function trocar() {
 }
 
 
-function cadastrarAnimal() {
-    var results = confirm("Tem certeza de que os dados estão corretos?");
-    if (results == 1) {
-
-        trocar();
-
-    }
-}
-
-function cadastrarResponsavel() {
-    var results = confirm("Tem certeza de que os dados estão corretos?");
-    if (results == 1) {
-
-        window.location.href = "../pg_admin.php?success='Animal inserido com sucesso'";
-    }
-}
-
 $(document).ready(() => {
 
     var id_animal;
@@ -65,9 +48,6 @@ $(document).ready(() => {
     $("#form-data-animal").submit((e) => {
         e.preventDefault();
 
-        var value_nome = $("#nome").val();
-        var value_image = $("#input-image").val();
-
         var form_data = new FormData(document.getElementById("form-data-animal"))
         
 
@@ -87,6 +67,33 @@ $(document).ready(() => {
             if(typeof(results["success"]) != undefined){
                 id_animal = results["id_animal"];
                 trocar();
+            }
+        })
+    })
+
+    $("#form-data-responsavel").submit((e) => {
+        e.preventDefault();
+
+        var form_data = new FormData(document.getElementById("form-data-responsavel"))
+        
+
+        $.ajax({
+
+            url: "../../../view_responsavel.php?stmt=insert",
+            type: "POST",
+            cache: false,
+            processData:false,
+            contentType:false,
+            data: form_data,
+            dataType: 'json'
+
+        }).done((results) => {
+            console.log(results);
+
+            if(typeof(results["success"]) != undefined){
+
+                window.location.href = "../pg_admin.php?success='Animal inserido com sucesso'";
+                
             }
         })
     })

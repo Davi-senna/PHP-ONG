@@ -190,7 +190,7 @@
             </form>
 
 
-            <form class="hidden-ativo" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
+            <form class="hidden-ativo" id="form-data-responsavel" action="../../../view_animal.php" method="POST" enctype="multipart/form-data">
                 <div class="card-admin">
 
                     <div class="card-header">
