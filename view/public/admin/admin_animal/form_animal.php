@@ -89,11 +89,11 @@
                                     <input class="input-form-admin" type="number" required placeholder="Digite a idade do animal" name="idade" id="idade">
                                 </div>
                                 <div class="form-group">
-                                    <label for="especie">Nome da espécie animal:</label>
-                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da espécie animal" name="especie" id="especie">
+                                    <label for="especie">Nome da espécie do animal:</label>
+                                    <input class="input-form-admin" required type="text" placeholder="Digite o nome da espécie do animal" name="especie" id="especie">
                                 </div>
                                 <div class="form-group">
-                                    <label for="raca">Nome da raça animal:</label>
+                                    <label for="raca">Nome da raça do animal:</label>
                                     <input class="input-form-admin" required type="text" placeholder="Digite o nome da raça do animal" name="raca" id="raca">
                                 </div>
                                 <div class="form-group">

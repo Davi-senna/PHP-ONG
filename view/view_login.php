@@ -6,13 +6,13 @@ require_once("../model/Admin.php");
 require_once("../controller/controller_Usuario.php");
 require_once("../controller/controller_Admin.php");
 
-var_dump($_POST);
+// var_dump($_POST);
 
 $usuario = new controller_Usuario();
 $admin = new controller_Admin();
 
 $results = $admin->valid_admin($_POST);
-var_dump($results);
+// var_dump($results);
 if($results["valid"] == 1){
 
     header("Location: public/admin/pg_admin.php");
