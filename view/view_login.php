@@ -23,7 +23,8 @@ if($results["valid"] == 1){
     header("Location: public/login/pg_login.php?error= $error");
 
 }else{
-    
+    $error = $results['error'];
+    header("Location: public/login/pg_login.php?error= $error");
 /*
     try{
         $usuario->loadByCpf($cpf);

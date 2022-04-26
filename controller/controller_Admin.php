@@ -9,16 +9,16 @@ class controller_Admin{
         $admin = $this->instanceModel->loadByLogin($login,$senha);
 
         switch ($admin) {
-            case count($admin) <= 0:
+            case empty($admin):
                 
                 return array(
                     "valid" => 0,
                     "error" => "Usuário não encontrado"
                 );
-
+                
                 break;
 
-            case count($admin) > 0 && $senha == $admin["senha"]:
+            case !empty($admin) && $senha == $admin["senha"]:
 
                 return array(
                     "valid" => 1
@@ -26,7 +26,7 @@ class controller_Admin{
 
                 break;
 
-            case count($admin) > 0 && $senha != $admin["senha"]:
+            case !empty($admin) && $senha != $admin["senha"]:
 
                 return array(
                     "valid" => 0,
