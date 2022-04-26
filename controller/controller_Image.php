@@ -46,6 +46,8 @@ class Controller_Image{
         }else{
 
             $results = $this->objectImage->pushInsert($id_animal,"../img/animal_sem_foto.png");
+            return $results["success"];
+            
 
         }
 

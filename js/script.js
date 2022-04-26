@@ -32,12 +32,13 @@ function cadastrarResponsavel() {
     var results = confirm("Tem certeza de que os dados estão corretos?");
     if (results == 1) {
 
-
         window.location.href = "../pg_admin.php?success='Animal inserido com sucesso'";
     }
 }
 
 $(document).ready(() => {
+
+    var id_animal;
 
     $('#input-image').change((e) => {
 
@@ -82,6 +83,11 @@ $(document).ready(() => {
 
         }).done((results) => {
             console.log(results);
+
+            if(typeof(results["success"]) != undefined){
+                id_animal = results["id_animal"];
+                trocar();
+            }
         })
     })
 

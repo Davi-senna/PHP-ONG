@@ -566,6 +566,11 @@ nav ul li a {
     cursor: pointer;
 }
 
+.button-empty-admin:hover{
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+}
+
 .card-admin{
     margin-top: 5vh;
     width: 70vw;
@@ -629,12 +634,7 @@ nav ul li a {
     
 }
 
-.button-form-animal input:hover{
 
-    cursor: pointer;
-    background-color: var(--cor-primaria);
-    
-}
 
 .span-checkbox{
     font-size: 0.8vw;

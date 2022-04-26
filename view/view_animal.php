@@ -45,14 +45,19 @@ switch ($stmt) {
                 
                 $resultsImage = insertImage($resultsAnimal, $image_data);
                 
-                $results = array(
-                    "success" => "Upload concluído com sucesso"
-                );
-
-                
                 if($resultsImage == 1){
+
+                    $results = array(
+                        "success" => "Upload concluído com sucesso",
+                        "id_animal" => $resultsAnimal["ids"][0] 
+                    );
                     
                     echo(json_encode($results));
+
+                }else{
+
+                    throw new Exception($message = "Não foi possível adicionar essa imagem");
+
                 }
 
             } else {
@@ -65,7 +70,7 @@ switch ($stmt) {
                 "error" => $e->$message
             );
 
-            //echo(json_encode($results));
+            echo(json_encode($results));
         }
 
         break;
