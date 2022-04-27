@@ -1,30 +1,57 @@
 <?php
 
-use LDAP\Result;
+header("Content-Type: application/json");
 
 require_once("../model/Sql.php");
 require_once("../model/Responsavel_animal.php");
 require_once("../controller/controller_Responsavel_animal.php");
 
-                // require_once("view_reponsavel_animal");
+extract($_POST);
 
-                // $responsavel_animal_data = array(
-                //     "cidade" => $cidade,
-                //     "estado" => $estado,
-                //     "email" => $email,
-                //     "telefone" => $telefone,
-                //     "id_animal" => $resultsAnimal["ids"][0]
-                // );
+echo(json_encode("entrou"));
+/*
 
-                // $resultsResponsavel_animal = insertResponsavel_animal($responsavel_animal_data);
+$responsavel_animal_data = array(
+    "cidade" => $cidade,
+    "estado" => $estado,
+    "email" => $email,
+    "telefone" => $telefone,
+    "id_animal" => $resultsAnimal["ids"][0]
+);
 
-function insertResponsavel_animal($responsavel_animal_data){
+$stmt = $_GET["stmt"];
 
-    $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
-    $resultsResponsavel_animal = $instanceControllerResponsavel_animal->insert($responsavel_animal_data);
+switch ($stmt) {
 
-    return($resultsResponsavel_animal);
+    case 'insert':
+        
+        try {
+
+            $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
+            $resultsResponsavel_animal = $instanceControllerResponsavel_animal->insert($responsavel_animal_data);
+            echo(json_encode($resultsResponsavel_animal));
+
+        } catch (\Exception $e) {
+            $results = array(
+                "error" => $e->$message
+            );
+
+            echo(json_encode($results));
+        }
+
+        break;
+
+    default:
+    
+        $results = array(
+            "error" => "Responsavel invalido"
+        );
+
+        echo(json_encode($results));
+
+    break;
 }
+*/
 
 ?>
 

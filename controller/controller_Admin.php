@@ -5,11 +5,13 @@ class controller_Admin{
     private $instanceModel;
 
     public function valid_admin($user_data){
-        extract($user_data);
+        try {
+            
+            extract($user_data);
         $admin = $this->instanceModel->loadByLogin($login,$senha);
 
         switch ($admin) {
-            case empty($admin):
+            case 0:
                 
                 return array(
                     "valid" => 0,
@@ -18,7 +20,7 @@ class controller_Admin{
                 
                 break;
 
-            case !empty($admin) && $senha == $admin["senha"]:
+            case count($admin) != 0 && $senha == $admin["senha"]:
 
                 return array(
                     "valid" => 1
@@ -26,7 +28,7 @@ class controller_Admin{
 
                 break;
 
-            case !empty($admin) && $senha != $admin["senha"]:
+            case count($admin) != 0 && $senha != $admin["senha"]:
 
                 return array(
                     "valid" => 0,
@@ -44,6 +46,13 @@ class controller_Admin{
             );
 
                 break;
+        }
+
+        } catch (\Exception $e) {
+            return array(
+                "valid" => 0,
+                "error" => $e
+            );
         }
     }
 

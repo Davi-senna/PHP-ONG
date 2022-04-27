@@ -84,17 +84,17 @@ $(document).ready(() => {
             cache: false,
             processData:false,
             contentType:false,
-            data: form_data,
+            data: {form_data,id_animal},
             dataType: 'json'
 
         }).done((results) => {
             console.log(results);
 
-            if(typeof(results["success"]) != undefined){
+            /*if(typeof(results["success"]) != undefined){
 
                 window.location.href = "../pg_admin.php?success='Animal inserido com sucesso'";
                 
-            }
+            }*/
         })
     })
 
