@@ -18,12 +18,13 @@ require_once("../../../controller/controller_Animal.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../../img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../../../index.css">
-    <script type="text/javascript" src="../../../script.js"></script>
+    <script type="text/javascript" src="../../../js/script.js"></script>
 
     <title>PetCare</title>
 </head>
 
 <body id="admin">
+
     <div id="pg-admin">
 
         <nav class="menu-lateral" id="menu-admin">
@@ -133,32 +134,32 @@ require_once("../../../controller/controller_Animal.php");
                         </div>
 
                         <div class="container-info-animal">
-                              
-                                <div class="info-animal">
-                                    <span>Idade:</span>
-                                    <div class="info-animal-value">
 
-                                    </div>
+                            <div class="info-animal">
+                                <span>Idade:</span>
+                                <div class="info-animal-value">
+
                                 </div>
+                            </div>
 
-                                <div class="info-animal">
-                                    <span>Sexo:</span>
-                                    <div class="info-animal-value">
+                            <div class="info-animal">
+                                <span>Sexo:</span>
+                                <div class="info-animal-value">
 
-                                    </div>
                                 </div>
+                            </div>
 
-                                <div class="info-animal">
-                                    <span>Raça:</span>
-                                    <div class="info-animal-value">
-                                        <span><?php echo $animal["raca"]?></span>
-                                    </div>
+                            <div class="info-animal">
+                                <span>Raça:</span>
+                                <div class="info-animal-value">
+                                    <span><?php echo $animal["raca"] ?></span>
                                 </div>
+                            </div>
 
                         </div>
 
                         <div class="container-actions">
-                               
+
                         </div>
                     </div>
                 <?php
@@ -168,6 +169,39 @@ require_once("../../../controller/controller_Animal.php");
             </div>
         </div>
     </div>
+    <?php
+
+    if (isset($_GET)) {
+        if (isset($_GET["success"])) { ?>
+
+            <div class="alert alert-success">
+
+                <div class="header-alert">
+
+                    <span><img src="../../../img/success-icon.png" alt="Sucesso"> Alert!</span>
+                    <a href="javascript:fechar()"  class="close">×</a>
+                </div>
+                <span><?php echo($_GET["success"])?></span>
+            </div>
+
+        <?php
+        }
+        if (isset($_GET["error"])) {
+        ?>
+            <div class="alert alert-success">
+
+                <div class="header-alert">
+
+                    <span><img src="../../../img/success-icon.png" alt="Sucesso"> Alert!</span>
+                    <a href="#" class="close">×</a>
+                </div>
+                <span></span>
+            </div>
+    <?php
+        }
+    } ?>
+
+
 </body>
 
 </html>

@@ -18,6 +18,11 @@ function trocar() {
     )
 }
 
+function fechar(){
+    var element = document.querySelector(".alert")
+    element.classList.add("hidden-ativo");
+}
+
 
 $(document).ready(() => {
 
@@ -96,7 +101,7 @@ $(document).ready(() => {
 
             if(results["success"] == 1){
 
-                window.location.href = "../pg_admin.php?success='Animal inserido com sucesso'";
+                window.location.href = "../pg_admin.php?success=Animal inserido com sucesso";
                 
             }
         })

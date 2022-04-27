@@ -14,7 +14,9 @@
     <title>PetCare</title>
 </head>
 
+
 <body id="admin">
+    
     <div id="pg-admin">
         <nav class="menu-lateral" id="menu-admin">
 
@@ -250,13 +252,8 @@
     </div>
 
 
-
-    <!--<?php
-        if (isset($_GET['error'])) {
-            $erro = $_GET['error'];
-            echo "<script>alert($erro)</script>";
-        }
-        ?>-->
 </body>
+
+
 
 </html>

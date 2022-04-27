@@ -703,3 +703,38 @@ nav ul li a {
     background-color: var(--cor-primaria);
 }
 
+.alert{
+    width: 30vw;
+    height: 10vh;
+    background-color: #28a745;
+    border-color: #23923d;
+    color: rgb(255, 255,255);
+    border-radius: 7px;
+    padding: 0.4vh 1.5vw;
+    position: absolute;
+    z-index: 999;
+    left: 60vw;
+    top: 5vh;
+}
+
+.header-alert{
+    width: 30vw;
+    height: 45%;
+    margin-bottom: 1vh;
+    
+}
+
+.alert .header-alert span img{
+    width: 7%;
+}
+
+
+
+.header-alert a{
+    font-size: 2vw;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    height: 1px;
+    margin-left: 70%;
+}
+
