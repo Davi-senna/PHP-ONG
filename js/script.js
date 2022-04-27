@@ -74,27 +74,31 @@ $(document).ready(() => {
     $("#form-data-responsavel").submit((e) => {
         e.preventDefault();
 
-        var form_data = new FormData(document.getElementById("form-data-responsavel"))
-        
+        var responsavel_data = {
+            "cidade" : $("#cidade").val(),
+            "estado" : $("#estado").val(),
+            "email" : $("#email").val(),
+            "telefone" : $("#telefone").val(),
+            "id_animal" : id_animal
+        }
+
+        console.log(responsavel_data);
 
         $.ajax({
 
             url: "../../../view_responsavel.php?stmt=insert",
             type: "POST",
-            cache: false,
-            processData:false,
-            contentType:false,
-            data: {form_data,id_animal},
+            data: responsavel_data,
             dataType: 'json'
 
         }).done((results) => {
             console.log(results);
 
-            /*if(typeof(results["success"]) != undefined){
+            if(results["success"] == 1){
 
                 window.location.href = "../pg_admin.php?success='Animal inserido com sucesso'";
                 
-            }*/
+            }
         })
     })
 
