@@ -55,7 +55,9 @@ ul,
 .form-group-options,
 .figure-etapa,
 .container-etapa,
-.container-button-etapa{
+.container-button-etapa,
+.container-actions,
+.button-action-admin{
     display: flex;
 }
 
@@ -526,10 +528,10 @@ nav ul li a {
 }
 
 .container-list-admin-situation {
-    margin-left: 2vw;
+    margin-left: 1vw;
     flex-direction: column;
     justify-content: center;
-    width: 25%;
+    width: 20%;
 }
 
 .list-bar {
@@ -670,6 +672,10 @@ nav ul li a {
     border-radius: 4px;
 }
 
+.info-animal-value-especie span{
+    font-size: 0.8vw;
+}
+
 .container-form-options{
     margin-right: 10vw;
     margin-bottom: 5vh;
@@ -738,3 +744,33 @@ nav ul li a {
     margin-left: 70%;
 }
 
+.list-admin figure{
+    width: 4.4%;
+    height: 80%;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 4px;
+    margin-left: 1vw;
+}
+
+.list-admin figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.button-action-admin img{
+    width: 30px;
+}
+
+.button-action-admin{
+    height: 30px;
+    margin-right: 1vw;
+}
+
+.container-actions{
+    
+    height: 100%;
+    width: 25%;
+    align-items: center;
+    justify-content: flex-end;
+
+}

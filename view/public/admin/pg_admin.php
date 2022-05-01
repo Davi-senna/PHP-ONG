@@ -116,6 +116,10 @@ require_once("../../../controller/controller_Animal.php");
 
                         <div class="list-bar <?php echo $situacao ?>"></div>
 
+                        <figure>
+                            <img src="../../../img/rabito.jpg" alt="">
+                        </figure>
+
                         <div class="container-list-admin-situation">
 
                             <span class="list-admin-name"><?php echo $animal["nome"] ?></span>
@@ -138,28 +142,38 @@ require_once("../../../controller/controller_Animal.php");
                             <div class="info-animal">
                                 <span>Idade:</span>
                                 <div class="info-animal-value">
-
+                                    <span><?php echo $animal["idade"] ?></span>
                                 </div>
                             </div>
 
                             <div class="info-animal">
                                 <span>Sexo:</span>
                                 <div class="info-animal-value">
-
+                                <span><?php echo $animal["sexo"] ?></span>
                                 </div>
                             </div>
 
                             <div class="info-animal">
-                                <span>Raça:</span>
-                                <div class="info-animal-value">
-                                    <span><?php echo $animal["raca"] ?></span>
+                                <span>Espécie:</span>
+                                <div class="info-animal-value info-animal-value-especie">
+                                    <span><?php echo $animal["especie"] ?></span>
                                 </div>
                             </div>
 
                         </div>
 
                         <div class="container-actions">
+                            <div class="button-action-admin button-action-admin-edit">
+                                    <a href="#">
+                                        <img src="../../../img/edit-icon.png" alt="Editar">
+                                    </a>
+                            </div>
 
+                            <div class="button-action-admin button-action-admin-delete">
+                                <a href="#">
+                                    <img src="../../../img/delete-icon.png" alt="Deletar">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 <?php

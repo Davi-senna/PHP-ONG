@@ -87,7 +87,7 @@
                                     <input class="input-form-admin" type="text" required placeholder="Digite o nome do animal" name="nome" id="nome">
                                 </div>
                                 <div class="form-group">
-                                    <label for="idade">Idade do animal:</label>
+                                    <label for="idade">Idade do animal (anos):</label>
                                     <input class="input-form-admin" type="number" required placeholder="Digite a idade do animal" name="idade" id="idade">
                                 </div>
                                 <div class="form-group">
