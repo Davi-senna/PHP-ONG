@@ -72,8 +72,9 @@
 
                 <div class="card-admin ">
 
-                    <div class="card-header">
+                    <div class="card-header" id="card-header-form-animal">
                         <span>Dados do animal</span>
+                        <a href="../pg_admin.php">Voltar</a>
                     </div>
 
                     <div class="container-form-admin">

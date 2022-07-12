@@ -587,9 +587,17 @@ nav ul li a {
     height: 7vh;
     background-color: var(--cor-primaria);
     align-items: center;
-    padding-left: 2vw;
-    font-size: 1.5vw;
+    padding: 0 2vw;
+    
 
+}
+
+.card-header span{
+    font-size: 1.5vw;
+}
+
+#card-header-form-animal{
+    justify-content: space-between;
 }
 
 .container-form-admin{
