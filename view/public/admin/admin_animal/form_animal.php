@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../index.css">
     <script src="../../../../js/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="../../../../js/script.js"></script>
+    <script type="text/javascript" src="../../../../js/form_animal.js"></script>
 
 
     <title>PetCare</title>

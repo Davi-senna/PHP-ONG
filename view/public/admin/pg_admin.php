@@ -1,7 +1,4 @@
 <?php
-if (isset($_GET["success"])) {
-    echo "<script>alert($_GET[success])</script>";
-}
 
 require_once("../../../model/Sql.php");
 require_once("../../../model/Animal.php");
