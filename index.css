@@ -652,13 +652,14 @@ nav ul li a {
 
 .container-info-animal{
     width: 45%;
+    justify-content: space-between;
+    padding: 0 6vw;
 }
 
 .info-animal{
     width: 90px;
     text-align: center;
     flex-direction: column;
-    margin-right: 6vw;
 }
 
 .info-animal span{

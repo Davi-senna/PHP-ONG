@@ -5,7 +5,9 @@ if (isset($_GET["success"])) {
 
 require_once("../../../model/Sql.php");
 require_once("../../../model/Animal.php");
+require_once("../../../model/Image.php");
 require_once("../../../controller/controller_Animal.php");
+require_once("../../../controller/controller_Image.php");
 
 ?>
 
@@ -102,8 +104,12 @@ require_once("../../../controller/controller_Animal.php");
 
                 $controllerAnimal = new controller_Animal();
                 $animais = $controllerAnimal->getAll();
+                
 
                 foreach ($animais as $animal) {
+
+                    $controllerImage = new Controller_Image();
+                    $image = $controllerImage->selectImage($animal['chip']);
 
                     if ($animal["situacao"] == 1) {
                         $situacao = "situation-ativo";
@@ -117,7 +123,7 @@ require_once("../../../controller/controller_Animal.php");
                         <div class="list-bar <?php echo $situacao ?>"></div>
 
                         <figure>
-                            <img src="../../../img/rabito.jpg" alt="">
+                            <img src="<?php echo "../../../img/animals/".$image?>" alt="">
                         </figure>
 
                         <div class="container-list-admin-situation">
@@ -142,31 +148,30 @@ require_once("../../../controller/controller_Animal.php");
                             <div class="info-animal">
                                 <span>Idade:</span>
                                 <div class="info-animal-value">
-                                    <span><?php echo $animal["idade"] ?></span>
+                                    <span><?php echo $animal["idade"] ?> anos</span>
                                 </div>
                             </div>
 
                             <div class="info-animal">
                                 <span>Sexo:</span>
                                 <div class="info-animal-value">
-                                <span><?php echo $animal["sexo"] ?></span>
+                                    <span><?php if ($animal["sexo"] == 1) {
+                                                echo "Maxo";
+                                            } else {
+                                                echo "Fêmea";
+                                            } ?></span>
                                 </div>
                             </div>
 
-                            <div class="info-animal">
-                                <span>Espécie:</span>
-                                <div class="info-animal-value info-animal-value-especie">
-                                    <span><?php echo $animal["especie"] ?></span>
-                                </div>
-                            </div>
+
 
                         </div>
 
                         <div class="container-actions">
                             <div class="button-action-admin button-action-admin-edit">
-                                    <a href="#">
-                                        <img src="../../../img/edit-icon.png" alt="Editar">
-                                    </a>
+                                <a href="#">
+                                    <img src="../../../img/edit-icon.png" alt="Editar">
+                                </a>
                             </div>
 
                             <div class="button-action-admin button-action-admin-delete">
@@ -193,9 +198,9 @@ require_once("../../../controller/controller_Animal.php");
                 <div class="header-alert">
 
                     <span><img src="../../../img/success-icon.png" alt="Sucesso"> Alert!</span>
-                    <a href="javascript:fechar()"  class="close">×</a>
+                    <a href="javascript:fechar()" class="close">×</a>
                 </div>
-                <span><?php echo($_GET["success"])?></span>
+                <span><?php echo ($_GET["success"]) ?></span>
             </div>
 
         <?php

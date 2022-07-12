@@ -27,7 +27,7 @@ class Controller_Image{
 
             $dir = "../img/animals/";
             $file = $image;
-            $image_source = $dir . md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
+            $image_source = md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
 
             $results = $this->objectImage->pushInsert($id_animal, $image_source);
 
@@ -37,7 +37,7 @@ class Controller_Image{
                 mkdir($dir);
             }
 
-            if(move_uploaded_file($file["tmp_name"],$image_source)){
+            if(move_uploaded_file($file["tmp_name"], $dir . $image_source)){
                 return 1;
             }else{
                 return 0;
@@ -45,13 +45,18 @@ class Controller_Image{
 
         }else{
 
-            $results = $this->objectImage->pushInsert($id_animal,"../img/animal_sem_foto.png");
+            $results = $this->objectImage->pushInsert($id_animal,"animal_sem_foto.png");
             return $results["success"];
             
 
         }
 
         
+    }
+
+    public function selectImage($id_animal){
+        $this->objectImage->loadById_animal($id_animal);
+        return $this->objectImage->getSource_image();
     }
 }
 
