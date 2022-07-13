@@ -12,8 +12,13 @@ class Controller_Image{
     public function deleteImage($id,$id_animal){
         $file = $this->objectImage->loadById_animal($id_animal);
         $this->objectImage->delete($id,$id_animal);
-        $nameFile =  $file["image_source"];
-        unlink($nameFile);
+        
+        if($file["image_source"] != "animal_sem_foto.png"){
+
+            $nameFile =  "../img/animals".$file["image_source"];
+            unlink($nameFile);
+
+        }
         
 
     }
@@ -56,7 +61,11 @@ class Controller_Image{
 
     public function selectImage($id_animal){
         $this->objectImage->loadById_animal($id_animal);
-        return $this->objectImage->getSource_image();
+        return [
+            "source" => $this->objectImage->getSource_image(),
+            "id" => $this->objectImage->getId(),
+            "id_animal" => $this->objectImage->getId_animal(),
+        ];
     }
 }
 

@@ -8,29 +8,28 @@ require_once("../controller/controller_Animal.php");
 require_once("view_image.php");
 
 
-extract($_POST);
+if(count($_POST) != 0) {
 
+    extract($_POST);
 
-// echo (json_encode("FOI"));
-
-
-$animal_data = array(
-    "nome" => $nome,
-    "idade" => $idade,
-    "sexo" => $sexo,
-    "especie" => $especie,
-    "raca" => $raca,
-    "situacao" => $situacao,
-    "descricao" => $descricao,
-    "peso" => $peso
-);
+    $animal_data = array(
+        "nome" => $nome,
+        "idade" => $idade,
+        "sexo" => $sexo,
+        "especie" => $especie,
+        "raca" => $raca,
+        "situacao" => $situacao,
+        "descricao" => $descricao,
+        "peso" => $peso
+    );
+    
+}
  
 
 
 $instanceControllerAnimal =  new Controller_Animal();
 
 $stmt = $_GET["stmt"];
-// echo(json_encode($stmt));
 
 switch ($stmt) {
 
@@ -64,7 +63,6 @@ switch ($stmt) {
                 throw new Exception($message = "Não foi possível adicionar esse animal");
             }
 
-            //var_dump($resultsResponsavel_animal);
         } catch (\Exception $e) {
             $results = array(
                 "error" => $e->$message
@@ -74,9 +72,14 @@ switch ($stmt) {
         }
 
         break;
+
+    case 'delete':
+
+        // deleteImage($GET['$id'],$GET['$id_animal']);
+
+        var_dump($_GET);
+        
+        break;
 }
 
 
-// //var_dump($animal_data);
-// //var_dump($responsavel_animal_data);
-// //var_dump($image_data);

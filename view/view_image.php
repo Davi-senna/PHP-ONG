@@ -14,6 +14,13 @@ function insertImage($resultsAnimal,$image_data){
 
 }
 
+function deleteImage($id,$id_animal){
+
+    $instanceControllerImage = new Controller_Image();
+    $resultsImage = $instanceControllerImage->deleteImage($id,$id_animal);
+
+}
+
 
 
 ?>

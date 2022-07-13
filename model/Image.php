@@ -5,6 +5,7 @@ class Image{
 
     private $source_image;
     private $id_animal;
+    private $id;
     private $sql;
      
 
@@ -28,7 +29,7 @@ class Image{
      /**
       * Get the value of id_animal
       */ 
-      public function getId_animal():INT{
+      public function getId_animal(){
         return $this->id_animal;
     }
 
@@ -42,6 +43,15 @@ class Image{
         return $this;
     }
 
+    public function getId(){
+        return $this->id;
+    }
+
+    public function setId($id){
+        $this->id = $id;
+        return $this;
+    }
+
     public function loadById_animal($value){
         
 
@@ -52,7 +62,8 @@ class Image{
 
         if(count($image) > 0){
             $this->setSource_image($image["source_image"]);
-            $this->setId_animal("id_animal");
+            $this->setId_animal($image["id_animal"]);
+            $this->setId($image["id_image"]);
   
         }
     }

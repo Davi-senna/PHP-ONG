@@ -102,7 +102,6 @@ require_once("../../../controller/controller_Image.php");
                 $controllerAnimal = new controller_Animal();
                 $animais = $controllerAnimal->getAll();
                 
-
                 foreach ($animais as $animal) {
 
                     $controllerImage = new Controller_Image();
@@ -120,7 +119,7 @@ require_once("../../../controller/controller_Image.php");
                         <div class="list-bar <?php echo $situacao ?>"></div>
 
                         <figure>
-                            <img src="<?php echo "../../../img/animals/".$image?>" alt="">
+                            <img src="<?php echo "../../../img/animals/" . $image['source'] ?>" alt="">
                         </figure>
 
                         <div class="container-list-admin-situation">
@@ -172,7 +171,7 @@ require_once("../../../controller/controller_Image.php");
                             </div>
 
                             <div class="button-action-admin button-action-admin-delete">
-                                <a href="#">
+                                <a href="../../view_animal.php?stmt=delete&&id=<?php echo $image['id']."&&id_animal=".$image['id_animal']?>">
                                     <img src="../../../img/delete-icon.png" alt="Deletar">
                                 </a>
                             </div>
