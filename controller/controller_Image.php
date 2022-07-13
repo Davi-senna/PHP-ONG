@@ -13,9 +13,9 @@ class Controller_Image{
         $file = $this->objectImage->loadById_animal($id_animal);
         $this->objectImage->delete($id,$id_animal);
         
-        if($file["image_source"] != "animal_sem_foto.png"){
+        if($file["source"] != "animal_sem_foto.png"){
 
-            $nameFile =  "../img/animals".$file["image_source"];
+            $nameFile =  "../img/animals".$file["source"];
             unlink($nameFile);
 
         }

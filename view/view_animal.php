@@ -74,10 +74,11 @@ switch ($stmt) {
         break;
 
     case 'delete':
-
-        // deleteImage($GET['$id'],$GET['$id_animal']);
-
+        
         var_dump($_GET);
+
+        deleteImage($_GET['id'],$_GET['id_animal']);
+
         
         break;
 }

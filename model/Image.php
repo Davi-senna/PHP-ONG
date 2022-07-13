@@ -64,6 +64,14 @@ class Image{
             $this->setSource_image($image["source_image"]);
             $this->setId_animal($image["id_animal"]);
             $this->setId($image["id_image"]);
+
+            return [
+                
+                "source" => $this->getSource_image($image["source_image"]),
+                "id_animal" => $this->getId_animal($image["id_animal"]),
+                "id" => $this->getId($image["id_image"]),
+
+            ];
   
         }
     }
@@ -123,7 +131,7 @@ class Image{
 
     public function delete($id_image,$id_animal){
 
-        $this->conn->execQuery(" DELETE from tb_img_souce where id_image = $id_image and id_animal = $id_animal
+        $this->sql->execQuery(" DELETE from tb_img_source where id_image = $id_image and id_animal = $id_animal
         ");
 
     }
