@@ -182,6 +182,27 @@ class Responsavel_animal{
         return $results;
     }
 
+    public function delete($id_animal){
+
+        try{
+
+            $this->sql->execQuery("DELETE FROM tb_responsavel_animal where id_animal=$id_animal");
+
+            return [
+                "success" => true
+            ];
+
+        }catch(Exception $e){
+
+            return [
+                "success" => false,
+                "error" => $e->getMessage()
+            ];
+
+        }
+
+    }
+
 
     //Método para fazer transação
     public function transaction($stmt){

@@ -6,6 +6,7 @@ require_once("../model/Sql.php");
 require_once("../model/Animal.php");
 require_once("../controller/controller_Animal.php");
 require_once("view_image.php");
+require_once("view_responsavel.php");
 
 
 if(count($_POST) != 0) {
@@ -78,9 +79,9 @@ switch ($stmt) {
         var_dump($_GET);
 
         // deleteImage($_GET['id'],$_GET['id_animal']);
-        $results = $instanceControllerAnimal->delete($_GET['id_animal']);
-
-        var_dump($results);
+        // $results = $instanceControllerAnimal->delete($_GET['id_animal']);
+        deleteResponsavel($id_animal);
+        // 
         
         break;
 }
