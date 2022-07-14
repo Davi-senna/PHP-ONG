@@ -28,11 +28,15 @@ if (isset($_GET['statement'])) {
 
                 $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
                 $resultsResponsavel_animal = $instanceControllerResponsavel_animal->insert($responsavel_animal_data);
-                echo (json_encode($resultsResponsavel_animal));
+                $results = array(
+                    "success" => 1,
+                );
+
+                echo (json_encode($results));
             } catch (\Exception $e) {
 
                 $results = array(
-
+                    "success" => 0,
                     "error" => $e->$message
 
                 );
@@ -55,25 +59,6 @@ if (isset($_GET['statement'])) {
             break;
     }
 
-    function deleteResponsavel($id_animal)
-    {
-
-        try {
-
-            $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
-            $instanceControllerResponsavel_animal->delete($id_animal);
-
-            return [
-                "success" => true,
-            ];
-        } catch (Exception $e) {
-
-            return [
-                "success" => false,
-                "error" => $e->getMessage(),
-            ];
-        }
-    }
 }
 
 function deleteResponsavel($id_animal)

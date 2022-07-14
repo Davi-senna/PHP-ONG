@@ -61,7 +61,6 @@ $(document).ready(() => {
             "id_animal": id_animal
         }
 
-        console.log(responsavel_data);
 
         $.ajax({
 
@@ -69,7 +68,7 @@ $(document).ready(() => {
             type: "POST",
             data: responsavel_data,
             dataType: 'json'
-
+            
         }).done((results) => {
             console.log(results);
 
