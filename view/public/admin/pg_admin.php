@@ -165,7 +165,7 @@ require_once("../../../controller/controller_Image.php");
 
                         <div class="container-actions">
                             <div class="button-action-admin button-action-admin-edit">
-                                <a href="#">
+                                <a href="admin_animal/form_update_animal.php?id_animal=<?php echo $animal["chip"]?>">
                                     <img src="../../../img/edit-icon.png" alt="Editar">
                                 </a>
                             </div>
