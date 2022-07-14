@@ -6,72 +6,91 @@ require_once("../model/Sql.php");
 require_once("../model/Responsavel_animal.php");
 require_once("../controller/controller_Responsavel_animal.php");
 
-extract($_POST);
+if (isset($_GET['statement'])) {
 
-$responsavel_animal_data = array(
-    "cidade" => $cidade,
-    "estado" => $estado,
-    "email" => $email,
-    "telefone" => $telefone,
-    "id_animal" => $id_animal
-);
+    extract($_POST);
 
-$stmt = $_GET["stmt"];
+    $responsavel_animal_data = array(
+        "cidade" => $cidade,
+        "estado" => $estado,
+        "email" => $email,
+        "telefone" => $telefone,
+        "id_animal" => $id_animal
+    );
 
-switch ($stmt) {
+    $stmt = $_GET["statement"];
 
-    case 'insert':
+    switch ($stmt) {
 
-        try {
+        case 'insert':
+
+            try {
+
+                $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
+                $resultsResponsavel_animal = $instanceControllerResponsavel_animal->insert($responsavel_animal_data);
+                echo (json_encode($resultsResponsavel_animal));
+            } catch (\Exception $e) {
+
+                $results = array(
+
+                    "error" => $e->$message
+
+                );
+
+                echo (json_encode($results));
+            }
+
+            break;
 
 
-            $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
-            $resultsResponsavel_animal = $instanceControllerResponsavel_animal->insert($responsavel_animal_data);
-            echo (json_encode($resultsResponsavel_animal));
+        default:
 
-        } catch (\Exception $e) {
 
             $results = array(
-
-                "error" => $e->$message
-
+                "error" => "Responsavel invalido"
             );
 
             echo (json_encode($results));
+
+            break;
+    }
+
+    function deleteResponsavel($id_animal)
+    {
+
+        try {
+
+            $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
+            $instanceControllerResponsavel_animal->delete($id_animal);
+
+            return [
+                "success" => true,
+            ];
+        } catch (Exception $e) {
+
+            return [
+                "success" => false,
+                "error" => $e->getMessage(),
+            ];
         }
-
-        break;
-
-
-    default:
-
-
-        $results = array(
-            "error" => "Responsavel invalido"
-        );
-
-        echo (json_encode($results));
-
-        break;
+    }
 }
 
-function deleteResponsavel($id_animal){
-
-    try{
+function deleteResponsavel($id_animal)
+{
+    try {
 
         $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
-        $instanceControllerResponsavel_animal->delete($id_animal);
+        $resultsResponsavel_animal = $instanceControllerResponsavel_animal->delete($id_animal);
 
-        return[
+        return [
             "success" => true,
         ];
+    } catch (Exception $e) {
 
-    }catch(Exception $e){
-
-        return[
+        return [
             "success" => false,
             "error" => $e->getMessage(),
         ];
-
     }
 }

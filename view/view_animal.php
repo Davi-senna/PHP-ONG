@@ -9,7 +9,7 @@ require_once("view_image.php");
 require_once("view_responsavel.php");
 
 
-if(count($_POST) != 0) {
+if (count($_POST) != 0) {
 
     extract($_POST);
 
@@ -23,9 +23,8 @@ if(count($_POST) != 0) {
         "descricao" => $descricao,
         "peso" => $peso
     );
-    
 }
- 
+
 
 
 $instanceControllerAnimal =  new Controller_Animal();
@@ -35,55 +34,56 @@ $stmt = $_GET["stmt"];
 switch ($stmt) {
 
     case 'insert':
-        
+
         try {
             $resultsAnimal = $instanceControllerAnimal->insertAnimal($animal_data);
- 
+
             if ($resultsAnimal["success"] == 1) {
-                
+
                 $image_data = $_FILES["image"];
-                
+
                 $resultsImage = insertImage($resultsAnimal, $image_data);
-                
-                if($resultsImage == 1){
+
+                if ($resultsImage == 1) {
 
                     $results = array(
                         "success" => "Upload concluído com sucesso",
-                        "id_animal" => $resultsAnimal["ids"][0] 
+                        "id_animal" => $resultsAnimal["ids"][0]
                     );
-                    
-                    echo(json_encode($results));
 
-                }else{
+                    echo (json_encode($results));
+                } else {
 
                     throw new Exception($message = "Não foi possível adicionar essa imagem");
-
                 }
-
             } else {
                 throw new Exception($message = "Não foi possível adicionar esse animal");
             }
-
         } catch (\Exception $e) {
             $results = array(
                 "error" => $e->$message
             );
 
-            echo(json_encode($results));
+            echo (json_encode($results));
         }
 
         break;
 
     case 'delete':
-        
+
         var_dump($_GET);
 
-        // deleteImage($_GET['id'],$_GET['id_animal']);
-        // $results = $instanceControllerAnimal->delete($_GET['id_animal']);
-        deleteResponsavel($id_animal);
+        try {
+
+            deleteImage($_GET['id'], $_GET['id_animal']);
+            deleteResponsavel($_GET['id_animal']);
+            $instanceControllerAnimal->delete($_GET['id_animal']);
+
+            header("Location: public/admin/pg_admin.php?success=Animal Deletado com sucesso");
+        } catch (Exception $e) {
+            header("Location: public/admin/pg_admin.php?success=Não foi possivel deletar esse animal");
+        }
         // 
-        
+
         break;
 }
-
-

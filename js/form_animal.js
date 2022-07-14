@@ -65,7 +65,7 @@ $(document).ready(() => {
 
         $.ajax({
 
-            url: "../../../view_responsavel.php?stmt=insert",
+            url: "../../../view_responsavel.php?statement=insert",
             type: "POST",
             data: responsavel_data,
             dataType: 'json'
