@@ -77,8 +77,10 @@ switch ($stmt) {
         
         var_dump($_GET);
 
-        deleteImage($_GET['id'],$_GET['id_animal']);
+        // deleteImage($_GET['id'],$_GET['id_animal']);
+        $results = $instanceControllerAnimal->delete($_GET['id_animal']);
 
+        var_dump($results);
         
         break;
 }

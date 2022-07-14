@@ -215,6 +215,27 @@ class Animal{
         return $results;
     }
 
+    public function delete($id){
+
+        try{
+
+            $this->sql->execQuery("DELETE FROM tb_animal where chip=$id");
+
+            return [
+                "success" => true
+            ];
+
+        }catch(Exception $e){
+
+            return [
+                "success" => false,
+                "error" => $e->getMessage()
+            ];
+
+        }
+
+    }
+
 
     //Método para fazer transação
     public function transaction($stmt){
@@ -232,7 +253,3 @@ class Animal{
     }
 
 }
-
-/*
-$teste = new Animal();
-var_dump($teste->insert("teste",12,1,"fdsa","fdsa"));*/
