@@ -88,29 +88,28 @@ if (isset($_GET["stmt"])) {
         case 'update':
 
             try {
-                $resultsAnimal = $instanceControllerAnimal->insertAnimal($animal_data);
+                $resultsAnimal = $instanceControllerAnimal->updateAnimal($_POST["id_animal"],$animal_data);
+                // if ($resultsAnimal["success"] == 1) {
+                        echo (json_encode($_FILES["image"]));
+                //     $image_data = $_FILES["image"];
 
-                if ($resultsAnimal["success"] == 1) {
+                //     $resultsImage = insertImage($resultsAnimal, $image_data);
 
-                    $image_data = $_FILES["image"];
+                //     if ($resultsImage == 1) {
 
-                    $resultsImage = insertImage($resultsAnimal, $image_data);
+                //         $results = array(
+                //             "success" => "Upload concluído com sucesso",
+                //             "id_animal" => $resultsAnimal["ids"][0]
+                //         );
 
-                    if ($resultsImage == 1) {
+                //         echo (json_encode($results));
+                //     } else {
 
-                        $results = array(
-                            "success" => "Upload concluído com sucesso",
-                            "id_animal" => $resultsAnimal["ids"][0]
-                        );
-
-                        echo (json_encode($results));
-                    } else {
-
-                        throw new Exception($message = "Não foi possível adicionar essa imagem");
-                    }
-                } else {
-                    throw new Exception($message = "Não foi possível adicionar esse animal");
-                }
+                //         throw new Exception($message = "Não foi possível adicionar essa imagem");
+                //     }
+                // } else {
+                //     throw new Exception($message = "Não foi possível adicionar esse animal");
+                // }
             } catch (\Exception $e) {
                 $results = array(
                     "error" => $e->$message

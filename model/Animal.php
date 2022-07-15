@@ -215,6 +215,33 @@ class Animal{
         return $results;
     }
 
+    public function update($id_animal,$raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso){
+
+        
+
+        try{
+
+            $this->feed_class($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso);
+            $data = $this->loadData();
+            extract($data);
+
+            $this->sql->execQuery("UPDATE tb_animal SET nome = '$nome', idade = $idade, sexo = $sexo, raca = '$raca', especie = '$especie', situacao = $situacao ,descricao = '$descricao',peso = $peso WHERE chip = $id_animal");
+
+            return [
+                "success" => true
+            ];
+
+        }catch(Exception $e){
+
+            return [
+                "success" => false,
+                "error" => $e->getMessage()
+            ];
+
+        }
+
+    }
+
     public function delete($id){
 
         try{

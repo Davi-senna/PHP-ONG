@@ -117,6 +117,7 @@ if(isset($_GET["id_animal"])){
                                 <div class="form-group">
                                     <label for="peso">Peso do animal (kg): </label>
                                     <input value="<?php echo $data["peso"]?>" class="input-form-admin" required type="number" placeholder="Digite o nome da raça do animal" name="peso" id="peso">
+                                    <input type="hidden" name="id_animal" value="<?php echo $_GET["id_animal"]?>">
                                 </div>
 
                                 <div class="form-group-options">

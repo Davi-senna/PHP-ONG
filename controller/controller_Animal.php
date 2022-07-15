@@ -26,6 +26,13 @@ class controller_Animal{
         $results = $this->instanceModel->delete($id);
         return $results;
     }
+    public function updateAnimal($id_animal,$data){
+
+        extract($data);
+
+        $results = $this->instanceModel->update($id_animal,$nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso);
+        return $results;
+    }
 
 }
 
