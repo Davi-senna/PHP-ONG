@@ -89,7 +89,7 @@ if (isset($_GET["stmt"])) {
 
             try {
                 $resultsAnimal = $instanceControllerAnimal->updateAnimal($_POST["id_animal"],$animal_data);
-                // if ($resultsAnimal["success"] == 1) {
+                if ($resultsAnimal["success"] == 1) {
                         echo (json_encode($_FILES["image"]));
                 //     $image_data = $_FILES["image"];
 
@@ -107,9 +107,9 @@ if (isset($_GET["stmt"])) {
 
                 //         throw new Exception($message = "Não foi possível adicionar essa imagem");
                 //     }
-                // } else {
-                //     throw new Exception($message = "Não foi possível adicionar esse animal");
-                // }
+                } else {
+                    throw new Exception($message = "Não foi possível adicionar esse animal");
+                }
             } catch (\Exception $e) {
                 $results = array(
                     "error" => $e->$message
