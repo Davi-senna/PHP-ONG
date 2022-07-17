@@ -15,7 +15,6 @@ class Controller_Image{
        
         
         if($file["source"] != "animal_sem_foto.png"){
-            echo(json_encode($file));
 
             $nameFile =  "../img/animals/".$file["source"];
             unlink($nameFile);

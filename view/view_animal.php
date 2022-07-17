@@ -88,11 +88,10 @@ if (isset($_GET["stmt"])) {
 
             try {
                 $resultsAnimal = $instanceControllerAnimal->updateAnimal($_POST["id_animal"],$animal_data);
-                if ($resultsAnimal["success"] == 1) {
+                if ($resultsAnimal["success"] == true) {
                     $image_data = $_FILES["image"];
                     $resultsImage = updateImage($_POST["id_animal"], $image_data);
-                    echo (json_encode($resultsImage));
-                    if ($resultsImage["success"] == 1) {
+                    if ($resultsImage["success"] == true) {
 
                         $results = array(
                             "success" => true,
