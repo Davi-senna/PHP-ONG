@@ -126,9 +126,9 @@ class Image{
         return $results;
     }
 
-    public function delete($id_image, $id_animal){
+    public function delete($id_animal){
 
-        $this->sql->execQuery(" DELETE from tb_img_source where id_image = $id_image and id_animal = $id_animal
+        $this->sql->execQuery(" DELETE from tb_img_source where id_animal = $id_animal
         ");
     }
 

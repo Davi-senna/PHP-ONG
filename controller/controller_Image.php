@@ -9,23 +9,22 @@ class Controller_Image{
     }
 
 
-    public function deleteImage($id,$id_animal){
+    public function deleteImage($id_animal){
         $file = $this->objectImage->loadById_animal($id_animal);
-        $this->objectImage->delete($id,$id_animal);
+        $this->objectImage->delete($id_animal);
+       
         
         if($file["source"] != "animal_sem_foto.png"){
+            echo(json_encode($file));
 
-            $nameFile =  "../img/animals".$file["source"];
+            $nameFile =  "../img/animals/".$file["source"];
             unlink($nameFile);
 
-        }
-        
+        }        
 
     }
 
     public function addImage($id_animal, $image){
-        extract($image);
-        //var_dump($image);
         
 
         if($image["size"] != 0){
@@ -56,6 +55,26 @@ class Controller_Image{
 
         }
 
+        
+    }
+
+    public function updateImage($id_animal, $image_data){
+
+        try{
+            $this->deleteImage($id_animal);
+            $this->addImage($id_animal, $image_data); 
+
+            return [
+                "success" => true,
+            ];
+        }catch(Exception $e){
+            
+            return [
+                "success" => false,
+                "error" => $e->getMessage,
+            ];
+
+        }
         
     }
 
