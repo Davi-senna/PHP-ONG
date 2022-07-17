@@ -46,6 +46,26 @@ if (isset($_GET['statement'])) {
 
             break;
 
+            case 'update':
+
+                try {
+    
+                    $instanceControllerResponsavel_animal = new Controller_Responsavel_animal();
+                    $resultsResponsavel_animal = $instanceControllerResponsavel_animal->update($responsavel_animal_data);
+    
+                    echo (json_encode($resultsResponsavel_animal));
+                } catch (\Exception $e) {
+    
+                    $results = array(
+                        "success" => 0,
+                        "error" => $e->$message
+    
+                    );
+    
+                    echo (json_encode($results));
+                }
+    
+                break;
 
         default:
 

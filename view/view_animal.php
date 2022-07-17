@@ -95,6 +95,7 @@ if (isset($_GET["stmt"])) {
 
                         $results = array(
                             "success" => true,
+                            "id_animal" => $_POST["id_animal"]
                         );
 
                         echo (json_encode($results));

@@ -203,6 +203,29 @@ class Responsavel_animal{
 
     }
 
+    public function update($id_animal,$raw_cidade,$raw_estado,$raw_email,$raw_telefone){        
+
+            try{
+    
+                $this->feed_class($id_animal,$raw_cidade,$raw_estado,$raw_email,$raw_telefone);
+                $data = $this->loadData();
+                extract($data);
+    
+                $this->sql->execQuery("UPDATE tb_responsavel_animal SET cidade = '$cidade', estado = '$estado', email = '$email', telefone = '$telefone' WHERE id_animal = $id_animal");
+    
+                return [
+                    "success" => true
+                ];
+    
+            }catch(Exception $e){
+    
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+            }
+        }
+
 
     //Método para fazer transação
     public function transaction($stmt){

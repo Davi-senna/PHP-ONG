@@ -16,6 +16,14 @@ class controller_Responsavel_animal{
         return $results;
     }
 
+    public function update($data){
+
+        extract($data);
+
+        $results = $this->instanceModel->update($id_animal,$cidade,$estado,$email,$telefone);
+        return $results;
+    }
+
     public function delete($id_animal){
         $results = $this->instanceModel->delete($id_animal);
         return $results;

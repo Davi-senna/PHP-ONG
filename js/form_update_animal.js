@@ -10,14 +10,12 @@ $(document).ready(() => {
             var file = e.target.files[0];
             var reader = new FileReader();
             if (file && file.type.match('image.*')) {
-                //console.log(file)
                 reader.readAsDataURL(file);
             } else {
                 image.attr('src', '');
             }
             reader.onloadend = function (e) {
                 image.attr('src', reader.result);
-                //console.log(e.target.result)
 
             }
         }
@@ -74,7 +72,7 @@ $(document).ready(() => {
 
             if (results["success"] == 1) {
 
-                window.location.href = "../pg_admin.php?success=Animal inserido com sucesso";
+                window.location.href = "../pg_admin.php?success=Animal atualizado com sucesso";
 
             }
         })
