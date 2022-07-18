@@ -3,8 +3,9 @@
 namespace Model;
 use Model\Sql;
 use \Exception;
+use Model\Model;
 
-class Usuario{
+class Usuario extends Model{
     private $nome;
     private $cpf;
     private $senha;
@@ -13,7 +14,6 @@ class Usuario{
     private $cidade;
     private $estado;
     private $cep;
-    private $sql;
 
     public function getNome(){
         return $this->nome;
@@ -135,11 +135,6 @@ class Usuario{
         $this->setCidade($cidade);
         $this->setEstado($estado);
         $this->setSenha($senha);
-    }
-
-    public function __construct(){
-        $this->sql = new Sql();
-
     }
 
 }

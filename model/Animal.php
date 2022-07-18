@@ -3,9 +3,9 @@
 namespace Model;
 use Model\Sql;
 use \Exception;
+use Model\Model;
 
-
-class Animal{
+class Animal extends Model{
     private $nome;
     private $idade;
     private $sexo;
@@ -15,7 +15,6 @@ class Animal{
     private $situacao;
     private $descricao;
     private $peso;
-    private $sql;
 
 
     //Getters and Setters...
@@ -314,9 +313,5 @@ class Animal{
 
     //...Execution methods
 
-    public function __construct(){
-        $this->sql = new Sql();
-
-    }
 
 }

@@ -3,13 +3,13 @@
 namespace Model;
 use Model\Sql;
 use \Exception;
+use Model\Model;
 
-class Image{
+class Image extends Model{
 
     private $source_image;
     private $id_animal;
     private $id;
-    private $sql;
 
 
     /**
@@ -122,9 +122,5 @@ class Image{
 
         $this->sql->execQuery(" DELETE from tb_img_source where id_animal = $id_animal
         ");
-    }
-
-    public function __construct(){
-        $this->sql = new Sql();
     }
 }

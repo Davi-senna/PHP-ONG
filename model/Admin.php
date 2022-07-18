@@ -1,41 +1,34 @@
 <?php
 
 namespace Model;
-use Model\Sql;
 use \Exception;
+use Model\Model;
 
-class Admin
-{
+class Admin extends Model{
 
     protected $login;
     protected $senha;
 
 
-    public function getLogin()
-    {
+    public function getLogin(){
         return $this->login;
     }
 
-    public function setLogin($value)
-    {
+    public function setLogin($value){
         $this->login = $value;
     }
 
-    public function getSenha()
-    {
+    public function getSenha(){
         return $this->senha;
     }
 
-    public function setSenha($value)
-    {
+    public function setSenha($value){
         $this->senha = $value;
     }
 
-    public function loadByLogin($login, $senha)
-    {
+    public function loadByLogin($login, $senha){
 
-        $sql = new Sql();
-        $results = $sql->select("SELECT * FROM tb_admin WHERE login = '$login'");
+        $results = $this->sql->select("SELECT * FROM tb_admin WHERE login = '$login'");
         if (!empty($results)) {
             $admin = $results[0];
             return $admin;

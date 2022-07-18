@@ -3,8 +3,9 @@
 namespace Model;
 use Model\Sql;
 use \Exception;
+use Model\Model;
 
-class Responsavel_animal{
+class Responsavel_animal extends Model{
 
     private $id_animal;
     private $cidade;
@@ -12,7 +13,6 @@ class Responsavel_animal{
     private $email;
     private $telefone;
     private $id;
-    private $sql;
 
 
     /**
@@ -241,9 +241,4 @@ class Responsavel_animal{
         return $results;
     }
 
-    public function __construct(){
-        
-        $this->sql = new Sql();
-
-    }
 }
