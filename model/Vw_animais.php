@@ -10,8 +10,20 @@ Class Vw_animais extends Model{
     //Select methods...
     
         public function getAllData($id_animal){
-            $results = $this->sql->select("SELECT * FROM vw_animais where chip = $id_animal");
-            return $results;
+
+            try{
+
+                $results = $this->sql->select("SELECT * FROM vw_animais where chip = $id_animal");
+                return $results;
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
         }
 
     //...Select methods

@@ -120,27 +120,49 @@ class Image extends Model{
 
         public function pushInsert($id_animal, $source_image){
 
-            $this->pushFeedClass($source_image, $id_animal);
+            try{
 
-            $stmt = "INSERT INTO tb_img_source(source_image,id_animal) 
-            Values (
-                :SOURCE_IMAGE,
-                :ID_ANIMAL
-            )";
+                $this->pushFeedClass($source_image, $id_animal);
+    
+                $stmt = "INSERT INTO tb_img_source(source_image,id_animal) 
+                Values (
+                    :SOURCE_IMAGE,
+                    :ID_ANIMAL
+                )";
+    
+                $parameters =  array(
+                    ":SOURCE_IMAGE" => $this->getSource_image(),
+                    ":ID_ANIMAL" => $this->getId_animal()    );
+    
+                $results = $this->sql->execTransaction([$stmt], $parameters);
+    
+                return $results;
 
-            $parameters =  array(
-                ":SOURCE_IMAGE" => $this->getSource_image(),
-                ":ID_ANIMAL" => $this->getId_animal()    );
+            }catch(Exception $e){
 
-            $results = $this->sql->execTransaction([$stmt], $parameters);
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
 
-            return $results;
+            }
+
         }
 
         public function delete($id_animal){
 
-            $this->sql->execQuery(" DELETE from tb_img_source where id_animal = $id_animal
-            ");
+            try{
+
+                $this->sql->execQuery(" DELETE from tb_img_source where id_animal = $id_animal");
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
         }
 
     //...Execution methods

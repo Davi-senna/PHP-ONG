@@ -181,17 +181,28 @@ class Responsavel_animal extends Model{
 
         public function insert($raw_id_animal,$raw_cidade,$raw_estado,$raw_email,$raw_telefone){
 
-            $this->feed_class($raw_id_animal,$raw_cidade,$raw_estado,$raw_email,$raw_telefone);
-            $data = $this->loadData();
-            extract($data);
-            
-            $stmt =" INSERT INTO tb_responsavel_animal (id_animal,cidade,estado,email,telefone) 
-                VALUES($id_animal,'$cidade','$estado','$email','$telefone')
-            ";
+            try{
 
-            $results = $this->sql->execTransaction([$stmt]);
+                $this->feed_class($raw_id_animal,$raw_cidade,$raw_estado,$raw_email,$raw_telefone);
+                $data = $this->loadData();
+                extract($data);
+                
+                $stmt =" INSERT INTO tb_responsavel_animal (id_animal,cidade,estado,email,telefone) 
+                    VALUES($id_animal,'$cidade','$estado','$email','$telefone')
+                ";
 
-            return $results;
+                $results = $this->sql->execTransaction([$stmt]);
+
+                return $results;
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
         }
 
         public function delete($id_animal){
