@@ -1,10 +1,9 @@
 <?php
 
-require_once("../model/Sql.php");
-require_once("../model/Usuario.php");
-require_once("../model/Admin.php");
-require_once("../controller/controller_Usuario.php");
-require_once("../controller/controller_Admin.php");
+require_once("../autoload.php");
+use Controller\controller_Admin;
+use Controller\controller_Usuario;
+
 
 // var_dump($_POST);
 

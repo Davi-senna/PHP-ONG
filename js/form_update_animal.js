@@ -27,7 +27,6 @@ $(document).ready(() => {
 
         var form_data = new FormData(document.getElementById("form-data-animal"))
 
-
         $.ajax({
 
             url: "../../../view_animal.php?stmt=update",
@@ -41,7 +40,7 @@ $(document).ready(() => {
         }).done((results) => {
             console.log(results);
 
-            if (results["success"]) {
+            if (results["success"] == true) {
                 id_animal = results["id_animal"];
                 trocar();
             }
@@ -71,6 +70,7 @@ $(document).ready(() => {
             console.log(results);
 
             if (results["success"] == 1) {
+                console.log(results)
 
                 window.location.href = "../pg_admin.php?success=Animal atualizado com sucesso";
 

@@ -1,5 +1,9 @@
 <?php
 
+namespace Controller;
+use Model\Vw_animais;
+use \Exception;
+
 Class controller_Vw_animais{
 
     private $instanceModel;

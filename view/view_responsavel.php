@@ -1,10 +1,8 @@
 <?php
 
 header("Content-Type: application/json");
-
-require_once("../model/Sql.php");
-require_once("../model/Responsavel_animal.php");
-require_once("../controller/controller_Responsavel_animal.php");
+require_once("../autoload.php");
+use Controller\controller_Responsavel_animal;
 
 if (isset($_GET['statement'])) {
 

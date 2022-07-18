@@ -1,4 +1,10 @@
 <?php
+
+namespace Model;
+use Model\Sql;
+use \Exception;
+
+
 class Animal{
     private $nome;
     private $idade;
@@ -12,256 +18,301 @@ class Animal{
     private $sql;
 
 
-    public function setNome($value){
+    //Getters and Setters...
 
-        $this->nome = $value;
+        public function setNome($value){
 
-    }
+            $this->nome = $value;
 
-    public function getNome(){
+        }
 
-        return $this->nome;
+        public function getNome(){
 
-    }
+            return $this->nome;
 
-    public function setIdade($value){
+        }
 
-        $this->idade = $value;
+        public function setIdade($value){
 
-    }
+            $this->idade = $value;
 
-    public function getIdade(){
+        }
 
-        return $this->idade;
+        public function getIdade(){
+
+            return $this->idade;
+            
+        }
+
+        public function setRaca($value){
+
+            $this->raca = $value;
+
+        }
+
+        public function getRaca(){
+
+            return $this->raca;
+
+        }
+
+        public function setSexo($value){
+
+            $this->sexo = $value;
+
+        }
+
+        public function getSexo(){
+
+            return $this->sexo;
+
+        }
+
+        public function setEspecie($value){
+
+            $this->especie = $value;
+
+        }
+
+        public function getEspecie(){
+
+            return $this->especie;
+
+        }
+
+        public function setChip($value){
+
+            $this->chip = $value;
+
+        }
+
+        public function getChip(){
+
+            return $this->chip;
+            
+        }
+
         
-    }
+        /**
+         * Get the value of situacao
+         */ 
+        public function getSituacao(){
+            return $this->situacao;
+        }
 
-    public function setRaca($value){
+        /**
+         * Set the value of situacao
+         *
+         * @return  self
+         */ 
+        public function setSituacao($situacao){
+            $this->situacao = $situacao;
 
-        $this->raca = $value;
+            return $this;
+        }
 
-    }
+            /**
+         * Get the value of descricao
+         */ 
+        public function getDescricao(){
+            return $this->descricao;
+        }
 
-    public function getRaca(){
+        /**
+         * Set the value of descricao
+         *
+         * @return  self
+         */ 
+        public function setDescricao($descricao){
+            $this->descricao = $descricao;
 
-        return $this->raca;
+            return $this;
+        }
 
-    }
+            /**
+         * Get the value of peso
+         */ 
+        public function getPeso(){
+            return $this->peso;
+        }
 
-    public function setSexo($value){
+        /**
+         * Set the value of peso
+         *
+         * @return  self
+         */ 
+        public function setPeso($peso){
+            $this->peso = $peso;
 
-        $this->sexo = $value;
-
-    }
-
-    public function getSexo(){
-
-        return $this->sexo;
-
-    }
-
-    public function setEspecie($value){
-
-        $this->especie = $value;
-
-    }
-
-    public function getEspecie(){
-
-        return $this->especie;
-
-    }
-
-    public function setChip($value){
-
-        $this->chip = $value;
-
-    }
-
-    public function getChip(){
-
-        return $this->chip;
-        
-    }
-
+            return $this;
+        }
     
-    /**
-     * Get the value of situacao
-     */ 
-    public function getSituacao(){
-        return $this->situacao;
-    }
+    //...Getters and Setters
 
-    /**
-     * Set the value of situacao
-     *
-     * @return  self
-     */ 
-    public function setSituacao($situacao){
-        $this->situacao = $situacao;
+    //Select methods...
 
-        return $this;
-    }
+        public function selectAll(){
+            
+            try{
 
-        /**
-     * Get the value of descricao
-     */ 
-    public function getDescricao(){
-        return $this->descricao;
-    }
+                $results = $this->sql->select("SELECT * FROM tb_animal");
+                return $results;
 
-    /**
-     * Set the value of descricao
-     *
-     * @return  self
-     */ 
-    public function setDescricao($descricao){
-        $this->descricao = $descricao;
+            }catch(Exception $e){
 
-        return $this;
-    }
+                return[
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+                
+            }
 
-        /**
-     * Get the value of peso
-     */ 
-    public function getPeso(){
-        return $this->peso;
-    }
-
-    /**
-     * Set the value of peso
-     *
-     * @return  self
-     */ 
-    public function setPeso($peso){
-        $this->peso = $peso;
-
-        return $this;
-    }
-
-    protected function loadByChip($value){
-        
-        $sql = new Sql();
-
-        $results = $sql->select("SELECT * FROM tb_animal WHERE chip = :CHIP",array(
-            ":CHIP" => $value)
-        );
-        $animal = $results[0];
-
-        if(count($animal) > 0){
-            $this->setNome($animal['nome']);
-            $this->setIdade($animal['idade']);
-            $this->setSexo($animal['sexo']);
-            $this->setRaca($animal['raca']);
-            $this->setEspecie($animal['especie']);
-            $this->setChip($animal['chip']);
-            $this->setSituacao($animal['situacao']);
-            $this->setDescricao($animal['descricao']);
-            $this->setPeso($animal['peso']);
-        }
-    }
-
-    public function selectAll(){
-        $results = $this->sql->select("SELECT * FROM tb_animal");
-        return $results;
-    } 
+        } 
 
 
-    public function loadData(){
-        
-        $data = array(
-            'nome' => $this->getNome(),
-            'idade' => $this->getIdade(),
-            'sexo' => $this->getSexo(),
-            'raca' => $this->getRaca(),
-            'especie' => $this->getEspecie(),
-            'chip' => $this->getChip(),
-            'situacao' => $this->getSituacao(),
-            'descricao' => $this->getDescricao(),
-            'peso' => $this->getPeso()
-        );
+        public function loadData(){
+            
+            $data = array(
+                'nome' => $this->getNome(),
+                'idade' => $this->getIdade(),
+                'sexo' => $this->getSexo(),
+                'raca' => $this->getRaca(),
+                'especie' => $this->getEspecie(),
+                'chip' => $this->getChip(),
+                'situacao' => $this->getSituacao(),
+                'descricao' => $this->getDescricao(),
+                'peso' => $this->getPeso()
+            );
 
-        return $data;
-
-    }
-
-
-    //Método para alimentação da classe por metodos como insert ou update
-    public function feed_class($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso){
-        $this->setNome($nome);
-        $this->setIdade($idade);
-        $this->setSexo($sexo);
-        $this->setRaca($raca);
-        $this->setEspecie($especie);
-        $this->setSituacao($situacao);
-        $this->setDescricao($descricao);
-        $this->setPeso($peso);
-    }
-
-
-
-    public function insert($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso){
-
-        $this->feed_class($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso);
-        $data = $this->loadData();
-        extract($data);
-        
-        $stmt =" INSERT INTO tb_animal (nome,idade,sexo,raca,especie,situacao,descricao,peso) 
-            VALUES('$nome',$idade,$sexo,'$raca','$especie',$situacao,'$descricao',$peso)
-        ";
-
-        $results = $this->transaction($stmt);
-
-        return $results;
-    }
-
-    public function update($id_animal,$raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso){
-
-        
-
-        try{
-
-            $this->feed_class($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso);
-            $data = $this->loadData();
-            extract($data);
-
-            $this->sql->execQuery("UPDATE tb_animal SET nome = '$nome', idade = $idade, sexo = $sexo, raca = '$raca', especie = '$especie', situacao = $situacao ,descricao = '$descricao',peso = $peso WHERE chip = $id_animal");
-
-            return [
-                "success" => true
-            ];
-
-        }catch(Exception $e){
-
-            return [
-                "success" => false,
-                "error" => $e->getMessage()
-            ];
+            return $data;
 
         }
 
-    }
+    //...Select methods
 
-    public function delete($id){
+    //Fedding methods...
 
-        try{
+        //Método de alimentação por banco de dados
+        protected function loadByChip($id_animal){
+            
+            try{
 
-            $this->sql->execQuery("DELETE FROM tb_animal where chip=$id");
+                $sql = new Sql();
 
-            return [
-                "success" => true
-            ];
+                $results = $sql->select("SELECT * FROM tb_animal WHERE chip = :CHIP",array(
+                    ":CHIP" => $id_animal)
+                );
+                $animal = $results[0];
 
-        }catch(Exception $e){
+                if(count($animal) > 0){
+                    $this->setNome($animal['nome']);
+                    $this->setIdade($animal['idade']);
+                    $this->setSexo($animal['sexo']);
+                    $this->setRaca($animal['raca']);
+                    $this->setEspecie($animal['especie']);
+                    $this->setChip($animal['chip']);
+                    $this->setSituacao($animal['situacao']);
+                    $this->setDescricao($animal['descricao']);
+                    $this->setPeso($animal['peso']);
+                }
 
-            return [
-                "success" => false,
-                "error" => $e->getMessage()
-            ];
+            }catch(Exception $e){
+                return[
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+            }
+        }
+
+        //Método para alimentação da classe por metodos como insert ou update
+        protected function feed_class($nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso){
+            $this->setNome($nome);
+            $this->setIdade($idade);
+            $this->setSexo($sexo);
+            $this->setRaca($raca);
+            $this->setEspecie($especie);
+            $this->setSituacao($situacao);
+            $this->setDescricao($descricao);
+            $this->setPeso($peso);
+        }
+
+    //...Fedding methods
+
+    //Execution methods...
+
+        public function insert($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso){
+
+            try{
+
+                $this->feed_class($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso);
+                $data = $this->loadData();
+                extract($data);
+                
+                $stmt =" INSERT INTO tb_animal (nome,idade,sexo,raca,especie,situacao,descricao,peso) 
+                    VALUES('$nome',$idade,$sexo,'$raca','$especie',$situacao,'$descricao',$peso)
+                ";
+
+                $results = $this->transaction($stmt);
+
+                return $results;
+
+            }catch(Exception $e){
+                return[
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+            }
+        }
+
+        public function update($id_animal,$raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso){
+
+            
+
+            try{
+
+                $this->feed_class($raw_nome,$raw_idade,$raw_sexo,$raw_raca,$raw_especie,$raw_situacao,$raw_descricao,$raw_peso);
+                $data = $this->loadData();
+                extract($data);
+
+                $this->sql->execQuery("UPDATE tb_animal SET nome = '$nome', idade = $idade, sexo = $sexo, raca = '$raca', especie = '$especie', situacao = $situacao ,descricao = '$descricao',peso = $peso WHERE chip = $id_animal");
+
+                return [
+                    "success" => true
+                ];
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
 
         }
 
-    }
+        public function delete($id){
+
+            try{
+
+                $this->sql->execQuery("DELETE FROM tb_animal where chip=$id");
+
+                return [
+                    "success" => true
+                ];
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
+
+        }
+
+    //...Execution methods
 
 
     //Método para fazer transação

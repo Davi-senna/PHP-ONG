@@ -1,5 +1,8 @@
 <?php
 
+namespace Model;
+use \PDO;
+
 class Sql extends PDO{
 
     public $conn;

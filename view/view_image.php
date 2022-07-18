@@ -1,8 +1,6 @@
 <?php
 
-require_once("../model/Sql.php");
-require_once("../model/Image.php");
-require_once("../controller/controller_Image.php");
+use Controller\controller_Image;
 
 
 

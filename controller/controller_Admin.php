@@ -1,5 +1,9 @@
 <?php
 
+namespace Controller;
+use Model\Admin;
+use \Exception;
+
 class controller_Admin{
 
     private $instanceModel;

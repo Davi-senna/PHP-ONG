@@ -1,5 +1,9 @@
 <?php
 
+namespace Model;
+use Model\Sql;
+use \Exception;
+
 class Usuario{
     private $nome;
     private $cpf;

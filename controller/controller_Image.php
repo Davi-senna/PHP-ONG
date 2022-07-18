@@ -1,5 +1,9 @@
 <?php
 
+namespace Controller;
+use Model\Image;
+use \Exception;
+
 class Controller_Image{
 
     private $objectImage;

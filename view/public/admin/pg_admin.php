@@ -1,10 +1,7 @@
 <?php
-
-require_once("../../../model/Sql.php");
-require_once("../../../model/Animal.php");
-require_once("../../../model/Image.php");
-require_once("../../../controller/controller_Animal.php");
-require_once("../../../controller/controller_Image.php");
+require_once("../../../autoload.php");
+use Controller\controller_Animal;
+use Controller\controller_Image;
 
 ?>
 

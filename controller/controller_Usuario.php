@@ -1,5 +1,9 @@
 <?php
 
+namespace Controller;
+use Model\Usuario;
+use \Exception;
+
 class controller_Usuario{
 
     private $instanceModel;

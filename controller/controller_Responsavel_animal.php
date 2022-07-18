@@ -1,5 +1,9 @@
 <?php
 
+namespace Controller;
+use Model\Responsavel_animal;
+use \Exception;
+
 class controller_Responsavel_animal{
 
     private $instanceModel;

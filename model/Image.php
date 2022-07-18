@@ -1,5 +1,8 @@
 <?php
 
+namespace Model;
+use Model\Sql;
+use \Exception;
 
 class Image{
 

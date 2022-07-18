@@ -1,8 +1,7 @@
 <?php
 
-require_once("../controller/controller_Usuario.php");
-require_once("../model/Usuario.php");
-require_once("../model/Sql.php");
+require_once("../autoload.php");
+use Controller\controller_Usuario;
 
 extract($_POST);
 

@@ -17,11 +17,12 @@
 
 <?php 
 
+use Controller\controller_Vw_animais;
+
 if(isset($_GET["id_animal"])){
+
+    require_once("../../../../autoload.php");
     
-    require_once("../../../../controller/controller_Vw_animais.php");
-    require_once("../../../../model/Vw_animais.php");
-    require_once("../../../../model/Sql.php");
     
     $instanceController = new controller_Vw_animais();
     $results = $instanceController->getAllData($_GET["id_animal"]);

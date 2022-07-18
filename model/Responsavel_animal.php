@@ -1,5 +1,9 @@
 <?php
 
+namespace Model;
+use Model\Sql;
+use \Exception;
+
 class Responsavel_animal{
 
     private $id_animal;

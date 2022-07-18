@@ -1,5 +1,9 @@
 <?php
 
+namespace Controller;
+use Model\Animal;
+use \Exception;
+
 class controller_Animal{
 
     private $instanceModel;
@@ -32,6 +36,8 @@ class controller_Animal{
 
         $results = $this->instanceModel->update($id_animal,$nome,$idade,$sexo,$raca,$especie,$situacao,$descricao,$peso);
         return $results;
+
+echo(json_encode($results));
     }
 
 }

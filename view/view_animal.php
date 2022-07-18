@@ -2,11 +2,10 @@
 
 header("Content-Type: application/json");
 
-require_once("../model/Sql.php");
-require_once("../model/Animal.php");
-require_once("../controller/controller_Animal.php");
-require_once("view_image.php");
+require_once("../autoload.php");
+require_once("view_image.php");  
 require_once("view_responsavel.php");
+use Controller\controller_Animal;
 
 
 if (count($_POST) != 0) {
@@ -23,7 +22,7 @@ if (count($_POST) != 0) {
         "descricao" => $descricao,
         "peso" => $peso
     );
-}
+}   
 
 
 if (isset($_GET["stmt"])) {
@@ -84,7 +83,7 @@ if (isset($_GET["stmt"])) {
 
             break;
 
-        case 'update':
+            case 'update':
 
             try {
                 $resultsAnimal = $instanceControllerAnimal->updateAnimal($_POST["id_animal"],$animal_data);
@@ -113,7 +112,7 @@ if (isset($_GET["stmt"])) {
 
                 echo (json_encode($results));
             }
-
+            
             break;
         default:
 
