@@ -10,31 +10,52 @@ class Admin extends Model{
     protected $senha;
 
 
-    public function getLogin(){
-        return $this->login;
-    }
+    //Getters and Setters...
 
-    public function setLogin($value){
-        $this->login = $value;
-    }
-
-    public function getSenha(){
-        return $this->senha;
-    }
-
-    public function setSenha($value){
-        $this->senha = $value;
-    }
-
-    public function loadByLogin($login, $senha){
-
-        $results = $this->sql->select("SELECT * FROM tb_admin WHERE login = '$login'");
-        if (!empty($results)) {
-            $admin = $results[0];
-            return $admin;
-        }else{
-            return 0;
+        public function getLogin(){
+            return $this->login;
         }
-        
-    }
+
+        public function setLogin($value){
+            $this->login = $value;
+        }
+
+        public function getSenha(){
+            return $this->senha;
+        }
+
+        public function setSenha($value){
+            $this->senha = $value;
+        }
+
+    //...Getters and Setters
+
+    //Select methods...
+
+        public function loadByLogin($login, $senha){
+
+            try{
+
+                $results = $this->sql->select("SELECT * FROM tb_admin WHERE login = '$login'");
+                if (!empty($results)) {
+                    $admin = $results[0];
+                    return $admin;
+                }else{
+                    return 0;
+                }
+
+            }catch(Exception $e){
+
+                return[
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
+            
+        }
+
+    //...Select methods
+
+
 }
