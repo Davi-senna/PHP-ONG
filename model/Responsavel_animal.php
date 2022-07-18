@@ -181,7 +181,7 @@ class Responsavel_animal{
             VALUES($id_animal,'$cidade','$estado','$email','$telefone')
         ";
 
-        $results = $this->transaction($stmt);
+        $results = $this->sql->execTransaction([$stmt]);
 
         return $results;
     }

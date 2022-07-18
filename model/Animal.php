@@ -252,7 +252,7 @@ class Animal{
                     VALUES('$nome',$idade,$sexo,'$raca','$especie',$situacao,'$descricao',$peso)
                 ";
 
-                $results = $this->transaction($stmt);
+                $results = $this->sql->execTransaction([$stmt]);
 
                 return $results;
 
@@ -313,17 +313,6 @@ class Animal{
         }
 
     //...Execution methods
-
-
-    //Método para fazer transação
-    public function transaction($stmt){
-
-        $results = $this->sql->execTransaction(
-            $statements = [$stmt]
-        );
-        	
-        return $results;
-    }
 
     public function __construct(){
         $this->sql = new Sql();

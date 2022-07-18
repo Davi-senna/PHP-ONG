@@ -113,18 +113,7 @@ class Image{
             ":SOURCE_IMAGE" => $this->getSource_image(),
             ":ID_ANIMAL" => $this->getId_animal()    );
 
-        $results = $this->transaction($stmt, $parameters);
-
-        return $results;
-    }
-
-    //Método para fazer transação
-    public function transaction($stmt, $parameters){
-
-        $results = $this->sql->execTransaction(
-            $statements = [$stmt],
-            $parameters
-        );
+        $results = $this->sql->execTransaction([$stmt], $parameters);
 
         return $results;
     }
