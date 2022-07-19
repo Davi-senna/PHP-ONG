@@ -12,25 +12,29 @@ class controller_Responsavel_animal{
         $this->instanceModel = new Responsavel_animal();
     }
 
-    public function insert($data){
+    //Execution methods...
 
-        extract($data);
+        public function insert($data){
 
-        $results = $this->instanceModel->insert($id_animal,$cidade,$estado,$email,$telefone);
-        return $results;
-    }
+            extract($data);
 
-    public function update($data){
+            $results = $this->instanceModel->insert($id_animal,$cidade,$estado,$email,$telefone);
+            return $results;
+        }
 
-        extract($data);
+        public function update($data){
 
-        $results = $this->instanceModel->update($id_animal,$cidade,$estado,$email,$telefone);
-        return $results;
-    }
+            extract($data);
 
-    public function delete($id_animal){
-        $results = $this->instanceModel->delete($id_animal);
-        return $results;
-    }
+            $results = $this->instanceModel->update($id_animal,$cidade,$estado,$email,$telefone);
+            return $results;
+        }
+
+        public function delete($id_animal){
+            $results = $this->instanceModel->delete($id_animal);
+            return $results;
+        }
+
+    //...Execution methods
 
 }

@@ -12,83 +12,87 @@ class Controller_Image{
         $this->objectImage = new Image();
     }
 
+    //Execution methods...
+        public function deleteImage($id_animal){
+            $file = $this->objectImage->loadById_animal($id_animal);
+            $this->objectImage->delete($id_animal);
+            
+            
+            if($file["source"] != "animal_sem_foto.png"){
 
-    public function deleteImage($id_animal){
-        $file = $this->objectImage->loadById_animal($id_animal);
-        $this->objectImage->delete($id_animal);
-       
-        
-        if($file["source"] != "animal_sem_foto.png"){
+                $nameFile =  "../img/animals/".$file["source"];
+                unlink($nameFile);
+            }        
 
-            $nameFile =  "../img/animals/".$file["source"];
-            unlink($nameFile);
+        }
 
-        }        
+        public function addImage($id_animal, $image){
+            
+            if($image["size"] != 0){
 
-    }
+                $dir = "../img/animals/";
+                $file = $image;
+                $image_source = md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
 
-    public function addImage($id_animal, $image){
-        
+                $results = $this->objectImage->pushInsert($id_animal, $image_source);
 
-        if($image["size"] != 0){
+                //var_dump($results);
 
-            $dir = "../img/animals/";
-            $file = $image;
-            $image_source = md5(rand() . date("d-m-Y H:i:s")) . $file["name"];
+                if(!is_dir($dir)){
+                    mkdir($dir);
+                }
 
-            $results = $this->objectImage->pushInsert($id_animal, $image_source);
+                if(move_uploaded_file($file["tmp_name"], $dir . $image_source)){
+                    return 1;
+                }else{
+                    return 0;
+                };
 
-            //var_dump($results);
+            }else{
 
-            if(!is_dir($dir)){
-                mkdir($dir);
+                $results = $this->objectImage->pushInsert($id_animal,"animal_sem_foto.png");
+                return $results["success"];
+                
+
             }
 
-            if(move_uploaded_file($file["tmp_name"], $dir . $image_source)){
-                return 1;
-            }else{
-                return 0;
-            };
-
-        }else{
-
-            $results = $this->objectImage->pushInsert($id_animal,"animal_sem_foto.png");
-            return $results["success"];
-            
-
-        }
-
-        
-    }
-
-    public function updateImage($id_animal, $image_data){
-
-        try{
-            $this->deleteImage($id_animal);
-            $this->addImage($id_animal, $image_data); 
-
-            return [
-                "success" => true,
-            ];
-        }catch(Exception $e){
-            
-            return [
-                "success" => false,
-                "error" => $e->getMessage,
-            ];
-
         }
         
-    }
+        public function updateImage($id_animal, $image_data){
+     
+            try{
+                $this->deleteImage($id_animal);
+                $this->addImage($id_animal, $image_data); 
+     
+                return [
+                    "success" => true,
+                ];
+            }catch(Exception $e){
+                
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage,
+                ];
+     
+            }
+            
+        }
 
-    public function selectImage($id_animal){
-        $this->objectImage->loadById_animal($id_animal);
-        return [
-            "source" => $this->objectImage->getSource_image(),
-            "id" => $this->objectImage->getId(),
-            "id_animal" => $this->objectImage->getId_animal(),
-        ];
-    }
+    //...Execution methods
+
+    //Select methods...
+
+        public function selectImage($id_animal){
+            $this->objectImage->loadById_animal($id_animal);
+            return [
+                "source" => $this->objectImage->getSource_image(),
+                "id" => $this->objectImage->getId(),
+                "id_animal" => $this->objectImage->getId_animal(),
+            ];
+        }
+
+    //...Select methods
+
 }
 
 ?>

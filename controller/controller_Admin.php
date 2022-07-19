@@ -12,7 +12,7 @@ class controller_Admin{
         try {
             
             extract($user_data);
-        $admin = $this->instanceModel->loadByLogin($login,$senha);
+            $admin = $this->instanceModel->loadByLogin($login,$senha);
 
         switch ($admin) {
             case 0:
