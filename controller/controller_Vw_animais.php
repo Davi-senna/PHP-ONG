@@ -9,14 +9,14 @@ Class controller_Vw_animais{
     private $instanceModel;
 
     
-    //Execution methods...
+    //Select methods...
     
         public function getAllData($id_animal){
             $results = $this->instanceModel->getAllData($id_animal);
             return $results;
         }
 
-    //...Execution methods
+    //...Select methods
 
     public function __construct(){
         $this->instanceModel = new Vw_animais();
