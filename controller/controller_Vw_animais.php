@@ -16,6 +16,11 @@ Class controller_Vw_animais{
             return $results;
         }
 
+        public function getAllAnimals(){
+            $results = $this->instanceModel->getAllAnimals();
+            return $results;
+        }
+
     //...Select methods
 
     public function __construct(){

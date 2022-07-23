@@ -26,6 +26,24 @@ Class Vw_animais extends Model{
             }
         }
 
+        public function getAllAnimals(){
+
+            try{
+
+                $results = $this->sql->select("SELECT * FROM vw_animais");
+                return $results;
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
+
+        }
+
     //...Select methods
 
 }
