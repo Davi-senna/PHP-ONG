@@ -15,6 +15,7 @@ use Controller\controller_Image;
     <link rel="shortcut icon" href="../../../img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../../../index.css">
     <script type="text/javascript" src="../../../js/script.js"></script>
+    <script type="text/javascript" src="../../../js/data_animal_admin.js"></script>
 
     <title>PetCare</title>
 </head>
