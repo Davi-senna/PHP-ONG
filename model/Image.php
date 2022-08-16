@@ -132,7 +132,7 @@ class Image extends Model{
     
                 $parameters =  array(
                     ":SOURCE_IMAGE" => $this->getSource_image(),
-                    ":ID_ANIMAL" => $this->getId_animal()    );
+                    ":ID_ANIMAL" => $this->getId_animal());
     
                 $results = $this->sql->execTransaction([$stmt], $parameters);
     

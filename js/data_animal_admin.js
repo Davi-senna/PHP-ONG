@@ -1,16 +1,21 @@
 const server = "http://localhost/petcare/";
 const pathImage = "img/animals/";
+var animals;
 
-async function getData() {
+
+async function feedSystem() {
 
     try {
 
         const url = `http://localhost/petcare/view/view_vw_animais.php?login=admin&&senha=petcare`;
         const data = await fetch(url);
-        const dataAllAnimals = await data.json();
+        animals = await data.json();
 
-        return dataAllAnimals;
+        return {
+            "success" : true
+        };
 
+        
     } catch (e) {
 
         return {
@@ -23,10 +28,11 @@ async function getData() {
 
 }
 
-const animals = getData();
 
-console.log(animals)
-console.log(animals.success);
-// if(animal.success){
+function createElementListAnimals(){
 
-// }
+}
+
+
+
+

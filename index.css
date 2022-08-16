@@ -57,7 +57,7 @@ ul,
 .container-etapa,
 .container-button-etapa,
 .container-actions,
-.button-action-admin{
+.button-action-admin {
     display: flex;
 }
 
@@ -77,7 +77,7 @@ header {
 
 nav ul li {
     list-style: none;
-    font-size: 1.8vw;
+    font-size: max(1.8vw, 20px);
     width: 17vw;
 }
 
@@ -101,7 +101,7 @@ nav ul li a {
 }
 
 #content-logo img {
-    width: 10vw;
+    width: 150px;
 }
 
 #content-home {
@@ -129,27 +129,28 @@ nav ul li a {
 }
 
 #home-text h1 {
-    font-size: 4.5vw;
+    font-size: max(4.5vw, 40px);
+    text-align: center;
 }
 
 #home-text h2 {
-    font-size: 2.5vw;
+    font-size: max(2.5vw, 25px);
     margin-bottom: 2vw;
 }
 
 #button-blue {
     color: var(--cor-secundaria);
     margin: 0 0 4vw 0;
-    width: 7vw;
-    height: 2.4vw;
-    font-size: 1.8vw;
+    width: max(7vw, 70px);
+    height: max(2.4vw, 25px);
+    font-size: max(1.8vw, 18px);
 }
 
 #button-yellow {
     color: var(--cor-primaria);
-    width: 13vw;
-    height: 2.1vw;
-    font-size: 1.6vw;
+    width: max(13vw,80px);
+    height: max(2.1vw,20px);
+    font-size: max(1.6vw,16px);
     margin: 4vh 0 4vh 0;
 }
 
@@ -167,6 +168,7 @@ nav ul li a {
     flex-wrap: wrap;
     width: 55vw;
     align-items: center;
+    height: 100%;
 }
 
 .content-animal img {
@@ -192,7 +194,7 @@ nav ul li a {
 }
 
 #adoption-text h1 {
-    font-size: 3.6vw;
+    font-size: max(3.6vw,30px);
     color: var(--cor-primaria);
     text-align: center;
 }
@@ -203,12 +205,12 @@ nav ul li a {
 
 #about h1 {
     color: var(--cor-secundaria);
-    font-size: 2vw;
+    font-size: max(2vw, 25px);
 }
 
 #about p {
     margin-top: 7vh;
-    font-size: 1.2vw;
+    font-size: max(1.2vw, 15px);
 }
 
 #about-tec {
@@ -298,13 +300,11 @@ nav ul li a {
 
 #cadastro-usu {
     width: 45vw;
-    left: 15vw;
-    border-radius: 0.5em;
 }
 
 .input-dados {
     outline: none;
-    width: 15vw;
+    width: max(15vw,180px);
     background-color: transparent;
     border: 0;
     border-bottom: 1px rgb(0, 0, 0) solid;
@@ -318,8 +318,8 @@ nav ul li a {
 .label-animado {
     color: rgb(0, 0, 0);
     position: absolute;
-    font-size: 1.3vw;
-    top: 0.5vw;
+    font-size: max(1.3vw,17px);
+    top: 0;
     left: 0;
     transition: .4s;
 }
@@ -352,7 +352,7 @@ nav ul li a {
 }
 
 #form_login_usu span {
-    font-size: 4.5vw;
+    font-size: max(4.5vw,50px);
     margin: 18vh 0 10vh 11vw;
 }
 
@@ -382,24 +382,26 @@ nav ul li a {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .button-dados {
-    border-radius: 0.8em;
-    background-color: var(--cor-secundaria);
-    width: 20vw;
-    margin: 6vh 0 2vh 12vw;
-    height: 1.6vw;
-    font-size: 1.2vw;
+    background-color: transparent;
+    width: max(20vw,200px);
+    margin: 6vh 0 2vh 0;
+    height: max(5vh,20px);
+    font-size: max(1.2vw,15px);
     justify-content: center;
     align-items: center;
+    border: solid 1px var(--cor-secundaria);
+    color: var(--cor-secundaria);
 }
 
 .button-dados:hover {
     cursor: pointer;
 }
 
-#button-dados-login{
+#button-dados-login {
     margin-top: 10vh;
 }
 
@@ -419,6 +421,7 @@ nav ul li a {
 #menu-admin {
     width: 23vw;
     background-color: var(--cor-primaria);
+    
 }
 
 #logo-menu-lateral {
@@ -474,7 +477,7 @@ nav ul li a {
 }
 
 .conteudo-admin h1 {
-    font-size: 3vw;
+    font-size: max(3vw,35px);
     margin-top: 4vh;
 }
 
@@ -492,12 +495,12 @@ nav ul li a {
     height: 100%;
     align-items: center;
     padding-left: 2vw;
-    font-size: 1.2vw;
+    font-size: max(1.2vw, 15px);
 }
 
 
 #filter-admin figure img {
-    width: 2vw;
+    width: max(2vw,15px);
 }
 
 #filter-admin a {
@@ -535,45 +538,45 @@ nav ul li a {
 }
 
 .list-bar {
-    width: 2%;
+    width: max(2%,12px);
     height: 100%;
 }
 
 .situation {
-    font-size: 0.6vw;
-    width: 3.3vw;
+    font-size: max(0.6vw,7px);
+    width: max(3.3vw,35px);
     height: 2vh;
     text-align: center;
     border-radius: 2px;
     color: #ced4da;
 }
 
-.situation-ativo{
+.situation-ativo {
     background-color: #4E8499;
 }
 
-.situation-inativo{
+.situation-inativo {
     background-color: #842013;
 }
 
 .list-admin-name {
-    font-size: 1.4vw;
+    font-size: max(1.4vw,15px);
 
 }
 
-.button-empty-admin{
+.button-empty-admin {
     color: rgb(0, 0, 0);
     border: solid rgb(0, 0, 0) 1px;
     padding: 0 0.6vw;
     cursor: pointer;
 }
 
-.button-empty-admin:hover{
+.button-empty-admin:hover {
     cursor: pointer;
     background-color: var(--cor-primaria);
 }
 
-.card-admin{
+.card-admin {
     margin-top: 5vh;
     width: 70vw;
     background-color: rgb(255, 255, 255);
@@ -582,37 +585,37 @@ nav ul li a {
     overflow: hidden;
 }
 
-.card-header{
+.card-header {
     width: 100%;
     height: 7vh;
     background-color: var(--cor-primaria);
     align-items: center;
     padding: 0 2vw;
-    
+
 
 }
 
-.card-header span{
+.card-header span {
     font-size: 1.5vw;
 }
 
-#card-header-form-animal{
+#card-header-form-animal {
     justify-content: space-between;
 }
 
-.container-form-admin{
+.container-form-admin {
     width: 100%;
     padding: 3vh 0 0 3vh;
 }
 
-.form-group{
+.form-group {
     flex-direction: column;
     margin-bottom: 3vh;
 }
 
-.input-form-admin{
+.input-form-admin {
     width: 35vw;
-    padding: 1vh 1vw ;
+    padding: 1vh 1vw;
     border-radius: 0.25rem;
     line-height: 1.5;
     font-weight: 400;
@@ -620,77 +623,77 @@ nav ul li a {
 
 }
 
-#description-animal{
+#description-animal {
     margin: 3vh 0 0 4vw;
     border-radius: 0.25rem;
     padding: 1vw;
 
 }
 
-#input-image{
+#input-image {
     margin: 6vh 4vw;
 }
 
-.button-form-animal{
-    justify-content: center ;
+.button-form-animal {
+    justify-content: center;
     align-items: center;
     margin-top: 3vh;
 }
 
-.button-form-animal input{
+.button-form-animal input {
     width: 20vw;
     height: 5vh;
     margin-bottom: 5vh;
-    
+
 }
 
 
 
-.span-checkbox{
+.span-checkbox {
     font-size: 0.8vw;
 }
 
-.margin-checkbox{
+.margin-checkbox {
     margin-top: 2vh;
 }
 
-.container-checkbox{
+.container-checkbox {
     align-items: center;
 }
 
-.container-info-animal{
+.container-info-animal {
     width: 45%;
     justify-content: space-between;
     padding: 0 6vw;
 }
 
-.info-animal{
+.info-animal {
     width: 90px;
     text-align: center;
     flex-direction: column;
 }
 
-.info-animal span{
-    font-size: 0.9vw;
+.info-animal span {
+    font-size: max(0.9vw,10px);
 }
 
-.info-animal-value{
+.info-animal-value {
     width: 90px;
     height: 25px;
     border: rgb(0, 0, 0) solid 1px;
     border-radius: 4px;
 }
 
-.info-animal-value-especie span{
+.info-animal-value-especie span {
     font-size: 0.8vw;
 }
 
-.container-form-options{
+.container-form-options {
     margin-right: 10vw;
     margin-bottom: 5vh;
 }
 
-.figure-circle{
+.figure-circle {
     width: 20px;
     height: 20px;
     border: rgb(0, 0, 0) solid 2px;
@@ -699,31 +702,31 @@ nav ul li a {
 
 }
 
-.figure-etapa{
+.figure-etapa {
     width: 54%;
     justify-content: flex-end;
 }
 
-.container-button-etapa{
+.container-button-etapa {
     width: 46%;
     justify-content: flex-end;
 
 }
 
-.container-etapa{
+.container-etapa {
     margin-top: 2vh;
 }
 
-.circle-ativo{
+.circle-ativo {
     background-color: var(--cor-primaria);
 }
 
-.alert{
+.alert {
     width: 30vw;
     height: 10vh;
     background-color: #28a745;
     border-color: #23923d;
-    color: rgb(255, 255,255);
+    color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.4vh 1.5vw;
     position: absolute;
@@ -732,20 +735,20 @@ nav ul li a {
     top: 5vh;
 }
 
-.header-alert{
+.header-alert {
     width: 30vw;
     height: 45%;
     margin-bottom: 1vh;
-    
+
 }
 
-.alert .header-alert span img{
+.alert .header-alert span img {
     width: 7%;
 }
 
 
 
-.header-alert a{
+.header-alert a {
     font-size: 2vw;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -753,33 +756,136 @@ nav ul li a {
     margin-left: 70%;
 }
 
-.list-admin figure{
-    width: 4.4%;
+.list-admin figure {
+    width: max(4.4%,35px);
     height: 80%;
     border: solid 1px rgb(0, 0, 0);
     border-radius: 4px;
     margin-left: 1vw;
 }
 
-.list-admin figure img{
+.list-admin figure img {
     width: 100%;
     height: 100%;
 }
 
-.button-action-admin img{
+.button-action-admin img {
     width: 30px;
 }
 
-.button-action-admin{
+.button-action-admin {
     height: 30px;
     margin-right: 1vw;
 }
 
-.container-actions{
-    
+.container-actions {
+
     height: 100%;
     width: 25%;
     align-items: center;
     justify-content: flex-end;
 
+}
+
+@media(max-width: 1090px) {
+
+    #cadastro-usu {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    } 
+
+    #form_cadastro_usu{
+        width: 500px;
+    }
+
+    #pg-cadastro-fundo{
+        display: none;
+    }
+
+    #form_cadastro_usu span {
+        margin: 3vh 0 5vh 0;
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-button-dados{
+        width: 100%;
+    }
+
+    #form_login_usu span {
+        font-size: max(4.5vw,50px);
+        margin: 18vh 0 10vh 0;
+        width: 100vw;
+        text-align: center;
+    }
+
+    #form_login_usu{    
+        width:100vw;
+        justify-content: center;
+        
+
+    }
+
+
+
+}
+
+@media(max-width: 940px) {
+
+    #menu-admin{
+        display:none;
+    }
+
+
+    .conteudo-admin {
+        margin: 0;
+        width: 100vw;
+        padding: 2vh 5vw;
+    }
+
+    #filter-admin {
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(255, 255, 255);
+        margin: 6.15vh 0 0 0;
+        box-shadow: 1px 1px 6px rgb(182 182 182);
+        align-items: center;
+    }
+
+    .list-admin {
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 6px rgb(182 182 182);
+        align-items: center;
+        margin-top: 5vh;
+        align-items: center;
+    }
+
+}
+
+@media(max-width: 800px) {
+
+    #pg-cadastro-fundo{
+        display: none;
+    }
+
+}
+
+@media(max-width: 570px) {
+
+    #apresentation-adoption {
+        height: 100vh;
+        position: relative;
+    }
+
+}
+
+@media(max-width: 480px) {
+
+    .info-animal{
+        display: none;
+    }
 }
