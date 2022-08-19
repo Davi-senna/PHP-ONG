@@ -21,8 +21,8 @@
             <span>Fazer login</span>
             <div id="container-login">
                 <div class="container-input-dados">
-                    <input class="input-dados" type="text" autocomplete="off" required name="login" id="login">
-                    <label class="label-animado" for="login">Cpf ou login</label>
+                    <input class="input-dados" type="text" autocomplete="off" required name="login" id="login-input">
+                    <label class="label-animado" for="login-input">Cpf ou login</label>
                 </div>
 
                 <div class="container-input-dados">
