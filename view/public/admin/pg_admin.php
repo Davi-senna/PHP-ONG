@@ -1,5 +1,6 @@
 <?php
 require_once("../../../autoload.php");
+
 use Controller\controller_Animal;
 use Controller\controller_Image;
 
@@ -74,7 +75,16 @@ use Controller\controller_Image;
 
         <div class="conteudo-admin">
 
-            <h1>Lista de animais</h1>
+            <div class="row" id="conteudo-admin-header">
+                <h1>Lista de animais</h1>
+                <div id="container-menu">
+                    <a href="javascript:activate('container-menu-mobile')">
+                    <div class="item-menu"></div>
+                    <div class="item-menu"></div>
+                    <div class="item-menu"></div>
+                    </a>
+                </div>
+            </div>
 
             <div id="filter-admin">
 
@@ -99,7 +109,7 @@ use Controller\controller_Image;
 
                 $controllerAnimal = new controller_Animal();
                 $animais = $controllerAnimal->getAll();
-                
+
                 foreach ($animais as $animal) {
 
                     $controllerImage = new Controller_Image();
@@ -163,13 +173,13 @@ use Controller\controller_Image;
 
                         <div class="container-actions">
                             <div class="button-action-admin button-action-admin-edit">
-                                <a href="admin_animal/form_update_animal.php?id_animal=<?php echo $animal["chip"]?>">
+                                <a href="admin_animal/form_update_animal.php?id_animal=<?php echo $animal["chip"] ?>">
                                     <img src="../../../img/edit-icon.png" alt="Editar">
                                 </a>
                             </div>
 
                             <div class="button-action-admin button-action-admin-delete">
-                                <a href="../../view_animal.php?stmt=delete&&id=<?php echo $image['id']."&&id_animal=".$image['id_animal']?>">
+                                <a href="../../view_animal.php?stmt=delete&&id=<?php echo $image['id'] . "&&id_animal=" . $image['id_animal'] ?>">
                                     <img src="../../../img/delete-icon.png" alt="Deletar">
                                 </a>
                             </div>
@@ -214,6 +224,41 @@ use Controller\controller_Image;
         }
     } ?>
 
+    <div id="container-menu-mobile" class="hidden-ativo">
+        <div onclick="inactivate('container-menu-mobile')" id="back-menu"></div>
+        <div id="menu-mobile">
+            <figure id="logo-menu-lateral">
+                <img src="../../../img/logoMaior.png" alt="Logo Petcare">
+            </figure>
+            <nav id="nav-mobile">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para animais">
+                            <span>Animais</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin_user/index_user.php">
+                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para usuarios">
+                            <span>Usuários</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin_animal/index_adoption.php">
+                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para adoções">
+                            <span>Adoções</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <figure id="container-close-menu">
+                <a href="javascript:inactivate('container-menu-mobile')">
+                    <img src="../../../img/close.png" alt="Fechar menu">
+                </a>
+            </figure>
+        </div>
+    </div>
 
 </body>
 

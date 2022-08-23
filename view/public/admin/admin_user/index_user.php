@@ -64,11 +64,20 @@
         </nav>
 
         <div class="conteudo-admin">
-            
-            <h1>Lista de usuarios</h1>
+
+            <div class="row" id="conteudo-admin-header">
+                <h1>Lista de usuários</h1>
+                <div id="container-menu">
+                    <a href="javascript:activate('container-menu-mobile')">
+                        <div class="item-menu"></div>
+                        <div class="item-menu"></div>
+                        <div class="item-menu"></div>
+                    </a>
+                </div>
+            </div>
 
             <div id="filter-admin">
-                
+
                 <span id="filter-text">Todos os usuarios</span>
                 <a href="#">
                     <span>Filtro</span>
@@ -76,10 +85,47 @@
                         <img src="../../../../img/filter-icon.png" alt="Editar">
                     </figure>
                 </a>
-                
+
             </div>
         </div>
     </div>
+
+    <div id="container-menu-mobile" class="hidden-ativo">
+        <div onclick="inactivate('container-menu-mobile')" id="back-menu"></div>
+        <div id="menu-mobile">
+            <figure id="logo-menu-lateral">
+                <img src="../../../img/logoMaior.png" alt="Logo Petcare">
+            </figure>
+            <nav id="nav-mobile">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para animais">
+                            <span>Animais</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin_user/index_user.php">
+                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para usuarios">
+                            <span>Usuários</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin_animal/index_adoption.php">
+                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para adoções">
+                            <span>Adoções</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <figure id="container-close-menu">
+                <a href="javascript:inactivate('container-menu-mobile')">
+                    <img src="../../../img/close.png" alt="Fechar menu">
+                </a>
+            </figure>
+        </div>
+    </div>
+
 </body>
 
 </html>

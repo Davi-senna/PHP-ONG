@@ -128,6 +128,13 @@ nav ul li a {
     color: var(--cor-secundaria);
 }
 
+.item-menu {
+    width: 30px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 4px;
+}
+
 #home-text h1 {
     font-size: max(4.5vw, 40px);
     text-align: center;
@@ -148,9 +155,9 @@ nav ul li a {
 
 #button-yellow {
     color: var(--cor-primaria);
-    width: max(13vw,80px);
-    height: max(2.1vw,20px);
-    font-size: max(1.6vw,16px);
+    width: max(13vw, 80px);
+    height: max(2.1vw, 20px);
+    font-size: max(1.6vw, 16px);
     margin: 4vh 0 4vh 0;
 }
 
@@ -194,7 +201,7 @@ nav ul li a {
 }
 
 #adoption-text h1 {
-    font-size: max(3.6vw,30px);
+    font-size: max(3.6vw, 30px);
     color: var(--cor-primaria);
     text-align: center;
 }
@@ -304,28 +311,28 @@ nav ul li a {
 
 .input-dados {
     outline: none;
-    width: max(15vw,180px);
+    width: max(15vw, 180px);
     background-color: transparent;
     border: 0;
     border-bottom: 1px rgb(0, 0, 0) solid;
     display: inline-block;
     color: rgb(0, 0, 0);
     padding: 0.5vw 0.5vw;
-    font-size: max(1.2vw,15px);
+    font-size: max(1.2vw, 15px);
     transition: all .3s ease-out;
 }
 
 .label-animado {
     color: rgb(0, 0, 0);
     position: absolute;
-    font-size: max(1.3vw,17px);
+    font-size: max(1.3vw, 17px);
     top: 0;
     left: 0;
     transition: .4s;
 }
 
 .input-dados:focus~label, .input-dados:valid~label {
-    font-size: max(0.6vw,7px);
+    font-size: max(0.6vw, 7px);
     top: -0.7vw;
     left: 0 !important;
 }
@@ -352,7 +359,7 @@ nav ul li a {
 }
 
 #form_login_usu span {
-    font-size: max(4.5vw,50px);
+    font-size: max(4.5vw, 50px);
     margin: 18vh 0 10vh 11vw;
 }
 
@@ -387,10 +394,10 @@ nav ul li a {
 
 .button-dados {
     background-color: transparent;
-    width: max(20vw,200px);
+    width: max(20vw, 200px);
     margin: 6vh 0 2vh 0;
-    height: max(5vh,20px);
-    font-size: max(1.2vw,15px);
+    height: max(5vh, 20px);
+    font-size: max(1.2vw, 15px);
     justify-content: center;
     align-items: center;
     border: solid 1px var(--cor-secundaria);
@@ -421,7 +428,7 @@ nav ul li a {
 #menu-admin {
     width: 23vw;
     background-color: var(--cor-primaria);
-    
+
 }
 
 #logo-menu-lateral {
@@ -477,8 +484,16 @@ nav ul li a {
 }
 
 .conteudo-admin h1 {
-    font-size: max(3vw,35px);
+    font-size: max(3vw, 35px);
+}
+
+#conteudo-admin-header {
+
     margin-top: 4vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3vw;
+
 }
 
 #filter-admin {
@@ -500,7 +515,7 @@ nav ul li a {
 
 
 #filter-admin figure img {
-    width: max(2vw,15px);
+    width: max(2vw, 15px);
 }
 
 #filter-admin a {
@@ -525,6 +540,77 @@ nav ul li a {
 
 }
 
+#menu-mobile {
+    height: 100vh;
+    width: 250px;
+    background-color: var(--cor-primaria);
+    top: 0;
+    left: 0;
+}
+
+#container-close-menu{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+#container-menu-mobile {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    grid-template-columns: auto 250px;
+}
+
+#back-menu {
+    width: 72%;
+}
+
+#nav-mobile ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: max(10vh,30px);
+}
+
+#nav-mobile ul li a {
+    display: flex;
+    align-items: center;
+}
+
+#nav-mobile {
+    margin-top: 100px;
+}
+
+
+#nav-mobile ul li a {
+    color: rgb(0, 0, 0);
+    transition: .4s;
+}
+
+#nav-mobile ul li a:hover {
+    margin-right: 30px;
+}
+
+#nav-mobile ul {
+    flex-direction: column;
+}
+
+.arrow-menu {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+
 #container-list-admin {
     height: 55vh;
     overflow: scroll;
@@ -538,13 +624,13 @@ nav ul li a {
 }
 
 .list-bar {
-    width: max(2%,12px);
+    width: max(2%, 12px);
     height: 100%;
 }
 
 .situation {
-    font-size: max(0.6vw,7px);
-    width: max(3.3vw,35px);
+    font-size: max(0.6vw, 7px);
+    width: max(3.3vw, 35px);
     height: 2vh;
     text-align: center;
     border-radius: 2px;
@@ -560,7 +646,7 @@ nav ul li a {
 }
 
 .list-admin-name {
-    font-size: max(1.4vw,15px);
+    font-size: max(1.4vw, 15px);
 
 }
 
@@ -596,12 +682,17 @@ nav ul li a {
 }
 
 .card-header span {
-    font-size: max(1.5vw,18px);
+    font-size: max(1.5vw, 18px);
 }
 
 #card-header-form-animal {
     justify-content: space-between;
 }
+
+#container-menu {
+    display: none;
+}
+
 
 .container-form-admin {
     width: 100%;
@@ -648,7 +739,7 @@ nav ul li a {
 }
 
 .span-checkbox {
-    font-size: max(0.8vw,11px);
+    font-size: max(0.8vw, 11px);
 }
 
 .margin-checkbox {
@@ -672,7 +763,7 @@ nav ul li a {
 }
 
 .info-animal span {
-    font-size: max(0.9vw,10px);
+    font-size: max(0.9vw, 10px);
 }
 
 .info-animal-value {
@@ -755,7 +846,7 @@ nav ul li a {
 }
 
 .list-admin figure {
-    width: max(4.4%,35px);
+    width: max(4.4%, 45px);
     height: 80%;
     border: solid 1px rgb(0, 0, 0);
     border-radius: 4px;
@@ -791,13 +882,13 @@ nav ul li a {
         width: 100vw;
         display: flex;
         justify-content: center;
-    } 
+    }
 
-    #form_cadastro_usu{
+    #form_cadastro_usu {
         width: 500px;
     }
 
-    #pg-cadastro-fundo{
+    #pg-cadastro-fundo {
         display: none;
     }
 
@@ -808,21 +899,21 @@ nav ul li a {
         width: 100%;
     }
 
-    .container-button-dados{
+    .container-button-dados {
         width: 100%;
     }
 
     #form_login_usu span {
-        font-size: max(4.5vw,50px);
+        font-size: max(4.5vw, 50px);
         margin: 18vh 0 10vh 0;
         width: 100vw;
         text-align: center;
     }
 
-    #form_login_usu{    
-        width:100vw;
+    #form_login_usu {
+        width: 100vw;
         justify-content: center;
-        
+
 
     }
 
@@ -832,10 +923,15 @@ nav ul li a {
 
 @media(max-width: 940px) {
 
-    #menu-admin{
-        display:none;
+    #menu-admin {
+        display: none;
     }
 
+    #container-menu {
+
+        display: block;
+
+    }
 
     .conteudo-admin {
         margin: 0;
@@ -871,16 +967,16 @@ nav ul li a {
         overflow: hidden;
     }
 
-    .container-form-admin .row{
+    .container-form-admin .row {
         flex-wrap: wrap;
     }
 
-    .container-form-admin .row .column{
+    .container-form-admin .row .column {
         width: 100%;
     }
 
-    .input-form-admin{
-        width: 95%; 
+    .input-form-admin {
+        width: 95%;
     }
 
     #description-animal {
@@ -894,7 +990,7 @@ nav ul li a {
 
 @media(max-width: 800px) {
 
-    #pg-cadastro-fundo{
+    #pg-cadastro-fundo {
         display: none;
     }
 
@@ -911,7 +1007,7 @@ nav ul li a {
 
 @media(max-width: 480px) {
 
-    .info-animal{
+    .info-animal {
         display: none;
     }
 }
