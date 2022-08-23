@@ -262,4 +262,13 @@ use Controller\controller_Image;
 
 </body>
 
+<style>
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+</style>
+
 </html>

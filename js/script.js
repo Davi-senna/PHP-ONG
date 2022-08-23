@@ -40,8 +40,3 @@ const activate = (element) => {
 }
 
 
-
-
-
-
-

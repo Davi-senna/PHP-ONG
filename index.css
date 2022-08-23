@@ -605,12 +605,6 @@ nav ul li a {
 }
 
 
-body {
-    position: relative;
-    overflow: hidden;
-}
-
-
 #container-list-admin {
     height: 55vh;
     overflow: scroll;

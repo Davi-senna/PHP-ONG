@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../../../img/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../../../../index.css">
-    <script type="text/javascript" src="../../../../script.js"></script>
+    <script type="text/javascript" src="../../../../js/script.js"></script>
 
     <title>PetCare</title>
 </head>
@@ -94,25 +94,25 @@
         <div onclick="inactivate('container-menu-mobile')" id="back-menu"></div>
         <div id="menu-mobile">
             <figure id="logo-menu-lateral">
-                <img src="../../../img/logoMaior.png" alt="Logo Petcare">
+                <img src="../../../../img/logoMaior.png" alt="Logo Petcare">
             </figure>
             <nav id="nav-mobile">
                 <ul>
                     <li>
-                        <a href="#">
-                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para animais">
+                        <a href="../pg_admin.php">
+                            <img class="arrow-menu" src="../../../../img/arrow-left.png" alt="Ir para animais">
                             <span>Animais</span>
                         </a>
                     </li>
                     <li>
-                        <a href="admin_user/index_user.php">
-                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para usuarios">
+                        <a href="#">
+                            <img class="arrow-menu" src="../../../../img/arrow-left.png" alt="Ir para usuarios">
                             <span>Usuários</span>
                         </a>
                     </li>
                     <li>
-                        <a href="admin_animal/index_adoption.php">
-                            <img class="arrow-menu" src="../../../img/arrow-left.png" alt="Ir para adoções">
+                        <a href="../admin_animal/index_adoption.php">
+                            <img class="arrow-menu" src="../../../../img/arrow-left.png" alt="Ir para adoções">
                             <span>Adoções</span>
                         </a>
                     </li>
@@ -120,12 +120,21 @@
             </nav>
             <figure id="container-close-menu">
                 <a href="javascript:inactivate('container-menu-mobile')">
-                    <img src="../../../img/close.png" alt="Fechar menu">
+                    <img src="../../../../img/close.png" alt="Fechar menu">
                 </a>
             </figure>
         </div>
     </div>
 
 </body>
+
+<style>
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+</style>
 
 </html>
