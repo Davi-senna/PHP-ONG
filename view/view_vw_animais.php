@@ -1,7 +1,6 @@
 <?php
 
-require_once("../autoload.php");
-$path = "../";
+require_once("../vendor/autoload.php");
 use Controller\controller_Admin;
 use Controller\controller_Vw_animais;
 

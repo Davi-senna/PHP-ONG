@@ -21,9 +21,7 @@ use Controller\controller_Vw_animais;
 
 if(isset($_GET["id_animal"])){
 
-    require_once("../../../../autoload.php");
-    $path = "../../../../";
-    
+    require_once("../../../../vendor/autoload.php");
     
     $instanceController = new controller_Vw_animais();
     $results = $instanceController->getAllData($_GET["id_animal"]);

@@ -2,8 +2,8 @@
 
 header("Content-Type: application/json");
 
-require_once("../autoload.php");
-$path = "../";
+require_once("../vendor/autoload.php");
+
 require_once("view_image.php");  
 require_once("view_responsavel.php");
 use Controller\controller_Animal;
