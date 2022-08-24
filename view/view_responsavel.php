@@ -2,6 +2,7 @@
 
 header("Content-Type: application/json");
 require_once("../autoload.php");
+$path = "../";
 use Controller\controller_Responsavel_animal;
 
 if (isset($_GET['statement'])) {

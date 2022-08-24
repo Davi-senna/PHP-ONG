@@ -1,5 +1,7 @@
 <?php
+
 require_once("../../../autoload.php");
+$path = "../../../";
 
 use Controller\controller_Animal;
 use Controller\controller_Image;

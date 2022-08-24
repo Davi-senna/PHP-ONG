@@ -1,6 +1,7 @@
 <?php
 
 require_once("../autoload.php");
+$path = "../";
 use Controller\controller_Usuario;
 
 extract($_POST);

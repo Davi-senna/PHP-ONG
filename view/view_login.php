@@ -1,8 +1,9 @@
 <?php
 
 require_once("../autoload.php");
+$path = "../";
 use Controller\controller_Admin;
-use Controller\controller_Usuario;
+use Controller\controller_Usuario;  
 
 
 $usuario = new controller_Usuario();

@@ -14,7 +14,7 @@ class controller_Usuario{
             extract($user_data);
             $this->instanceModel->insert($nome,$cpf,$tel,$cep,$rua,$cidade,$estado,$senha);
         }
-
+        
     //...Execution methods
 
     public function __construct(){
