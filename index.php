@@ -12,13 +12,13 @@
 </head>
 
 <body>
-    <header>
+    <header id="initial-header">
 
         <figure id="content-logo">
             <img src="img/logo.png" alt="Logo da PetCare">
         </figure>
 
-        <nav>
+        <nav id="nav-initial">
             <ul>
                 <li>
 
@@ -45,12 +45,20 @@
         </nav>
 
         <a href="view/public/login/pg_login.php" id="button-login">
-            <h3>
+            <span id="initial-login">
                 Entrar
-            </h3>
+            </span>
 
             <img src="img/Login-icon.png" alt="Ícone de login">
         </a>
+
+        <div id="container-menu-initial">
+            <a href="javascript:activate('container-menu-mobile')">
+                <div class="item-menu"></div>
+                <div class="item-menu"></div>
+                <div class="item-menu"></div>
+            </a>
+        </div>
 
     </header>
 
@@ -82,25 +90,25 @@
     <section id="content-adoption">
         <a name="adoption">
             <div id="apresentation-adoption" class="hidden-inativo">
-
+    	
                 <div id="adoption-image">
 
-                    <div class="content-animal">
+                    <div class="content-animal no-mobile">
                         <img src="img/bob.png" alt="Imagem de animal">
                         <h1>Bob</h1>
                     </div>
 
-                    <div class="content-animal">
+                    <div id="set-image-left" class="content-animal">
                         <img src="img/bartolomeu.png" alt="Imagem de animal">
                         <h1>Bartolomeu</h1>
                     </div>
 
-                    <div class="content-animal">
+                    <div id="set-image-right" class="content-animal">
                         <img src="img/stuart.png" alt="Imagem de animal">
                         <h1>Stuart</h1>
                     </div>
 
-                    <div class="content-animal">
+                    <div id="set-image-main" class="content-animal">
                         <img src="img/caramelo.png" alt="Imagem de animal">
                         <h1>Caramelo</h1>
                     </div>
@@ -259,9 +267,49 @@
         </section>
     </a>
 
+    <div id="container-menu-mobile" class="hidden-ativo">
+        <div onclick="inactivate('container-menu-mobile')" id="back-menu"></div>
+        <div id="menu-mobile">
+            <div id="container-login-mobile">
+                <a href="view/public/login/pg_login.php" id="button-login-mobile">
+                    <span id="initial-login-mobile-text">
+                        Entrar
+                    </span>
+
+                    <img id="initial-login-mobile-img" src="img/Login-icon.png" alt="Ícone de login">
+                </a>
+            </div>
+            <nav id="nav-mobile">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img class="arrow-menu" src="img/arrow-left.png" alt="Ir para home">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#adoption">
+                            <img class="arrow-menu" src="img/arrow-left.png" alt="Ir para adoção">
+                            <span>Adoção</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <img class="arrow-menu" src="img/arrow-left.png" alt="Ir para sobre o projeto">
+                            <span>Sobre</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <figure id="container-close-menu">
+                <a href="javascript:inactivate('container-menu-mobile')">
+                    <img src="img/close.png" alt="Fechar menu">
+                </a>
+            </figure>
+        </div>
+    </div>
+
 
 </body>
 
 </html>
-
-
