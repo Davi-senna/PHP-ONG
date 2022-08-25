@@ -1036,11 +1036,11 @@ nav ul li a {
     }
 
     #home-image img {
-        height: 40vh;
-        width: 50vw;
+        height: 45vh;
+        width: 60vw;
         position: absolute;
-        left: 27vw;
-        top: 15vh;
+        left: 22vw;
+        top: 20vh;
     }
 
     #home-text {
@@ -1050,7 +1050,7 @@ nav ul li a {
         justify-content: center;
         color: var(--cor-secundaria);
         position: absolute;
-        top: 60vh;
+        top: 72vh;
     }
 
     .content-animal {
@@ -1087,19 +1087,19 @@ nav ul li a {
 
     #set-image-main {
         position: absolute;
-        top: 10vh;
+        top: 15vh;
         left: 30vw;
     }
 
     #set-image-left {
         position: absolute;
-        top: 0;
+        top: 5vh;
         left: 0;
     }
 
     #set-image-right {
         position: absolute;
-        top: 0;
+        top: 5vh;
         left: 60vw;
     }
 
@@ -1109,6 +1109,10 @@ nav ul li a {
 
     .no-mobile{
         display: none
+    }
+
+    .info-animal {
+        display: none;
     }
 
 }
@@ -1122,9 +1126,25 @@ nav ul li a {
 
 }
 
-@media(max-width: 480px) {
 
-    .info-animal {
-        display: none;
+@media(max-width: 350px) {
+
+    #set-image-main {
+        position: absolute;
+        top: 20vh;
+        left: 30vw;
     }
+
+    #set-image-left {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+    }
+
+    #set-image-right {
+        position: absolute;
+        top: 10vh;
+        left: 60vw;
+    }
+
 }
