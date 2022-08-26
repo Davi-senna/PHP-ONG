@@ -201,8 +201,8 @@ use Controller\controller_Image;
 
                 <div class="header-alert">
 
-                    <span><img src="../../../img/success-icon.png" alt="Sucesso"> Alert!</span>
-                    <a href="javascript:fechar()" class="close">×</a>
+                    <span class="title-alert"><img src="../../../img/success-icon.png" alt="Sucesso"> Alert!</span>
+                    <span><a href="javascript:fechar()" class="close">x</a></span>
                 </div>
                 <span><?php echo ($_GET["success"]) ?></span>
             </div>
@@ -216,7 +216,7 @@ use Controller\controller_Image;
                 <div class="header-alert">
 
                     <span><img src="../../../img/success-icon.png" alt="Sucesso"> Alert!</span>
-                    <a href="#" class="close">×</a>
+                    <a href="#" class="close"><span>X</span></a>
                 </div>
                 <span></span>
             </div>
